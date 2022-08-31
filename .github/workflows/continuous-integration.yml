@@ -1,0 +1,62 @@
+name: Continuous Integration
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+
+jobs:
+    Linting:
+        name: Linting
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Project
+              uses: actions/checkout@v3
+            - name: Manage cache
+              uses: actions/cache@v3
+              with:
+                  path: |
+                      ~/.npm
+                      ~/.yarn
+                      ${{ github.workspace }}/.next/cache
+                  key: ${{ runner.os }}-nextjs-lint-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+                  restore-keys: |
+                      ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
+            - name: Use Node.js v16
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+                  cache: yarn
+                  registry-url: https://registry.npmjs.org/
+            - name: Install Dependencies
+              run: yarn --immutable
+            - name: Run next lint
+              run: yarn lint
+
+    Building:
+        name: Compile source code
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Project
+              uses: actions/checkout@v3
+            - name: Manage cache
+              uses: actions/cache@v3
+              with:
+                  path: |
+                      ~/.npm
+                      ~/.yarn
+                      ${{ github.workspace }}/.next/cache
+                  key: ${{ runner.os }}-nextjs-build-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+                  restore-keys: |
+                      ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
+            - name: Use Node.js v16
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+                  cache: yarn
+                  registry-url: https://registry.npmjs.org/
+            - name: Install Dependencies
+              run: yarn --immutable
+            - name: Build Code
+              run: yarn build
