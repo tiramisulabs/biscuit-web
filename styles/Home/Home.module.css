@@ -1,0 +1,6 @@
+.container {
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: contain;
+	background-image: url('../../public/Home/background.png');
+}

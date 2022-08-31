@@ -1,0 +1,14 @@
+.container {
+	position: fixed;
+	width: 100%;
+	height: 80px;
+	backdrop-filter: blur(20px);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 10px 50px 10px 50px;
+}
+
+.container img {
+	cursor: pointer;
+}

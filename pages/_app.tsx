@@ -3,11 +3,12 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
 import { CacheProvider, EmotionCache } from '@emotion/react';
-import { ThemeProvider } from '@mui/material/styles';
+import { Experimental_CssVarsProvider as CssVarsProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
 import createEmotionCache from '../lib/createEmotionCache';
-import theme from '../lib/theme';
+import Theme from '../lib/theme';
+import Layout from '../components/layout/Layout';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -17,10 +18,12 @@ function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }: 
 			<Head>
 				<meta name="viewport" content="initial-scale=1, width=device-width" />
 			</Head>
-			<ThemeProvider theme={theme}>
+			<CssVarsProvider theme={Theme} modeStorageKey="theme-mode">
 				<CssBaseline />
-				<Component {...pageProps} />
-			</ThemeProvider>
+				<Layout>
+					<Component {...pageProps} />
+				</Layout>
+			</CssVarsProvider>
 		</CacheProvider>
 	);
 }
