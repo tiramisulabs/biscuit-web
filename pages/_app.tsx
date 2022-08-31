@@ -18,7 +18,7 @@ function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }: 
 			<Head>
 				<meta name="viewport" content="initial-scale=1, width=device-width" />
 			</Head>
-			<CssVarsProvider theme={Theme} modeStorageKey="theme-mode">
+			<CssVarsProvider theme={Theme}>
 				<CssBaseline />
 				<Layout>
 					<Component {...pageProps} />
