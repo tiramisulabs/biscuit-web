@@ -15,7 +15,7 @@ const HomeFooter = () => {
 	return (
 		<div style={{ marginTop: '50px' }}>
 			<Stack spacing={2} direction="row">
-				<ActiveLink href={'https://github.com/oasisjs'} target="_blank">
+				<ActiveLink href={'https://github.com/oasisjs'}>
 					<Button variant="outlined" size="large" startIcon={<GitHubIcon></GitHubIcon>}>
 						Github
 					</Button>
