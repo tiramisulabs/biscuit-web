@@ -9,10 +9,11 @@ import IconButton from '@mui/material/IconButton';
 import HomeIcon from '@mui/icons-material/Home';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import BookIcon from '@mui/icons-material/Book';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
-import Styles from '../../styles/Layout/Menu.module.css';
+import Styles from '../../../styles/Layout/Menu.module.css';
 import ActiveLink from '../ActiveLink';
 import { hexColorToRgba } from '../../lib/funtions/colors';
 
@@ -53,10 +54,17 @@ const Menu = () => {
 							</Button>
 						</a>
 					</ActiveLink>
+					<ActiveLink href={'https://docs.biscuitjs.com'}>
+						<a>
+							<Button variant="text" startIcon={<BookIcon></BookIcon>}>
+								Documentation
+							</Button>
+						</a>
+					</ActiveLink>
 				</Stack>
 			</Stack>
 			<Stack spacing={2} direction="row" alignItems="center">
-				<ActiveLink href={'/packages'}>
+				<ActiveLink href={'https://github.com/oasisjs/biscuit'}>
 					<a>
 						<Button variant="text" startIcon={<GitHubIcon></GitHubIcon>}>
 							Repository

@@ -5,8 +5,8 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
 import { getInitColorSchemeScript } from '@mui/material/styles';
 
-import theme from '../lib/theme';
-import createEmotionCache from '../lib/createEmotionCache';
+import theme from '../common/lib/theme';
+import createEmotionCache from '../common/lib/createEmotionCache';
 
 export default class MyDocument extends Document {
 	render() {
