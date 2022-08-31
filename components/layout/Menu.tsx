@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
-import { useColorScheme } from '@mui/material/styles';
+import { useColorScheme, useTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
@@ -14,10 +14,12 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 import Styles from '../../styles/Layout/Menu.module.css';
 import ActiveLink from '../ActiveLink';
+import { hexColorToRgba } from '../../lib/funtions/colors';
 
 // TODO: Logic for ActiveLink
 const Menu = () => {
 	const { mode, setMode } = useColorScheme();
+	const theme = useTheme();
 
 	// For server-side rendering
 	// Read more on https://github.com/pacocoursey/next-themes#avoid-hydration-mismatch
@@ -29,7 +31,7 @@ const Menu = () => {
 	if (!mounted) return null;
 
 	return (
-		<div className={Styles.container}>
+		<div className={Styles.container} style={{ backgroundColor: hexColorToRgba(theme.palette.background.default, 0.5) }}>
 			<Stack spacing={2} direction="row" alignItems="center">
 				<ActiveLink href={'/'}>
 					<a>
