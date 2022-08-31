@@ -8,13 +8,13 @@ const theme = experimental_extendTheme({
 					main: '#10b982',
 				},
 				secondary: {
-					main: '#7582eb',
+					main: '#5865F2',
 				},
 				error: {
 					main: '#ff7e7c',
 				},
 				warning: {
-					main: '#ffff75',
+					main: '#ffe75c',
 				},
 				info: {
 					main: '#c976f8',
