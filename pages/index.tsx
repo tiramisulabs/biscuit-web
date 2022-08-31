@@ -4,9 +4,9 @@ import type { NextPage } from 'next';
 import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 
-import { hexColorToRgba } from '../common/lib/funtions/colors';
-import Title from '../common/components/Home/Title';
-import Footer from '../common/components/Home/Footer';
+import { hexColorToRgba } from '../lib/funtions/colors';
+import Title from '../components/Home/Title';
+import Footer from '../components/Home/Footer';
 import Styles from '../styles/Home/Home.module.css';
 
 // TODO: Fix error about class names
