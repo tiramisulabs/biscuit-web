@@ -13,7 +13,7 @@ import BookIcon from '@mui/icons-material/Book';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
-import Styles from '../../../styles/Layout/Menu.module.css';
+import Styles from '../../styles/Layout/Menu.module.css';
 import ActiveLink from '../ActiveLink';
 import { hexColorToRgba } from '../../lib/funtions/colors';
 
