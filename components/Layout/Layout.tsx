@@ -21,7 +21,7 @@ const Layout = ({ children }: LayoutProps) => {
 	return (
 		<Fragment>
 			<Head>
-				<title>biscuit.js | Discord Bot Framework</title>
+				<title>biscuitjs | Discord Bot Framework</title>
 			</Head>
 			<Menu></Menu>
 			<main style={{ paddingBottom: showBottonNavigation && mounted ? '90px' : 'unset' }}>{children}</main>
