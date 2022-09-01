@@ -3,10 +3,9 @@ import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 import createEmotionServer from '@emotion/server/create-instance';
-import { getInitColorSchemeScript } from '@mui/material/styles';
 
-import theme from '../lib/theme';
-import createEmotionCache from '../lib/createEmotionCache';
+import theme from '../lib/common/theme';
+import createEmotionCache from '../lib/common/createEmotionCache';
 
 export default class MyDocument extends Document {
 	render() {
@@ -14,14 +13,13 @@ export default class MyDocument extends Document {
 			<Html lang="en">
 				<Head>
 					{/* PWA primary color */}
-					<meta name="theme-color" content={theme.colorSchemes.dark.palette.primary.main} />
+					<meta name="theme-color" content={theme.palette.primary.main} />
 					<link rel="shortcut icon" href="/favicon.ico" />
 					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 					<meta name="emotion-insertion-point" content="" />
 					{(this.props as any).emotionStyleTags}
 				</Head>
 				<body>
-					{getInitColorSchemeScript()}
 					<Main />
 					<NextScript />
 				</body>
