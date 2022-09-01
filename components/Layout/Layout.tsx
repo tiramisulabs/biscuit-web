@@ -1,4 +1,4 @@
-import { ReactNode, Fragment } from 'react';
+import { ReactNode, Fragment, useState, useEffect } from 'react';
 import Head from 'next/head';
 
 import { When } from 'react-if';
@@ -13,6 +13,10 @@ export type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
 	const showBottonNavigation = !useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'));
+	const [mounted, setMounted] = useState(false);
+	useEffect(() => {
+		setMounted(true);
+	}, []);
 
 	return (
 		<Fragment>
@@ -20,8 +24,8 @@ const Layout = ({ children }: LayoutProps) => {
 				<title>biscuit.js | Discord Bot Framework</title>
 			</Head>
 			<Menu></Menu>
-			<main style={{ paddingBottom: showBottonNavigation ? '90px' : 'unset' }}>{children}</main>
-			<When condition={showBottonNavigation}>
+			<main style={{ paddingBottom: showBottonNavigation && mounted ? '90px' : 'unset' }}>{children}</main>
+			<When condition={showBottonNavigation && mounted}>
 				<BottomNavigation show={showBottonNavigation}></BottomNavigation>
 			</When>
 		</Fragment>
