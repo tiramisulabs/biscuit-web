@@ -9,3 +9,7 @@
 .container img {
 	cursor: pointer;
 }
+
+.menu-item-selected Button {
+	color: white;
+}

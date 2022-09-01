@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
@@ -24,43 +25,43 @@ const Menu = () => {
 			justifyContent="space-between"
 		>
 			<Stack spacing={2} direction="row" alignItems="center">
-				<ActiveLink href={'/'}>
+				<Link href={'/'}>
 					<a>
 						<Image src={'/icon.svg'} width={50} height={50} alt="Biscuit logo"></Image>
 					</a>
-				</ActiveLink>
+				</Link>
 				<Stack spacing={2} direction="row" alignItems="center">
-					<ActiveLink href={'/'}>
+					<ActiveLink href={'/'} activeClassName={Styles['menu-item-selected']}>
 						<a>
 							<Button variant="text" startIcon={<HomeIcon></HomeIcon>}>
 								Home
 							</Button>
 						</a>
 					</ActiveLink>
-					<ActiveLink href={'/packages'}>
+					<ActiveLink href={'/packages'} activeClassName={Styles['menu-item-selected']}>
 						<a>
 							<Button variant="text" startIcon={<InventoryIcon></InventoryIcon>}>
 								Packages
 							</Button>
 						</a>
 					</ActiveLink>
-					<ActiveLink href={'https://docs.biscuitjs.com'}>
+					<Link href={'https://docs.biscuitjs.com'}>
 						<a>
 							<Button variant="text" startIcon={<BookIcon></BookIcon>}>
 								Documentation
 							</Button>
 						</a>
-					</ActiveLink>
+					</Link>
 				</Stack>
 			</Stack>
 			<Stack spacing={2} direction="row" alignItems="center">
-				<ActiveLink href={'https://github.com/oasisjs/biscuit'}>
+				<Link href={'https://github.com/oasisjs/biscuit'}>
 					<a>
 						<Button variant="text" startIcon={<GitHubIcon></GitHubIcon>}>
 							Repository
 						</Button>
 					</a>
-				</ActiveLink>
+				</Link>
 			</Stack>
 		</Box>
 	);
