@@ -17,6 +17,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import Styles from '../../styles/Layout/Menu.module.css';
 import ActiveLink from '../ActiveLink';
 import { hexColorToRgba } from '../../lib/funtions/colors';
+import { When } from 'react-if';
 
 // TODO: Logic for ActiveLink class
 const Menu = () => {
@@ -77,7 +78,7 @@ const Menu = () => {
 						</Button>
 					</a>
 				</ActiveLink>
-				{!mounted ? null : (
+				<When condition={!mounted}>
 					<IconButton
 						color="primary"
 						component="label"
@@ -91,7 +92,7 @@ const Menu = () => {
 					>
 						{mode === 'dark' ? <LightModeIcon></LightModeIcon> : <DarkModeIcon></DarkModeIcon>}
 					</IconButton>
-				)}
+				</When>
 			</Stack>
 		</Box>
 	);

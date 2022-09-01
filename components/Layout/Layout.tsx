@@ -10,6 +10,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuIcon from '@mui/icons-material/Menu';
 
+import { When, Unless } from 'react-if';
 import { Theme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -37,7 +38,7 @@ const Layout = ({ children }: LayoutProps) => {
 			</Head>
 			<Menu></Menu>
 			<main style={{ paddingBottom: showBottonNavigation ? '35px' : 'unset' }}>{children}</main>
-			{showBottonNavigation ? (
+			<When condition={showBottonNavigation}>
 				<Box position="fixed" bottom={0} left={0} right={0}>
 					<BottomNavigation
 						showLabels
@@ -52,7 +53,7 @@ const Layout = ({ children }: LayoutProps) => {
 						<BottomNavigationAction label="Menu" icon={<MenuIcon></MenuIcon>} />
 					</BottomNavigation>
 				</Box>
-			) : null}
+			</When>
 		</Fragment>
 	);
 };
