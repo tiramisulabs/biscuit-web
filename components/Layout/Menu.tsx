@@ -1,6 +1,5 @@
 import Image from 'next/image';
 
-import { useTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
@@ -16,16 +15,13 @@ import { hexColorToRgba } from '../../lib/funtions/colors';
 
 // TODO: Logic for ActiveLink class
 const Menu = () => {
-	const theme = useTheme();
-
 	return (
 		<Box
 			className={Styles.container}
 			component="div"
-			sx={{ display: { xs: 'none', sm: 'flex' } }}
+			sx={{ display: { xs: 'none', sm: 'flex' }, bgcolor: (theme) => hexColorToRgba(theme.palette.background.default, 0.5) }}
 			flexDirection="row"
 			justifyContent="space-between"
-			style={{ backgroundColor: hexColorToRgba(theme.palette.background.default, 0.5) }}
 		>
 			<Stack spacing={2} direction="row" alignItems="center">
 				<ActiveLink href={'/'}>
