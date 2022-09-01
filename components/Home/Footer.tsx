@@ -55,7 +55,7 @@ const HomeFooter = () => {
 					icon={<DownloadIcon></DownloadIcon>}
 				/>
 				<Chip
-					label={stats.loading ? '... Stars on Github"' : `${stats.stats.repository.stargazers.toLocaleString()} Stars on Github"`}
+					label={stats.loading ? '... Stars on Github' : `${stats.stats.repository.stargazers.toLocaleString()} Stars on Github`}
 					color="warning"
 					icon={<StarsIcon></StarsIcon>}
 				/>
