@@ -1,35 +1,22 @@
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
-import { useColorScheme, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 
 import HomeIcon from '@mui/icons-material/Home';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import BookIcon from '@mui/icons-material/Book';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 import Styles from '../../styles/Layout/Menu.module.css';
 import ActiveLink from '../ActiveLink';
 import { hexColorToRgba } from '../../lib/funtions/colors';
-import { When } from 'react-if';
 
 // TODO: Logic for ActiveLink class
 const Menu = () => {
-	const { mode, setMode } = useColorScheme();
 	const theme = useTheme();
-
-	// For server-side rendering
-	// Read more on https://github.com/pacocoursey/next-themes#avoid-hydration-mismatch
-	const [mounted, setMounted] = useState(false);
-	useEffect(() => {
-		setMounted(true);
-	}, []);
 
 	return (
 		<Box
@@ -78,21 +65,6 @@ const Menu = () => {
 						</Button>
 					</a>
 				</ActiveLink>
-				<When condition={!mounted}>
-					<IconButton
-						color="primary"
-						component="label"
-						onClick={() => {
-							if (mode === 'light') {
-								setMode('dark');
-							} else {
-								setMode('light');
-							}
-						}}
-					>
-						{mode === 'dark' ? <LightModeIcon></LightModeIcon> : <DarkModeIcon></DarkModeIcon>}
-					</IconButton>
-				</When>
 			</Stack>
 		</Box>
 	);
