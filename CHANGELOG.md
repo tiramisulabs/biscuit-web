@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/oasisjs/biscuit-web/compare/v0.1.1...v0.1.2) (2022-09-01)
+
+
+### Bug Fixes
+
+* **components/layout:** flashing when the page was loaded showed the bottom navigation menu ([9f4619f](https://github.com/oasisjs/biscuit-web/commit/9f4619fd8991c32cce13bcf0b15fab857464f6a6))
+
 ### 0.1.1 (2022-09-01)
 
 
