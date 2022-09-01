@@ -10,7 +10,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuIcon from '@mui/icons-material/Menu';
 
-import { When, Unless } from 'react-if';
+import { When } from 'react-if';
 import { Theme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -37,7 +37,7 @@ const Layout = ({ children }: LayoutProps) => {
 				<title>biscuit.js | Discord Bot Framework</title>
 			</Head>
 			<Menu></Menu>
-			<main style={{ paddingBottom: showBottonNavigation ? '35px' : 'unset' }}>{children}</main>
+			<main style={{ paddingBottom: showBottonNavigation ? '90px' : 'unset' }}>{children}</main>
 			<When condition={showBottonNavigation}>
 				<Box position="fixed" bottom={0} left={0} right={0}>
 					<BottomNavigation
