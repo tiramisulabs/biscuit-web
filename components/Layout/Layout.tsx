@@ -36,7 +36,7 @@ const Layout = ({ children }: LayoutProps) => {
 				<title>biscuit.js | Discord Bot Framework</title>
 			</Head>
 			<Menu></Menu>
-			<main style={{ paddingBottom: showBottonNavigation ? '30px' : 'unset' }}>{children}</main>
+			<main style={{ paddingBottom: showBottonNavigation ? '35px' : 'unset' }}>{children}</main>
 			{showBottonNavigation ? (
 				<Box position="fixed" bottom={0} left={0} right={0}>
 					<BottomNavigation
