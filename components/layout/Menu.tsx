@@ -5,6 +5,7 @@ import { useColorScheme, useTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
+import Box from '@mui/material/Box';
 
 import HomeIcon from '@mui/icons-material/Home';
 import InventoryIcon from '@mui/icons-material/Inventory';
@@ -29,10 +30,15 @@ const Menu = () => {
 		setMounted(true);
 	}, []);
 
-	if (!mounted) return null;
-
 	return (
-		<div className={Styles.container} style={{ backgroundColor: hexColorToRgba(theme.palette.background.default, 0.5) }}>
+		<Box
+			className={Styles.container}
+			component="div"
+			sx={{ display: { xs: 'none', sm: 'flex' } }}
+			flexDirection="row"
+			justifyContent="space-between"
+			style={{ backgroundColor: hexColorToRgba(theme.palette.background.default, 0.5) }}
+		>
 			<Stack spacing={2} direction="row" alignItems="center">
 				<ActiveLink href={'/'}>
 					<a>
@@ -71,21 +77,23 @@ const Menu = () => {
 						</Button>
 					</a>
 				</ActiveLink>
-				<IconButton
-					color="primary"
-					component="label"
-					onClick={() => {
-						if (mode === 'light') {
-							setMode('dark');
-						} else {
-							setMode('light');
-						}
-					}}
-				>
-					{mode === 'dark' ? <LightModeIcon></LightModeIcon> : <DarkModeIcon></DarkModeIcon>}
-				</IconButton>
+				{!mounted ? null : (
+					<IconButton
+						color="primary"
+						component="label"
+						onClick={() => {
+							if (mode === 'light') {
+								setMode('dark');
+							} else {
+								setMode('light');
+							}
+						}}
+					>
+						{mode === 'dark' ? <LightModeIcon></LightModeIcon> : <DarkModeIcon></DarkModeIcon>}
+					</IconButton>
+				)}
 			</Stack>
-		</div>
+		</Box>
 	);
 };
 

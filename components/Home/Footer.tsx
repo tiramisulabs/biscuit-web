@@ -24,9 +24,9 @@ const HomeFooter = () => {
 	return (
 		<div style={{ marginTop: '50px' }}>
 			<Stack spacing={2} direction={{ xs: 'column', sm: 'row' }}>
-				<Link href={stats.stats.repository.url}>
+				<Link href={'https://github.com/oasisjs'}>
 					<a>
-						<Button variant="outlined" size="large" startIcon={<GitHubIcon></GitHubIcon>}>
+						<Button variant="outlined" size="large" startIcon={<GitHubIcon></GitHubIcon>} fullWidth>
 							Github
 						</Button>
 					</a>
@@ -48,7 +48,7 @@ const HomeFooter = () => {
 					</Button>
 				</CopyToClipboard>
 			</Stack>
-			<Stack spacing={2} direction="row" marginTop={3}>
+			<Stack spacing={2} direction="row" marginTop={3} justifyContent={{ xs: 'center', sm: 'unset' }}>
 				<Chip
 					label={stats.loading ? '... downloads' : `${stats.stats.npm.downloads.toLocaleString()} downloads`}
 					color="secondary"
