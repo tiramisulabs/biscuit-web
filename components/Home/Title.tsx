@@ -6,12 +6,7 @@ import Image from 'next/image';
 const HomeTitle = () => {
 	return (
 		<Box textAlign={'start'} marginBottom={'20px'}>
-			<Image
-				src={'https://raw.githubusercontent.com/oasisjs/biscuit/main/assets/icon.svg'}
-				width="200"
-				height="200"
-				alt="biscuit.js Icon"
-			></Image>
+			<Image src={'/icon.svg'} width="200" height="200" alt="biscuit.js Icon"></Image>
 
 			<Typography variant="h2" gutterBottom fontWeight={'bold'} maxWidth={500} margin="0">
 				Create wonderful bots with{' '}
