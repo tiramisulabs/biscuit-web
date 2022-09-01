@@ -7,8 +7,8 @@ import { Experimental_CssVarsProvider as CssVarsProvider } from '@mui/material/s
 import CssBaseline from '@mui/material/CssBaseline';
 
 import createEmotionCache from '../lib/common/createEmotionCache';
-import Theme from '../lib/common/theme';
 import Layout from '../components/Layout/Layout';
+import Theme from '../lib/common/theme';
 
 const clientSideEmotionCache = createEmotionCache();
 
