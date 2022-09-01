@@ -17,7 +17,7 @@ type npmDownloadsStats = {
 	downloads: Array<{ downloads: number; day: string }>;
 };
 
-type Response = {
+export type StatsResponse = {
 	repository: {
 		name: string;
 		description: string;
@@ -30,7 +30,7 @@ type Response = {
 	};
 };
 
-export default async function handler(_: NextApiRequest, res: NextApiResponse<Response>) {
+export default async function handler(_: NextApiRequest, res: NextApiResponse<StatsResponse>) {
 	const githubRepository = await ky
 		.get('https://api.github.com/repos/oasisjs/biscuit', {
 			headers: { Authorization: `Bearer ${process.env.API_KEY_GITHUB}` },

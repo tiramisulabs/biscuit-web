@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
@@ -12,21 +13,24 @@ import CheckIcon from '@mui/icons-material/Check';
 
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-import ActiveLink from '../ActiveLink';
 import { wait } from '../../lib/funtions/utils';
+import useStats from '../../lib/hooks/stats';
 
 const HomeFooter = () => {
 	const [copied, setCopied] = useState(false);
 	const [command, setCommand] = useState('yarn add @biscuitland/core');
+	const stats = useStats();
 
 	return (
 		<div style={{ marginTop: '50px' }}>
 			<Stack spacing={2} direction={{ xs: 'column', sm: 'row' }}>
-				<ActiveLink href={'https://github.com/oasisjs'}>
-					<Button variant="outlined" size="large" startIcon={<GitHubIcon></GitHubIcon>}>
-						Github
-					</Button>
-				</ActiveLink>
+				<Link href={stats.stats.repository.url}>
+					<a>
+						<Button variant="outlined" size="large" startIcon={<GitHubIcon></GitHubIcon>}>
+							Github
+						</Button>
+					</a>
+				</Link>
 				<CopyToClipboard
 					text={command}
 					onCopy={async () => {
@@ -45,8 +49,16 @@ const HomeFooter = () => {
 				</CopyToClipboard>
 			</Stack>
 			<Stack spacing={2} direction="row" marginTop={3}>
-				<Chip label="1,720 downloads" color="secondary" icon={<DownloadIcon></DownloadIcon>} />
-				<Chip label="72 Stars on Github" color="warning" icon={<StarsIcon></StarsIcon>} />
+				<Chip
+					label={stats.loading ? '... downloads' : `${stats.stats.npm.downloads.toLocaleString()} downloads`}
+					color="secondary"
+					icon={<DownloadIcon></DownloadIcon>}
+				/>
+				<Chip
+					label={stats.loading ? '... Stars on Github"' : `${stats.stats.repository.stargazers.toLocaleString()} Stars on Github"`}
+					color="warning"
+					icon={<StarsIcon></StarsIcon>}
+				/>
 			</Stack>
 		</div>
 	);
