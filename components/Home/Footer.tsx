@@ -1,33 +1,46 @@
-import { Fragment } from 'react';
-import ActiveLink from '../ActiveLink';
+import { useState } from 'react';
 
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Chip from '@mui/material/Chip';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
-import CookieIcon from '@mui/icons-material/Cookie';
 import DownloadIcon from '@mui/icons-material/Download';
 import StarsIcon from '@mui/icons-material/Stars';
+import KeyboardCommandKeyIcon from '@mui/icons-material/KeyboardCommandKey';
+import CheckIcon from '@mui/icons-material/Check';
+
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
+import ActiveLink from '../ActiveLink';
+import { wait } from '../../lib/funtions/utils';
+
 const HomeFooter = () => {
+	const [copied, setCopied] = useState(false);
+	const [command, setCommand] = useState('yarn add @biscuitland/core');
+
 	return (
 		<div style={{ marginTop: '50px' }}>
-			<Stack spacing={2} direction="row">
+			<Stack spacing={2} direction={{ xs: 'column', sm: 'row' }}>
 				<ActiveLink href={'https://github.com/oasisjs'}>
 					<Button variant="outlined" size="large" startIcon={<GitHubIcon></GitHubIcon>}>
 						Github
 					</Button>
 				</ActiveLink>
 				<CopyToClipboard
-					text="yarn add @biscuitland/core"
-					onCopy={() => {
-						alert('Command copied');
+					text={command}
+					onCopy={async () => {
+						setCopied(true);
+						await wait(1_000);
+
+						if (command.startsWith('yarn')) setCommand('npm install @biscuitland/core');
+						else setCommand('yarn add @biscuitland/core');
+
+						setCopied(false);
 					}}
 				>
-					<Button variant="contained" size="large" startIcon={<CookieIcon></CookieIcon>}>
-						yarn add @biscuitland/core
+					<Button startIcon={copied ? <CheckIcon></CheckIcon> : <KeyboardCommandKeyIcon></KeyboardCommandKeyIcon>} variant="contained">
+						{copied ? 'Command copied' : command}
 					</Button>
 				</CopyToClipboard>
 			</Stack>
