@@ -6,11 +6,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 import Sections from './Sections';
 
@@ -102,22 +99,6 @@ const Footer = () => {
 						</Link>
 					</Stack>
 				</Container>
-
-				<Box sx={{ padding: '20px', width: '100%' }} maxWidth="xl">
-					<Divider sx={{ marginBottom: '30px' }}></Divider>
-					<Box display="flex" flexDirection="row" justifyContent="space-between" alignItems="center">
-						<Typography variant="subtitle1" gutterBottom marginRight={5}>
-							© {new Date().getFullYear()} biscuitland - All rights reserved.
-						</Typography>
-						<Link href={'/'}>
-							<a>
-								<IconButton aria-label="go-to-up">
-									<ArrowUpwardIcon />
-								</IconButton>
-							</a>
-						</Link>
-					</Box>
-				</Box>
 			</Box>
 		</Fragment>
 	);

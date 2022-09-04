@@ -6,6 +6,7 @@ import { Theme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Menu from './Menu';
 import BottomNavigation from './BottomNavigation';
+import Footer from './Footer';
 
 export type LayoutProps = {
 	children: ReactNode;
@@ -24,10 +25,11 @@ const Layout = ({ children }: LayoutProps) => {
 				<title>biscuitjs | Discord Bot Framework</title>
 			</Head>
 			<Menu></Menu>
-			<main style={{ paddingBottom: showBottonNavigation && mounted ? '56px' : 'unset' }}>{children}</main>
+			<main>{children}</main>
 			<When condition={showBottonNavigation && mounted}>
 				<BottomNavigation show={showBottonNavigation}></BottomNavigation>
 			</When>
+			<Footer bottomNavigation={showBottonNavigation} mounted={mounted}></Footer>
 		</Fragment>
 	);
 };
