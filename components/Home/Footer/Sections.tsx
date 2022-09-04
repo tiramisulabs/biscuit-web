@@ -43,7 +43,7 @@ const Sections = ({ image, packageName, description, direction }: SectionsCompon
 				justifyContent: { md: 'space-between', xs: 'center' },
 				alignItems: 'center',
 				marginBottom: '200px',
-				padding: '30px',
+				padding: '15px',
 			}}
 		>
 			<Box

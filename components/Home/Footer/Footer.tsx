@@ -85,7 +85,7 @@ const Footer = () => {
 						Biscuit is primarily inspired by Discord.js and Discordeno but it does not include a cache layer by default, we believe that
 						you should not make software that does things it is not supposed to do.
 					</Typography>
-					<Stack direction="row" spacing={2} marginTop={3}>
+					<Stack direction={{ xs: 'column', md: 'row' }} spacing={2} marginTop={3}>
 						<Link href={'https://github.com/oasisjs'}>
 							<a>
 								<Button variant="outlined" size="large" startIcon={<GitHubIcon></GitHubIcon>}>

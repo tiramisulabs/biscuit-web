@@ -24,7 +24,7 @@ const Layout = ({ children }: LayoutProps) => {
 				<title>biscuitjs | Discord Bot Framework</title>
 			</Head>
 			<Menu></Menu>
-			<main style={{ paddingBottom: showBottonNavigation && mounted ? '90px' : 'unset' }}>{children}</main>
+			<main style={{ paddingBottom: showBottonNavigation && mounted ? '56px' : 'unset' }}>{children}</main>
 			<When condition={showBottonNavigation && mounted}>
 				<BottomNavigation show={showBottonNavigation}></BottomNavigation>
 			</When>
