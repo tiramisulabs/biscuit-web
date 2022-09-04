@@ -101,11 +101,10 @@ const Sections = ({ image, packageName, description, direction }: SectionsCompon
 					</Link>
 				</Box>
 				<Box
-					sx={{ display: { xs: 'flex', md: 'none' }, flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }}
 					className={Styles.feature}
 				>
 					<Link href={{ pathname: '/packages/[slug]', query: { slug: packageName } }}>
-						<CustomAnchor sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }}>
+						<CustomAnchor sx={{ display: { xs: 'flex', md: 'none' }, flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }}>
 							<Typography variant="h3" gutterBottom fontWeight="bold" color={(theme) => theme.palette.secondary.main}>
 								@biscuitland/
 							</Typography>
