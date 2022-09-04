@@ -6,6 +6,8 @@ import Stack from '@mui/material/Stack';
 import Styled from '@mui/material/styles/styled';
 import Typography from '@mui/material/Typography';
 
+import CheckIcon from '@mui/icons-material/Check';
+
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { hexColorToRgba } from '../../../lib/funtions/colors';
@@ -74,7 +76,13 @@ const Sections = ({ image, packageName, description, direction }: SectionsCompon
 							className={Styles.feature}
 							display={{ xs: 'none', md: 'block' }}
 						>
-							{copied ? 'Command copied' : command}
+							{copied ? (
+								<Stack spacing={1} direction="row" alignItems="center">
+									<CheckIcon></CheckIcon> <p>Command copied</p>
+								</Stack>
+							) : (
+								command
+							)}
 						</Typography>
 					</CopyToClipboard>
 				</Gradient>
