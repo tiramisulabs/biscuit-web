@@ -19,7 +19,6 @@ export type SectionsComponentTypes = {
 	direction: 'left' | 'right';
 };
 
-// TODO: Fix error about class names
 const Gradient = Styled('div')(({ theme }) => {
 	const color = (alpha: number) => hexColorToRgba(theme.palette.background.default, alpha);
 
@@ -30,6 +29,8 @@ const Gradient = Styled('div')(({ theme }) => {
 		padding: '40px',
 	};
 });
+
+const CustomAnchor = Styled('a')();
 
 const Sections = ({ image, packageName, description, direction }: SectionsComponentTypes) => {
 	const [copied, setCopied] = useState(false);
@@ -79,19 +80,16 @@ const Sections = ({ image, packageName, description, direction }: SectionsCompon
 				</Gradient>
 			</Box>
 			<Stack sx={{ maxWidth: { xs: '100%', md: '500px' } }} direction="column" spacing={3}>
-				<Box
-					sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }}
-					className={Styles.feature}
-				>
+				<Box className={Styles.feature}>
 					<Link href={{ pathname: '/packages/[slug]', query: { slug: packageName } }}>
-						<a>
+						<CustomAnchor sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }}>
 							<Typography variant="h2" gutterBottom fontWeight="bold" color={(theme) => theme.palette.secondary.main}>
 								@biscuitland/
 							</Typography>
 							<Typography variant="h2" gutterBottom fontWeight="bold">
 								{packageName}
 							</Typography>
-						</a>
+						</CustomAnchor>
 					</Link>
 				</Box>
 				<Box
@@ -99,14 +97,14 @@ const Sections = ({ image, packageName, description, direction }: SectionsCompon
 					className={Styles.feature}
 				>
 					<Link href={{ pathname: '/packages/[slug]', query: { slug: packageName } }}>
-						<a>
+						<CustomAnchor sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }}>
 							<Typography variant="h3" gutterBottom fontWeight="bold" color={(theme) => theme.palette.secondary.main}>
 								@biscuitland/
 							</Typography>
 							<Typography variant="h3" gutterBottom fontWeight="bold">
 								{packageName}
 							</Typography>
-						</a>
+						</CustomAnchor>
 					</Link>
 				</Box>
 				<Typography variant="h5" gutterBottom>
