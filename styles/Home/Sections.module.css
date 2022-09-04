@@ -1,7 +1,7 @@
 .container {
 	background-repeat: no-repeat;
-	background-position: right;
-	background-size: contain;
+	background-position: left;
+	background-size: cover;
 }
 
 .feature {

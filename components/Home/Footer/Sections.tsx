@@ -1,13 +1,19 @@
+import { useState } from 'react';
+import Link from 'next/link';
+
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Styled from '@mui/material/styles/styled';
 import Typography from '@mui/material/Typography';
 
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+
 import { hexColorToRgba } from '../../../lib/funtions/colors';
+import { wait } from '../../../lib/funtions/utils';
 import Styles from '../../../styles/Home/Sections.module.css';
 
 export type SectionsComponentTypes = {
-	package: string;
+	packageName: string;
 	description: string;
 	image: string;
 	direction: 'left' | 'right';
@@ -25,32 +31,83 @@ const Gradient = Styled('div')(({ theme }) => {
 	};
 });
 
-const Sections = ({ image, package: title, description, direction }: SectionsComponentTypes) => {
+const Sections = ({ image, packageName, description, direction }: SectionsComponentTypes) => {
+	const [copied, setCopied] = useState(false);
+	const [command, setCommand] = useState(`yarn add @biscuitland/${packageName}`);
+
 	return (
 		<Box
 			sx={{
 				display: 'flex',
-				flexDirection: direction === 'left' ? 'row' : 'row-reverse',
-				justifyContent: 'space-between',
+				flexDirection: direction === 'left' ? { xs: 'column', md: 'row' } : { xs: 'column', md: 'row-reverse' },
+				justifyContent: { md: 'space-between', xs: 'center' },
 				alignItems: 'center',
 				marginBottom: '200px',
+				padding: '30px',
 			}}
 		>
-			<Box width={700} height={500} className={Styles.container} style={{ backgroundImage: `url('${image}')` }}>
+			<Box
+				width={{ xs: '100%', md: '700px' }}
+				height={{ xs: '300px', md: '500px' }}
+				className={Styles.container}
+				style={{ backgroundImage: `url('${image}')` }}
+				marginRight={{ xs: '0px', md: '50px' }}
+			>
 				<Gradient sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'end', alignItems: 'end' }}>
-					<Typography variant="h5" color={(theme) => theme.palette.primary.main} fontWeight="bold" className={Styles.feature}>
-						npm i @biscuitland/{title}
-					</Typography>
+					<CopyToClipboard
+						text={command}
+						onCopy={async () => {
+							setCopied(true);
+							await wait(1_000);
+
+							if (command.startsWith('yarn')) setCommand(`npm install @biscuitland/${packageName}`);
+							else setCommand(`yarn add @biscuitland/${packageName}`);
+
+							setCopied(false);
+						}}
+					>
+						<Typography
+							variant="h5"
+							color={(theme) => theme.palette.primary.main}
+							fontWeight="bold"
+							className={Styles.feature}
+							display={{ xs: 'none', md: 'block' }}
+						>
+							{copied ? 'Command copied' : command}
+						</Typography>
+					</CopyToClipboard>
 				</Gradient>
 			</Box>
-			<Stack sx={{ maxWidth: '500px' }} direction="column" spacing={3}>
-				<Box sx={{ display: 'flex', flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }} className={Styles.feature}>
-					<Typography variant="h2" gutterBottom fontWeight="bold" color={(theme) => theme.palette.secondary.main}>
-						@biscuitland/
-					</Typography>
-					<Typography variant="h2" gutterBottom fontWeight="bold">
-						{title}
-					</Typography>
+			<Stack sx={{ maxWidth: { xs: '100%', md: '500px' } }} direction="column" spacing={3}>
+				<Box
+					sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }}
+					className={Styles.feature}
+				>
+					<Link href={{ pathname: '/packages/[slug]', query: { slug: packageName } }}>
+						<a>
+							<Typography variant="h2" gutterBottom fontWeight="bold" color={(theme) => theme.palette.secondary.main}>
+								@biscuitland/
+							</Typography>
+							<Typography variant="h2" gutterBottom fontWeight="bold">
+								{packageName}
+							</Typography>
+						</a>
+					</Link>
+				</Box>
+				<Box
+					sx={{ display: { xs: 'flex', md: 'none' }, flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }}
+					className={Styles.feature}
+				>
+					<Link href={{ pathname: '/packages/[slug]', query: { slug: packageName } }}>
+						<a>
+							<Typography variant="h3" gutterBottom fontWeight="bold" color={(theme) => theme.palette.secondary.main}>
+								@biscuitland/
+							</Typography>
+							<Typography variant="h3" gutterBottom fontWeight="bold">
+								{packageName}
+							</Typography>
+						</a>
+					</Link>
 				</Box>
 				<Typography variant="h5" gutterBottom>
 					{description}
