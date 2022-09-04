@@ -5,9 +5,10 @@ import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 
 import { hexColorToRgba } from '../lib/funtions/colors';
-import Title from '../components/Home/Header/Title';
-import Footer from '../components/Home/Header/Footer';
+import HeadTitle from '../components/Home/Header/Title';
+import HeadFooter from '../components/Home/Header/Footer';
 import Styles from '../styles/Home/Home.module.css';
+import Footer from '../components/Home/Footer/Footer';
 
 // TODO: Fix error about class names
 const Gradient = styled('div')(({ theme }) => {
@@ -27,11 +28,12 @@ const Home: NextPage = () => {
 			<div className={Styles.container}>
 				<Gradient sx={{ display: 'flex', flexDirection: 'column', height: '100vh', padding: '20px', justifyContent: 'center' }}>
 					<Container>
-						<Title></Title>
-						<Footer></Footer>
+						<HeadTitle></HeadTitle>
+						<HeadFooter></HeadFooter>
 					</Container>
 				</Gradient>
 			</div>
+			<Footer></Footer>
 		</Fragment>
 	);
 };
