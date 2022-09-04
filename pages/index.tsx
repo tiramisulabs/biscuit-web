@@ -10,7 +10,6 @@ import HeadFooter from '../components/Home/Header/Footer';
 import Styles from '../styles/Home/Home.module.css';
 import Footer from '../components/Home/Footer/Footer';
 
-// TODO: Fix error about class names
 const Gradient = styled('div')(({ theme }) => {
 	const color = (alpha: number) => hexColorToRgba(theme.palette.background.default, alpha);
 

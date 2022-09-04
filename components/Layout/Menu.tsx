@@ -14,7 +14,6 @@ import Styles from '../../styles/Layout/Menu.module.css';
 import ActiveLink from '../ActiveLink';
 import { hexColorToRgba } from '../../lib/funtions/colors';
 
-// TODO: Logic for ActiveLink class
 const Menu = () => {
 	return (
 		<Box
