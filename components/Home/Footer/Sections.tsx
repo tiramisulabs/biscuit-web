@@ -100,9 +100,7 @@ const Sections = ({ image, packageName, description, direction }: SectionsCompon
 						</CustomAnchor>
 					</Link>
 				</Box>
-				<Box
-					className={Styles.feature}
-				>
+				<Box className={Styles.feature}>
 					<Link href={{ pathname: '/packages/[slug]', query: { slug: packageName } }}>
 						<CustomAnchor sx={{ display: { xs: 'flex', md: 'none' }, flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }}>
 							<Typography variant="h3" gutterBottom fontWeight="bold" color={(theme) => theme.palette.secondary.main}>
