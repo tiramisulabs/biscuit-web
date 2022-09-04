@@ -15,8 +15,8 @@ import CheckIcon from '@mui/icons-material/Check';
 import { Else, If, Then } from 'react-if';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-import { wait } from '../../lib/funtions/utils';
-import useStats from '../../lib/hooks/stats';
+import { wait } from '../../../lib/funtions/utils';
+import useStats from '../../../lib/hooks/stats';
 
 const HomeFooter = () => {
 	const [copied, setCopied] = useState(false);

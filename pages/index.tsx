@@ -5,8 +5,8 @@ import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 
 import { hexColorToRgba } from '../lib/funtions/colors';
-import Title from '../components/Home/Title';
-import Footer from '../components/Home/Footer';
+import Title from '../components/Home/Header/Title';
+import Footer from '../components/Home/Header/Footer';
 import Styles from '../styles/Home/Home.module.css';
 
 // TODO: Fix error about class names
