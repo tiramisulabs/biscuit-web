@@ -11,7 +11,7 @@ const HomeTitle = () => {
 			<Typography variant="h2" gutterBottom fontWeight={'bold'} maxWidth={500} margin="0">
 				Create wonderful bots with{' '}
 				<Typography variant="h2" color="secondary" component="span" fontWeight={'bold'}>
-					biscuit.js
+					biscuitjs
 				</Typography>
 			</Typography>
 

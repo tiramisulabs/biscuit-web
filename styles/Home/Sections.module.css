@@ -1,0 +1,14 @@
+.container {
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: cover;
+}
+
+.feature {
+	cursor: pointer;
+	transition: all 0.1s;
+}
+
+.feature:hover {
+	transform: scale(1.1);
+}
