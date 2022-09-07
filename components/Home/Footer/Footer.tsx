@@ -16,37 +16,37 @@ const Footer = () => {
 		<Fragment>
 			<Container sx={{ display: 'flex', flexDirection: 'column', width: '100%', paddingBottom: '50px', paddingTop: '50px' }} maxWidth="xl">
 				<Sections
-					image="/home/sections/core-code.png"
+					image="/home/sections/core-code.webp"
 					packageName="core"
 					description="Classes, functions and main structures to create an application with biscuit. Core contains the essentials to launch you to develop your own customized and scalable bot."
 					direction="left"
 				></Sections>
 				<Sections
-					image="/home/sections/types-code.png"
+					image="/home/sections/types-code.webp"
 					packageName="api-types"
 					description="1:1 type definition with the latest available in the Discord API. No need to worry about your code typing anymore."
 					direction="right"
 				></Sections>
 				<Sections
-					image="/home/sections/cache-code.png"
+					image="/home/sections/cache-code.webp"
 					packageName="cache"
 					description="A cache will help you avoid making HTTP requests to the Discord api, saving you network resources and avoiding a possible Rate Limit."
 					direction="left"
 				></Sections>
 				<Sections
-					image="/home/sections/helpers-code.png"
+					image="/home/sections/helpers-code.webp"
 					packageName="helpers"
 					description="Collectors, builders and other helper functions such as setPresence."
 					direction="right"
 				></Sections>
 				<Sections
-					image="/home/sections/rest-code.png"
+					image="/home/sections/rest-code.webp"
 					packageName="rest"
 					description="Wrapper ready to make any Discord API request with simple methods."
 					direction="left"
 				></Sections>
 				<Sections
-					image="/home/sections/ws-code.png"
+					image="/home/sections/ws-code.webp"
 					packageName="ws"
 					description="A standalone gateway to interface Discord, it is meant to be used with a rest manager to send fetch requests to Discord"
 					direction="right"
@@ -83,14 +83,14 @@ const Footer = () => {
 						you should not make software that does things it is not supposed to do.
 					</Typography>
 					<Stack direction={{ xs: 'column', md: 'row' }} spacing={2} marginTop={3}>
-						<Link href={'https://github.com/oasisjs'}>
+						<Link href={'https://github.com/oasisjs'} passHref>
 							<a>
 								<Button variant="outlined" size="large" startIcon={<GitHubIcon></GitHubIcon>}>
 									Github
 								</Button>
 							</a>
 						</Link>
-						<Link href={'https://discord.com/invite/XNw2RZFzaP'}>
+						<Link href={'https://discord.com/invite/XNw2RZFzaP'} passHref>
 							<a>
 								<Button variant="contained" size="large" startIcon={<PsychologyAltIcon></PsychologyAltIcon>}>
 									Discord Server

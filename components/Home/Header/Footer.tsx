@@ -36,7 +36,7 @@ const HomeFooter = () => {
 	return (
 		<div style={{ marginTop: '50px' }}>
 			<Stack spacing={2} direction={{ xs: 'column', sm: 'row' }}>
-				<Link href={'https://github.com/oasisjs'}>
+				<Link href={'https://github.com/oasisjs'} passHref>
 					<a>
 						<Button variant="outlined" size="large" startIcon={<GitHubIcon></GitHubIcon>} fullWidth>
 							Github

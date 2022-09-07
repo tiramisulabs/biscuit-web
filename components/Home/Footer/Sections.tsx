@@ -32,7 +32,7 @@ const Gradient = Styled('div')(({ theme }) => {
 	};
 });
 
-const CustomAnchor = Styled('a')();
+const CustomAnchor = Styled('a')(() => ({}));
 
 const Sections = ({ image, packageName, description, direction }: SectionsComponentTypes) => {
 	const [copied, setCopied] = useState(false);
@@ -88,7 +88,7 @@ const Sections = ({ image, packageName, description, direction }: SectionsCompon
 			</Box>
 			<Stack sx={{ maxWidth: { xs: '100%', md: '500px' } }} direction="column" spacing={3}>
 				<Box className={Styles.feature}>
-					<Link href={{ pathname: '/packages/[slug]', query: { slug: packageName } }}>
+					<Link href={{ pathname: '/packages/[slug]', query: { slug: packageName } }} passHref>
 						<CustomAnchor sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }}>
 							<Typography variant="h2" gutterBottom fontWeight="bold" color={(theme) => theme.palette.secondary.main}>
 								@biscuitland/
@@ -100,7 +100,7 @@ const Sections = ({ image, packageName, description, direction }: SectionsCompon
 					</Link>
 				</Box>
 				<Box className={Styles.feature}>
-					<Link href={{ pathname: '/packages/[slug]', query: { slug: packageName } }}>
+					<Link href={{ pathname: '/packages/[slug]', query: { slug: packageName } }} passHref>
 						<CustomAnchor sx={{ display: { xs: 'flex', md: 'none' }, flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }}>
 							<Typography variant="h3" gutterBottom fontWeight="bold" color={(theme) => theme.palette.secondary.main}>
 								@biscuitland/
