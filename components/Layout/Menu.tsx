@@ -24,20 +24,20 @@ const Menu = () => {
 			justifyContent="space-between"
 		>
 			<Stack spacing={2} direction="row" alignItems="center">
-				<Link href={'/'}>
+				<Link href={'/'} passHref>
 					<a>
-						<Image src={'/icon.svg'} width={50} height={50} alt="Biscuit logo"></Image>
+						<Image src={'/icon.svg'} width="50px" height="50px" alt="Biscuit logo"></Image>
 					</a>
 				</Link>
 				<Stack spacing={2} direction="row" alignItems="center">
-					<ActiveLink href={'/'} activeClassName={Styles['menu-item-selected']}>
+					<ActiveLink href={'/'} activeClassName={Styles['menu-item-selected']} passHref>
 						<a>
 							<Button variant="text" startIcon={<HomeIcon></HomeIcon>}>
 								Home
 							</Button>
 						</a>
 					</ActiveLink>
-					<ActiveLink href={'/packages'} activeClassName={Styles['menu-item-selected']}>
+					<ActiveLink href={'/packages'} activeClassName={Styles['menu-item-selected']} passHref>
 						<a>
 							<Button variant="text" startIcon={<InventoryIcon></InventoryIcon>}>
 								Packages

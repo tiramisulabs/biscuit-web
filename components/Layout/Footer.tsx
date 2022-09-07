@@ -26,7 +26,7 @@ const Footer = ({ bottomNavigation, mounted }: FooterComponentTypes) => {
 					<Typography variant="subtitle1" gutterBottom marginRight={5}>
 						© {new Date().getFullYear()} biscuitland - All rights reserved.
 					</Typography>
-					<Link href={'/'}>
+					<Link href={'/'} passHref>
 						<a>
 							<IconButton aria-label="go-to-up">
 								<ArrowUpwardIcon />
