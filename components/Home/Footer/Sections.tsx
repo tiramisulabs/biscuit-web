@@ -36,7 +36,17 @@ const CustomAnchor = Styled('a')();
 
 const Sections = ({ image, packageName, description, direction }: SectionsComponentTypes) => {
 	const [copied, setCopied] = useState(false);
-	const [command, setCommand] = useState(`yarn add @biscuitland/${packageName}`);
+	const [command, setCommand] = useState(`npm install @biscuitland/${packageName}`);
+
+	const onCopyCommand = async () => {
+		setCopied(true);
+		await wait(1_000);
+
+		if (command.startsWith('yarn')) setCommand(`npm install @biscuitland/${packageName}`);
+		else setCommand(`yarn add @biscuitland/${packageName}`);
+
+		setCopied(false);
+	};
 
 	return (
 		<Box
@@ -57,18 +67,7 @@ const Sections = ({ image, packageName, description, direction }: SectionsCompon
 				marginRight={{ xs: '0px', md: '50px' }}
 			>
 				<Gradient sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'end', alignItems: 'end' }}>
-					<CopyToClipboard
-						text={command}
-						onCopy={async () => {
-							setCopied(true);
-							await wait(1_000);
-
-							if (command.startsWith('yarn')) setCommand(`npm install @biscuitland/${packageName}`);
-							else setCommand(`yarn add @biscuitland/${packageName}`);
-
-							setCopied(false);
-						}}
-					>
+					<CopyToClipboard text={command} onCopy={onCopyCommand}>
 						<Typography
 							variant="h5"
 							color={(theme) => theme.palette.primary.main}

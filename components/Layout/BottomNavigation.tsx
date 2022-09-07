@@ -27,6 +27,8 @@ const BottomNavigationComponent = ({ show }: BottomNavigationPros) => {
 	const [showDrawer, setShowDrawer] = useState(false);
 	const router = useRouter();
 
+	const hideDrawer = () => setShowDrawer(false);
+
 	useEffect(() => {
 		if (show) {
 			if (router.route === '/') setMenuPosition(1);
@@ -49,7 +51,7 @@ const BottomNavigationComponent = ({ show }: BottomNavigationPros) => {
 				<BottomNavigationAction label="Home" icon={<HomeIcon></HomeIcon>} />
 				<BottomNavigationAction label="Menu" icon={<MenuIcon></MenuIcon>} />
 			</BottomNavigation>
-			<Drawer anchor="bottom" open={showDrawer} onClose={() => setShowDrawer(false)}>
+			<Drawer anchor="bottom" open={showDrawer} onClose={hideDrawer}>
 				<nav aria-label="menu-drawer">
 					<List
 						sx={{ bgcolor: 'background.paper', width: '100%', borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }}

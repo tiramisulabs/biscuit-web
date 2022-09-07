@@ -20,8 +20,18 @@ import useStats from '../../../lib/hooks/stats';
 
 const HomeFooter = () => {
 	const [copied, setCopied] = useState(false);
-	const [command, setCommand] = useState('yarn add @biscuitland/core');
+	const [command, setCommand] = useState(`npm install @biscuitland/core`);
 	const stats = useStats();
+
+	const onCopyCommand = async () => {
+		setCopied(true);
+		await wait(1_000);
+
+		if (command.startsWith('yarn')) setCommand(`npm install @biscuitland/core`);
+		else setCommand(`yarn add @biscuitland/core`);
+
+		setCopied(false);
+	};
 
 	return (
 		<div style={{ marginTop: '50px' }}>
@@ -33,18 +43,7 @@ const HomeFooter = () => {
 						</Button>
 					</a>
 				</Link>
-				<CopyToClipboard
-					text={command}
-					onCopy={async () => {
-						setCopied(true);
-						await wait(1_000);
-
-						if (command.startsWith('yarn')) setCommand('npm install @biscuitland/core');
-						else setCommand('yarn add @biscuitland/core');
-
-						setCopied(false);
-					}}
-				>
+				<CopyToClipboard text={command} onCopy={onCopyCommand}>
 					<Button startIcon={copied ? <CheckIcon></CheckIcon> : <KeyboardCommandKeyIcon></KeyboardCommandKeyIcon>} variant="contained">
 						{copied ? 'Command copied' : command}
 					</Button>
