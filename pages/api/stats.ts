@@ -10,7 +10,7 @@ type githubRepository = {
 	stargazers_count: number;
 };
 
-type npmDownloadsStats = {
+export type npmDownloadsStatsTotal = {
 	start: string;
 	end: string;
 	package: string;
@@ -39,7 +39,7 @@ export default async function handler(_: NextApiRequest, res: NextApiResponse<St
 
 	const npmDownloadsStats = await ky
 		.get(`https://api.npmjs.org/downloads/range/2020-06-01:${new Date().toISOString().slice(0, 10)}/@oasisjs/biscuit`)
-		.json<npmDownloadsStats>();
+		.json<npmDownloadsStatsTotal>();
 
 	res.status(200).json({
 		repository: {

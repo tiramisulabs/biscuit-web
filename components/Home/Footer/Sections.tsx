@@ -11,7 +11,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { hexColorToRgba } from '../../../lib/funtions/colors';
-import { wait } from '../../../lib/funtions/utils';
+import { useInstallCommand } from '../../../lib/hooks/install-command';
 import Styles from '../../../styles/Home/Sections.module.css';
 
 export type SectionsComponentTypes = {
@@ -35,18 +35,7 @@ const Gradient = Styled('div')(({ theme }) => {
 const CustomAnchor = Styled('a')(() => ({}));
 
 const Sections = ({ image, packageName, description, direction }: SectionsComponentTypes) => {
-	const [copied, setCopied] = useState(false);
-	const [command, setCommand] = useState(`npm install @biscuitland/${packageName}`);
-
-	const onCopyCommand = async () => {
-		setCopied(true);
-		await wait(1_000);
-
-		if (command.startsWith('yarn')) setCommand(`npm install @biscuitland/${packageName}`);
-		else setCommand(`yarn add @biscuitland/${packageName}`);
-
-		setCopied(false);
-	};
+	const installCommand = useInstallCommand(`@biscuitland/${packageName}`);
 
 	return (
 		<Box
@@ -67,7 +56,7 @@ const Sections = ({ image, packageName, description, direction }: SectionsCompon
 				marginRight={{ xs: '0px', md: '50px' }}
 			>
 				<Gradient sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'end', alignItems: 'end' }}>
-					<CopyToClipboard text={command} onCopy={onCopyCommand}>
+					<CopyToClipboard text={installCommand.command} onCopy={installCommand.onCopyCommand}>
 						<Typography
 							variant="h5"
 							color={(theme) => theme.palette.primary.main}
@@ -75,12 +64,12 @@ const Sections = ({ image, packageName, description, direction }: SectionsCompon
 							className={Styles.feature}
 							display={{ xs: 'none', md: 'block' }}
 						>
-							{copied ? (
+							{installCommand.copied ? (
 								<Stack spacing={1} direction="row" alignItems="center">
 									<CheckIcon></CheckIcon> <p>Command copied</p>
 								</Stack>
 							) : (
-								command
+								installCommand.command
 							)}
 						</Typography>
 					</CopyToClipboard>
@@ -88,24 +77,12 @@ const Sections = ({ image, packageName, description, direction }: SectionsCompon
 			</Box>
 			<Stack sx={{ maxWidth: { xs: '100%', md: '500px' } }} direction="column" spacing={3}>
 				<Box className={Styles.feature}>
-					<Link href={{ pathname: '/packages/[slug]', query: { slug: packageName } }} passHref>
+					<Link href={{ pathname: `/packages/${packageName}` }} passHref>
 						<CustomAnchor sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }}>
 							<Typography variant="h2" gutterBottom fontWeight="bold" color={(theme) => theme.palette.secondary.main}>
 								@biscuitland/
 							</Typography>
 							<Typography variant="h2" gutterBottom fontWeight="bold">
-								{packageName}
-							</Typography>
-						</CustomAnchor>
-					</Link>
-				</Box>
-				<Box className={Styles.feature}>
-					<Link href={{ pathname: '/packages/[slug]', query: { slug: packageName } }} passHref>
-						<CustomAnchor sx={{ display: { xs: 'flex', md: 'none' }, flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }}>
-							<Typography variant="h3" gutterBottom fontWeight="bold" color={(theme) => theme.palette.secondary.main}>
-								@biscuitland/
-							</Typography>
-							<Typography variant="h3" gutterBottom fontWeight="bold">
 								{packageName}
 							</Typography>
 						</CustomAnchor>
