@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import NextNProgress from 'nextjs-progressbar';
 
 import createEmotionCache from '../lib/common/createEmotionCache';
 import Layout from '../components/Layout/Layout';
@@ -35,6 +36,7 @@ function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }: 
 			<ThemeProvider theme={Theme}>
 				<CssBaseline />
 				<Layout>
+					<NextNProgress color={Theme.palette.primary.main}></NextNProgress>
 					<Component {...pageProps} />
 				</Layout>
 			</ThemeProvider>

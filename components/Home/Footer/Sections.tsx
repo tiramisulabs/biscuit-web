@@ -88,24 +88,12 @@ const Sections = ({ image, packageName, description, direction }: SectionsCompon
 			</Box>
 			<Stack sx={{ maxWidth: { xs: '100%', md: '500px' } }} direction="column" spacing={3}>
 				<Box className={Styles.feature}>
-					<Link href={{ pathname: '/packages/[slug]', query: { slug: packageName } }} passHref>
+					<Link href={{ pathname: `/packages/${packageName}` }} passHref>
 						<CustomAnchor sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }}>
 							<Typography variant="h2" gutterBottom fontWeight="bold" color={(theme) => theme.palette.secondary.main}>
 								@biscuitland/
 							</Typography>
 							<Typography variant="h2" gutterBottom fontWeight="bold">
-								{packageName}
-							</Typography>
-						</CustomAnchor>
-					</Link>
-				</Box>
-				<Box className={Styles.feature}>
-					<Link href={{ pathname: '/packages/[slug]', query: { slug: packageName } }} passHref>
-						<CustomAnchor sx={{ display: { xs: 'flex', md: 'none' }, flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }}>
-							<Typography variant="h3" gutterBottom fontWeight="bold" color={(theme) => theme.palette.secondary.main}>
-								@biscuitland/
-							</Typography>
-							<Typography variant="h3" gutterBottom fontWeight="bold">
 								{packageName}
 							</Typography>
 						</CustomAnchor>

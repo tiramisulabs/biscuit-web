@@ -37,13 +37,6 @@ const Menu = () => {
 							</Button>
 						</a>
 					</ActiveLink>
-					<ActiveLink href={'/packages'} activeClassName={Styles['menu-item-selected']} passHref>
-						<a>
-							<Button variant="text" startIcon={<InventoryIcon></InventoryIcon>}>
-								Packages
-							</Button>
-						</a>
-					</ActiveLink>
 					<Link href={'https://docs.biscuitjs.com'}>
 						<a>
 							<Button variant="text" startIcon={<BookIcon></BookIcon>}>
