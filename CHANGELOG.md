@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/oasisjs/biscuit-web/compare/v0.1.3...v0.1.4) (2022-09-08)
+
+
+### Features
+
+* **api:** get npmjs packages ([272a424](https://github.com/oasisjs/biscuit-web/commit/272a4243d14443c8b7af6c61032ed04f16507438))
+* bump deps? ([bc04c05](https://github.com/oasisjs/biscuit-web/commit/bc04c05bfb2dfa0e8711084b3d9c3552c7551645))
+* bump deps? ([b8f1087](https://github.com/oasisjs/biscuit-web/commit/b8f10878d6e01bce5b2cf56653d12cdf09a44351))
+* **Home:** added responsive design ([971a331](https://github.com/oasisjs/biscuit-web/commit/971a331d13804e4cd8b32d1f59b0af09efa28d24))
+* **Home:** added sections about packages from biscuitland ([e9c86e8](https://github.com/oasisjs/biscuit-web/commit/e9c86e89646a5894de06c7eed98c7988bc60d699))
+* **pages:** added packages page ([c34f954](https://github.com/oasisjs/biscuit-web/commit/c34f954069fd672170ef28ee175958d2873e0861))
+* **styles:** custom scrollbar style ([bf948c1](https://github.com/oasisjs/biscuit-web/commit/bf948c1c18e2b89f73c36bea225d2ef63530d9ea))
+* **styles:** custom scrollbar style ([3eab9af](https://github.com/oasisjs/biscuit-web/commit/3eab9afdfe8494318127efd4e479520e1a5f6f65))
+
+
+### Bug Fixes
+
+* **components/Sections:** fix responsive design ([b243a54](https://github.com/oasisjs/biscuit-web/commit/b243a543af697e7dffe0ba5601fc860e10905f57))
+* **deps:** update dependency ky to ^0.31.3 ([d8780f6](https://github.com/oasisjs/biscuit-web/commit/d8780f6c2a5787de117b2734d07dc7296feddc85))
+* **pages/Home:** fix responsive design ([d138868](https://github.com/oasisjs/biscuit-web/commit/d13886830df242e92fc6c83f29e1ac1b4b541831))
+* **pages/Home:** fix responsive design ([400d4ba](https://github.com/oasisjs/biscuit-web/commit/400d4ba4cba350033bda68ed39b13a27d1784342))
+* **pages/Home:** fix responsive design ([a48dc2e](https://github.com/oasisjs/biscuit-web/commit/a48dc2e9289485581992ff2a48f10a47c2278624))
+* some fixes and yarn >>>> npm ([71a8529](https://github.com/oasisjs/biscuit-web/commit/71a85292934ef2a23d80789e93514122142534d1))
+
 ### [0.1.3](https://github.com/oasisjs/biscuit-web/compare/v0.1.2...v0.1.3) (2022-09-01)
 
 ### [0.1.2](https://github.com/oasisjs/biscuit-web/compare/v0.1.1...v0.1.2) (2022-09-01)
