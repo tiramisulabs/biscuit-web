@@ -8,7 +8,7 @@ const useStats = () => {
 	const [loading, setLoading] = useState(true);
 	const [stats, setStats] = useState<StatsResponse>({
 		repository: { name: 'oasisjs/biscuit', description: '', url: '', stargazers: 0 },
-		npm: { name: '@oasisjs/biscuit', downloads: 0 },
+		npm: { name: '@biscuitland/core', downloads: 0 },
 	});
 
 	useEffect(() => {

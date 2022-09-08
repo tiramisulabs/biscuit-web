@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { NextPage, GetServerSideProps } from 'next';
 import Head from 'next/head';
 import ky from 'ky';
@@ -6,7 +6,8 @@ import ky from 'ky';
 import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 
-import Styles from '../../styles/Packages/Info.module.css';
+import Markdoc from '@markdoc/markdoc';
+
 import Header from '../../components/Packages/Header';
 import { PackageInfo } from '../api/package/[name]';
 
@@ -15,6 +16,8 @@ interface Props {
 }
 
 const Packages: NextPage<Props> = ({ pkg }) => {
+	const readme = Markdoc.transform(Markdoc.parse(pkg.readme));
+
 	return (
 		<Fragment>
 			<Head>
@@ -25,8 +28,18 @@ const Packages: NextPage<Props> = ({ pkg }) => {
 			</Head>
 			<Header pkg={pkg}></Header>
 			<Container maxWidth="lg">
-				<Paper className={Styles.readme} elevation={0}>
-					<div dangerouslySetInnerHTML={{ __html: pkg.readme }} style={{ overflowX: 'auto' }}></div>
+				<Paper
+					elevation={0}
+					sx={{
+						overflowX: 'auto',
+						width: ' 100%',
+						padding: '20px',
+						marginBottom: '20px',
+						borderBottomLeftRadius: '20px',
+						borderBottomRightRadius: '20px',
+					}}
+				>
+					{Markdoc.renderers.react(readme, React)}
 				</Paper>
 			</Container>
 		</Fragment>

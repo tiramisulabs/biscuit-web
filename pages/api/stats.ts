@@ -38,7 +38,7 @@ export default async function handler(_: NextApiRequest, res: NextApiResponse<St
 		.json<githubRepository>();
 
 	const npmDownloadsStats = await ky
-		.get(`https://api.npmjs.org/downloads/range/2020-06-01:${new Date().toISOString().slice(0, 10)}/@oasisjs/biscuit`)
+		.get(`https://api.npmjs.org/downloads/range/2020-06-01:${new Date().toISOString().slice(0, 10)}/@biscuitland/core`)
 		.json<npmDownloadsStatsTotal>();
 
 	res.status(200).json({

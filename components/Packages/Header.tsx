@@ -18,7 +18,7 @@ import Progressbar from '../Progressbar';
 
 import { useInstallCommand } from '../../lib/hooks/install-command';
 import { PackageInfo } from '../../pages/api/package/[name]';
-import Styles from '../../styles/Packages/Info.module.css';
+import Styles from '../../styles/Packages/Header.module.css';
 
 const Header = ({ pkg }: { pkg: PackageInfo }) => {
 	const installCommand = useInstallCommand(pkg.fullname);
@@ -108,14 +108,12 @@ const Header = ({ pkg }: { pkg: PackageInfo }) => {
 				</Grid>
 				<Grid
 					container
-					columns={3}
+					columns={{ xs: 1, lg: 3 }}
 					className={Styles.stats}
-					sx={{ backgroundColor: (theme) => theme.palette.background.default }}
 					alignItems="center"
-					justifyContent="center"
+					justifyContent="space-between"
 					direction={{ lg: 'row', md: 'row', xs: 'column' }}
-					marginBottom={{ xs: '35px', lg: '0px' }}
-					paddingTop={{ md: '20px' }}
+					padding={{ md: '20px' }}
 				>
 					<Grid item>
 						<Stack direction="row" spacing={2}>

@@ -1,5 +1,4 @@
 import ky from 'ky';
-import * as markdown from 'markdown-it';
 
 import { NextApiRequest, NextApiResponse } from 'next';
 import { npmDownloadsStatsTotal } from '../stats';
@@ -44,7 +43,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 	if (packages.total === 0) return res.status(404);
 
 	const npmDownloadsStats = await ky
-		.get(`https://api.npmjs.org/downloads/range/2020-06-01:${new Date().toISOString().slice(0, 10)}/@oasisjs/biscuit`)
+		.get(`https://api.npmjs.org/downloads/range/2020-06-01:${new Date().toISOString().slice(0, 10)}/@biscuitland/${name}`)
 		.json<npmDownloadsStatsTotal>();
 
 	const readme = await ky.get(`https://raw.githubusercontent.com/oasisjs/biscuit/main/packages/${name}/README.md`).arrayBuffer();
@@ -69,7 +68,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 			},
 		},
 		scope,
-		readme: markdown.default().render(readmeParsed),
+		readme: readmeParsed,
 		downloads: npmDownloadsStats.downloads.reduce<number>((a, b) => a + b.downloads, 0),
 	});
 }

@@ -3,6 +3,7 @@
 	margin-bottom: 20px;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
+	padding: 20px;
 }
 
 .info {
@@ -19,12 +20,4 @@
 	margin-top: 20px;
 	padding-bottom: 10px;
 	border-radius: 30px;
-}
-
-.readme {
-	width: 100%;
-	padding: 20px;
-	margin-bottom: 20px;
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;
 }
