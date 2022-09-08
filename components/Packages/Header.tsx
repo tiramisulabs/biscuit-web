@@ -18,7 +18,7 @@ import Progressbar from '../Progressbar';
 
 import { useInstallCommand } from '../../lib/hooks/install-command';
 import { PackageInfo } from '../../pages/api/package/[name]';
-import Styles from '../../../styles/Packages/Info.module.css';
+import Styles from '../../styles/Packages/Info.module.css';
 
 const Header = ({ pkg }: { pkg: PackageInfo }) => {
 	const installCommand = useInstallCommand(pkg.fullname);
