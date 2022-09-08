@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/oasisjs/biscuit-web/compare/v0.1.4...v0.1.5) (2022-09-08)
+
+
+### Bug Fixes
+
+* title packages not showing in home page ([bcde03b](https://github.com/oasisjs/biscuit-web/commit/bcde03b40e5ad86aa89bfb0f264ae3b10f8ca429))
+
 ### [0.1.4](https://github.com/oasisjs/biscuit-web/compare/v0.1.3...v0.1.4) (2022-09-08)
 
 
