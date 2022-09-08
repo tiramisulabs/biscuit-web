@@ -88,6 +88,18 @@ const Sections = ({ image, packageName, description, direction }: SectionsCompon
 						</CustomAnchor>
 					</Link>
 				</Box>
+				<Box className={Styles.feature}>
+					<Link href={{ pathname: '/packages/[slug]', query: { slug: packageName } }} passHref>
+						<CustomAnchor sx={{ display: { xs: 'flex', md: 'none' }, flexDirection: 'row', flexFlow: 'wrap', cursor: 'pointer' }}>
+							<Typography variant="h3" gutterBottom fontWeight="bold" color={(theme) => theme.palette.secondary.main}>
+								@biscuitland/
+							</Typography>
+							<Typography variant="h3" gutterBottom fontWeight="bold">
+								{packageName}
+							</Typography>
+						</CustomAnchor>
+					</Link>
+				</Box>
 				<Typography variant="h5" gutterBottom>
 					{description}
 				</Typography>
