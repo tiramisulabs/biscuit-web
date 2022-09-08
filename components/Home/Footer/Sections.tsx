@@ -11,7 +11,6 @@ import CheckIcon from '@mui/icons-material/Check';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { hexColorToRgba } from '../../../lib/funtions/colors';
-import { wait } from '../../../lib/funtions/utils';
 import { useInstallCommand } from '../../../lib/hooks/install-command';
 import Styles from '../../../styles/Home/Sections.module.css';
 
