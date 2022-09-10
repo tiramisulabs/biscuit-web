@@ -27,7 +27,7 @@ const Packages: NextPage<Props> = ({ pkg }) => {
 				<meta name="og:description" content={pkg.description} />
 			</Head>
 			<Header pkg={pkg}></Header>
-			<Container maxWidth="lg">
+			<Container maxWidth="lg" sx={{ minHeight: '100vh' }}>
 				<Paper
 					elevation={0}
 					sx={{
