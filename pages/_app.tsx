@@ -1,4 +1,6 @@
 import '../styles/globals.css';
+import 'animate.css/animate.min.css';
+
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
@@ -10,6 +12,7 @@ import NextNProgress from 'nextjs-progressbar';
 import createEmotionCache from '../lib/common/createEmotionCache';
 import Layout from '../components/Layout/Layout';
 import Theme from '../lib/common/theme';
+import { Box } from '@mui/material';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -37,7 +40,9 @@ function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }: 
 				<CssBaseline />
 				<Layout>
 					<NextNProgress color={Theme.palette.primary.main}></NextNProgress>
-					<Component {...pageProps} />
+					<Box minHeight="100vh">
+						<Component {...pageProps} />
+					</Box>
 				</Layout>
 			</ThemeProvider>
 		</CacheProvider>

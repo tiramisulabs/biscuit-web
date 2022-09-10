@@ -21,10 +21,12 @@
 		"@markdoc/markdoc": "^0.1.7",
 		"@mui/icons-material": "^5.10.3",
 		"@mui/material": "^5.10.4",
+		"animate.css": "^4.1.1",
 		"ky": "^0.31.3",
 		"next": "12.3.0",
 		"nextjs-progressbar": "^0.0.14",
 		"react": "18.2.0",
+		"react-animation-on-scroll": "^5.1.0",
 		"react-copy-to-clipboard": "^5.1.0",
 		"react-dom": "18.2.0",
 		"react-if": "^4.1.4"
