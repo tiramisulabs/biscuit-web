@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/oasisjs/biscuit-web/compare/v0.1.5...v0.1.6) (2022-09-19)
+
+
+### Features
+
+* **pages:** added animations ([fbd679f](https://github.com/oasisjs/biscuit-web/commit/fbd679f482198339f2868bf79211b92aa11c8036))
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([72e7d03](https://github.com/oasisjs/biscuit-web/commit/72e7d0399bd36328e725ca01f392bf23ba89864e))
+* **pages:** some improvements in packages page ([19c5d7c](https://github.com/oasisjs/biscuit-web/commit/19c5d7c22470d722419aed70f2f3c68c04f2cdc6))
+* **sections:** broken url in title links ([d2c00d9](https://github.com/oasisjs/biscuit-web/commit/d2c00d9bd7fa6f876b543df06a8013da5c41e898))
+
 ### [0.1.5](https://github.com/oasisjs/biscuit-web/compare/v0.1.4...v0.1.5) (2022-09-08)
 
 
