@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/oasisjs/biscuit-web/compare/v0.1.7...v0.1.8) (2022-09-24)
+
+
+### Features
+
+* improve seo and better animations in home page ([3e46614](https://github.com/oasisjs/biscuit-web/commit/3e4661485c2b3a833c36953553743386e335c946))
+
+
+### Bug Fixes
+
+* bottom menu bar incorrect item select on router ([adc462f](https://github.com/oasisjs/biscuit-web/commit/adc462f0c15248190342793671c251039181441a))
+
 ### [0.1.7](https://github.com/oasisjs/biscuit-web/compare/v0.1.6...v0.1.7) (2022-09-24)
 
 
