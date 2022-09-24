@@ -18,8 +18,8 @@ const Footer = ({ bottomNavigation, mounted }: FooterComponentTypes) => {
 		>
 			<Container>
 				<Divider sx={{ marginBottom: '30px' }}></Divider>
-				<Box display="flex" flexDirection="row" justifyContent="center" alignItems="center">
-					<Typography variant="subtitle1" gutterBottom marginRight={5}>
+				<Box p={2} display="flex" flexDirection="row" justifyContent="center" alignItems="center" textAlign="center">
+					<Typography variant="subtitle1" gutterBottom>
 						© {new Date().getFullYear()} biscuitland - All rights reserved.
 					</Typography>
 				</Box>

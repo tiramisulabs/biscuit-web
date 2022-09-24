@@ -1,5 +1,5 @@
 import Markdown from 'markdown-to-jsx';
-import { CopyBlock, dracula } from 'react-code-blocks';
+import { CodeBlock, dracula } from 'react-code-blocks';
 
 type Props = {
 	readme: string;
@@ -12,7 +12,8 @@ const Readme = ({ readme }: Props) => {
 				overrides: {
 					code: {
 						component: ({ children }) => (
-							<CopyBlock
+							<CodeBlock
+								showLineNumbers={false}
 								customStyle={{ backgroundColor: 'transparent', overflowX: 'scroll', overflowY: 'hidden' }}
 								theme={dracula}
 								text={children}

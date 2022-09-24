@@ -23,7 +23,11 @@ interface Props {
 const Packages: NextPage<Props> = ({ pkg }) => {
 	return (
 		<Fragment>
-			<NextSeo title={pkg.fullname} description={pkg.description} />
+			<NextSeo
+				title={pkg.fullname}
+				description={pkg.description}
+				openGraph={{ images: [{ url: `https://www.biscuitjs.com/home/sections/${pkg.name}-code.webp` }] }}
+			/>
 			<Header pkg={pkg}></Header>
 			<Container maxWidth="lg" sx={{ minHeight: '100vh' }}>
 				<Paper
