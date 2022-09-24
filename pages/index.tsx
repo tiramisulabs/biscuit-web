@@ -5,10 +5,12 @@ import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 
 import { hexColorToRgba } from '../lib/funtions/colors';
-import HeadTitle from '../components/Home/Header/Title';
-import HeadFooter from '../components/Home/Header/Footer';
 import Styles from '../styles/Home/Home.module.css';
-import Footer from '../components/Home/Footer/Footer';
+import dynamic from 'next/dynamic';
+
+const HeaderTitle = dynamic(() => import('../components/Home/Header/Title'));
+const HeaderFooter = dynamic(() => import('../components/Home/Header/Footer'));
+const Footer = dynamic(() => import('../components/Home/Footer/Footer'));
 
 const Gradient = styled('div')(({ theme }) => {
 	const color = (alpha: number) => hexColorToRgba(theme.palette.background.default, alpha);
@@ -27,8 +29,8 @@ const Home: NextPage = () => {
 			<div className={Styles.container}>
 				<Gradient sx={{ display: 'flex', flexDirection: 'column', height: '100vh', padding: '20px', justifyContent: 'center' }}>
 					<Container>
-						<HeadTitle></HeadTitle>
-						<HeadFooter></HeadFooter>
+						<HeaderTitle />
+						<HeaderFooter />
 					</Container>
 				</Gradient>
 			</div>

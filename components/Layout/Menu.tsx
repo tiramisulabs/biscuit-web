@@ -22,6 +22,7 @@ const Menu = () => {
 			sx={{ display: { xs: 'none', sm: 'flex' }, bgcolor: (theme) => hexColorToRgba(theme.palette.background.default, 0.5) }}
 			flexDirection="row"
 			justifyContent="space-between"
+			zIndex={10}
 		>
 			<Stack spacing={2} direction="row" alignItems="center">
 				<Link href={'/'} passHref>

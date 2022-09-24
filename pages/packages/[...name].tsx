@@ -1,23 +1,25 @@
 import React, { Fragment } from 'react';
 import { NextPage, GetServerSideProps } from 'next';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import ky from 'ky';
 
 import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 
-import Markdoc from '@markdoc/markdoc';
-
 import Header from '../../components/Packages/Header';
 import { PackageInfo } from '../api/package/[name]';
+
+import Styles from '../../styles/Packages/Container.module.css';
+import ReadmeLoading from '../../components/Packages/ReadmeLoading';
+
+const Readme = dynamic(() => import('../../components/Packages/Readme'), { ssr: false, loading: () => <ReadmeLoading /> });
 
 interface Props {
 	pkg: PackageInfo;
 }
 
 const Packages: NextPage<Props> = ({ pkg }) => {
-	const readme = Markdoc.transform(Markdoc.parse(pkg.readme));
-
 	return (
 		<Fragment>
 			<Head>
@@ -29,6 +31,7 @@ const Packages: NextPage<Props> = ({ pkg }) => {
 			<Header pkg={pkg}></Header>
 			<Container maxWidth="lg" sx={{ minHeight: '100vh' }}>
 				<Paper
+					className={Styles.container}
 					elevation={0}
 					sx={{
 						overflowX: 'auto',
@@ -39,7 +42,7 @@ const Packages: NextPage<Props> = ({ pkg }) => {
 						borderBottomRightRadius: '20px',
 					}}
 				>
-					{Markdoc.renderers.react(readme, React)}
+					<Readme readme={pkg.readme} />
 				</Paper>
 			</Container>
 		</Fragment>

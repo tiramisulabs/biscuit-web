@@ -1,19 +1,18 @@
 import '../styles/globals.css';
 import 'animate.css/animate.min.css';
 
+import dynamic from 'next/dynamic';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
 import { CacheProvider, EmotionCache } from '@emotion/react';
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import NextNProgress from 'nextjs-progressbar';
 
 import createEmotionCache from '../lib/common/createEmotionCache';
-import Layout from '../components/Layout/Layout';
-import Theme from '../lib/common/theme';
 
 const clientSideEmotionCache = createEmotionCache();
+const ThemeCustomProvider = dynamic(() => import('../components/ThemeProvider'));
+
+const Layout = dynamic(() => import('../components/Layout/Layout'));
 
 function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }: CustomAppProps) {
 	return (
@@ -35,13 +34,11 @@ function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }: 
 					content="Biscuit is primarily inspired by Discord.js and Discordeno but it does not include a cache layer by default, we believe that you should not make software that does things it is not supposed to do."
 				/>
 			</Head>
-			<ThemeProvider theme={Theme}>
-				<CssBaseline />
+			<ThemeCustomProvider>
 				<Layout>
-					<NextNProgress color={Theme.palette.primary.main}></NextNProgress>
 					<Component {...pageProps} />
 				</Layout>
-			</ThemeProvider>
+			</ThemeCustomProvider>
 		</CacheProvider>
 	);
 }

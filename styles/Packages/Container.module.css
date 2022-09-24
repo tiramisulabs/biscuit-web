@@ -1,0 +1,12 @@
+.container a {
+	text-decoration: underline;
+}
+
+.container span {
+	background: transparent !important;
+	white-space: inherit !important;
+}
+
+.container pre button {
+	cursor: pointer;
+}
