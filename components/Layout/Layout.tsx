@@ -1,6 +1,5 @@
 import { ReactNode, Fragment, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Head from 'next/head';
 
 import { When } from 'react-if';
 import { Theme } from '@mui/material/styles';
@@ -27,9 +26,6 @@ const Layout = ({ children }: LayoutProps) => {
 
 	return (
 		<Fragment>
-			<Head>
-				<title>biscuitjs | Discord Bot Framework</title>
-			</Head>
 			<Menu></Menu>
 			<ScrollToUp />
 			<main style={{ paddingTop: router.pathname === '/' ? '0px' : showBottonNavigation ? '0px' : '60px' }}>{children}</main>

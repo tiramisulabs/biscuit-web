@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react';
 import { NextPage, GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
-import Head from 'next/head';
-import ky from 'ky';
 
 import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
+
+import { NextSeo } from 'next-seo';
+import ky from 'ky';
 
 import Header from '../../components/Packages/Header';
 import { PackageInfo } from '../api/package/[name]';
@@ -22,12 +23,7 @@ interface Props {
 const Packages: NextPage<Props> = ({ pkg }) => {
 	return (
 		<Fragment>
-			<Head>
-				<title>{pkg.fullname} | biscuitjs</title>
-				<meta name="og:title" content={`${pkg.fullname} | biscuitjs`} />
-				<meta name="description" content={pkg.description} />
-				<meta name="og:description" content={pkg.description} />
-			</Head>
+			<NextSeo title={pkg.fullname} description={pkg.description} />
 			<Header pkg={pkg}></Header>
 			<Container maxWidth="lg" sx={{ minHeight: '100vh' }}>
 				<Paper

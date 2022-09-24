@@ -8,6 +8,8 @@ import { hexColorToRgba } from '../lib/funtions/colors';
 import Styles from '../styles/Home/Home.module.css';
 import dynamic from 'next/dynamic';
 
+import 'animate.css/animate.min.css';
+
 const HeaderTitle = dynamic(() => import('../components/Home/Header/Title'));
 const HeaderFooter = dynamic(() => import('../components/Home/Header/Footer'));
 const Footer = dynamic(() => import('../components/Home/Footer/Footer'));

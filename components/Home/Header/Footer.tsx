@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import Fade from '@mui/material/Fade';
+import Grow from '@mui/material/Grow';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Chip from '@mui/material/Chip';
@@ -23,7 +23,7 @@ const HomeFooter = () => {
 	const stats = useStats();
 
 	return (
-		<Fade in timeout={4e3} unmountOnExit>
+		<Grow in timeout={3_000} unmountOnExit>
 			<div style={{ marginTop: '50px' }}>
 				<Stack spacing={2} direction={{ xs: 'column', sm: 'row' }}>
 					<Link href={'https://github.com/oasisjs'} passHref>
@@ -71,7 +71,7 @@ const HomeFooter = () => {
 					</If>
 				</Stack>
 			</div>
-		</Fade>
+		</Grow>
 	);
 };
 
