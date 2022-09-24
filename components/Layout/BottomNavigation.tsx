@@ -31,7 +31,7 @@ const BottomNavigationComponent = ({ show }: BottomNavigationPros) => {
 	useEffect(() => {
 		if (show) {
 			if (router.route === '/') setMenuPosition(1);
-			if (router.route === '/packages') setMenuPosition(2);
+			if (router.route.includes('/packages')) setMenuPosition(2);
 		}
 	}, [router.route, show]);
 

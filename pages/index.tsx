@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 
 import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
@@ -37,6 +37,10 @@ const Home: NextPage = () => {
 			<Footer></Footer>
 		</Fragment>
 	);
+};
+
+export const getStaticProps: GetStaticProps = () => {
+	return { props: {}, revalidate: 3600 };
 };
 
 export default Home;

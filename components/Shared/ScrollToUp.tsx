@@ -26,7 +26,7 @@ const ScrollToUp = () => {
 	});
 
 	return (
-		<Fade in={visible} style={{ zIndex: 10, position: 'fixed', margin: 40, bottom: 0, right: 0 }}>
+		<Fade in={visible} style={{ zIndex: 10, position: 'fixed', margin: '40px 40px 80px 40px', bottom: 0, right: 0 }}>
 			<IconButton
 				size="large"
 				aria-label="Go to up"
