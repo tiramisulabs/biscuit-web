@@ -15,7 +15,6 @@ import ListSubheader from '@mui/material/ListSubheader';
 import HomeIcon from '@mui/icons-material/Home';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuIcon from '@mui/icons-material/Menu';
-import InventoryIcon from '@mui/icons-material/Inventory';
 import BookIcon from '@mui/icons-material/Book';
 
 export type BottomNavigationPros = {
@@ -57,14 +56,6 @@ const BottomNavigationComponent = ({ show }: BottomNavigationPros) => {
 						sx={{ bgcolor: 'background.paper', width: '100%', borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }}
 						subheader={<ListSubheader>Menu</ListSubheader>}
 					>
-						<ListItem disablePadding onClick={() => router.push('/packages')}>
-							<ListItemButton selected={menuPosition === 3}>
-								<ListItemIcon>
-									<InventoryIcon />
-								</ListItemIcon>
-								<ListItemText primary="Packages" />
-							</ListItemButton>
-						</ListItem>
 						<ListItem disablePadding onClick={() => router.push('https://docs.biscuitjs.com')}>
 							<ListItemButton>
 								<ListItemIcon>
