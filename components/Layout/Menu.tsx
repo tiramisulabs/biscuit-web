@@ -27,7 +27,7 @@ const Menu = () => {
 			<Stack spacing={2} direction="row" alignItems="center">
 				<Link href={'/'} passHref>
 					<a>
-						<Image src={'/icon.svg'} width="50px" height="50px" alt="Biscuit logo"></Image>
+						<Image src={'/icon.svg'} width={50} height={50} alt="Biscuit logo"></Image>
 					</a>
 				</Link>
 				<Stack spacing={2} direction="row" alignItems="center">

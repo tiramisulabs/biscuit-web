@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 const HomeTitle = () => {
 	return (
 		<Box textAlign={'start'} marginBottom={'20px'}>
-			<Image src={'/icon.svg'} width="200px" height="200px" alt="biscuit.js Icon"></Image>
+			<Image src={'/icon.svg'} width={200} height={200} alt="biscuit.js Icon"></Image>
 			<Grow in={true} timeout={1_000}>
 				<Typography variant="h2" gutterBottom fontWeight={'bold'} maxWidth={500} margin="0">
 					Create wonderful bots with{' '}
