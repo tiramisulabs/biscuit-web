@@ -6,7 +6,6 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
 import HomeIcon from '@mui/icons-material/Home';
-import InventoryIcon from '@mui/icons-material/Inventory';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import BookIcon from '@mui/icons-material/Book';
 
@@ -40,7 +39,7 @@ const Menu = () => {
 					</ActiveLink>
 					<Link href={'https://docs.biscuitjs.com'}>
 						<a>
-							<Button variant="text" startIcon={<BookIcon></BookIcon>}>
+							<Button variant="text" color="secondary" startIcon={<BookIcon></BookIcon>}>
 								Documentation
 							</Button>
 						</a>
