@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.10](https://github.com/oasisjs/biscuit-web/compare/v0.1.9...v0.1.10) (2022-11-06)
+
+
+### Features
+
+* **pages:** prerender pages ([c755a0f](https://github.com/oasisjs/biscuit-web/commit/c755a0fea4ef3406d5c4bbebf5696115894547dc))
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([9d4c90a](https://github.com/oasisjs/biscuit-web/commit/9d4c90adb4f001a925d9957d539f4f548e857308))
+* **deps:** update all non-major dependencies ([18e29e6](https://github.com/oasisjs/biscuit-web/commit/18e29e6bb20839ebd8bb9582470e80598ff4f2c4))
+* **deps:** update all non-major dependencies ([cf9706b](https://github.com/oasisjs/biscuit-web/commit/cf9706b27058aec1d0b7b7eba8bef99c6e0a1f19))
+* **deps:** update all non-major dependencies ([d6af575](https://github.com/oasisjs/biscuit-web/commit/d6af57569e59076d5dcc6758b2949d0b57f64395))
+* **deps:** update all non-major dependencies ([f28c1e5](https://github.com/oasisjs/biscuit-web/commit/f28c1e53880c370a7587fad71b391d2783a2eff2))
+* **pages/index:** api url in request ([8420c0e](https://github.com/oasisjs/biscuit-web/commit/8420c0e56eca4431ceae3e64fa5defd7812e47b8))
+
 ### [0.1.9](https://github.com/oasisjs/biscuit-web/compare/v0.1.8...v0.1.9) (2022-09-24)
 
 
