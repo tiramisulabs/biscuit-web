@@ -48,7 +48,7 @@ const Home: NextPage<HomeProps> = ({ stats }) => {
 };
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-	const apiStats = await ky.get('/api/stats').json<StatsResponse>();
+	const apiStats = await ky.get(`${process.env.NEXT_PUBLIC_API_URL}/stats`).json<StatsResponse>();
 	return { props: { stats: apiStats }, revalidate: 3600 };
 };
 
