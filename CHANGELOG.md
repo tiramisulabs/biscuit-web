@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.11](https://github.com/oasisjs/biscuit-web/compare/v0.1.10...v0.1.11) (2022-11-06)
+
+
+### Bug Fixes
+
+* **pages:** when not testing new updates ([1ba05ea](https://github.com/oasisjs/biscuit-web/commit/1ba05ea3126da51c679c633bb676203b35758d2f))
+
 ### [0.1.10](https://github.com/oasisjs/biscuit-web/compare/v0.1.9...v0.1.10) (2022-11-06)
 
 
