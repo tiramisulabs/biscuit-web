@@ -22,7 +22,7 @@ const Footer = () => {
 					direction="left"
 				></Sections>
 				<Sections
-					image="/home/sections/types-code.webp"
+					image="/home/sections/api-types-code.webp"
 					packageName="api-types"
 					description="1:1 type definition with the latest available in the Discord API. No need to worry about your code typing anymore."
 					direction="right"
