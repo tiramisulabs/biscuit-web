@@ -35,7 +35,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
 	const packages = await ky
 		.get('http://registry.npmjs.com/-/v1/search', {
-			headers: { Authorization: `Bearer ${process.env.API_KEY_GITHUB}` },
 			searchParams: { text: `@biscuitland/${name}`, size: 1 },
 		})
 		.json<npmjsSearchPackages>();
