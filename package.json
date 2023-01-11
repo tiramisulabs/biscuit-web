@@ -20,7 +20,8 @@
     "cz-conventional-changelog": "^3.3.0",
     "git-cz": "^4.9.0",
     "husky": "^8.0.3",
-    "nuxt": "3.0.0"
+    "nuxt": "3.0.0",
+    "nuxt-icon": "^0.1.8"
   },
   "config": {
     "commitizen": {
@@ -35,12 +36,15 @@
   },
   "pnpm": {
     "peerDependencyRules": {
-      "ignoreMissing": ["webpack"]
+      "ignoreMissing": [
+        "webpack"
+      ]
     },
     "allowedDeprecatedVersions": {
-      "sourcemap-codec": "1.4.8",
-      "rollup-plugin-terser": "7.0.2",
-      "stable": "0.1.8"
+      "sourcemap-codec": "*",
+      "rollup-plugin-terser": "*",
+      "stable": "*",
+      "vue": "*"
     }
   },
   "packageManager": "pnpm@7.0.0"
