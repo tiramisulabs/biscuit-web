@@ -8,10 +8,36 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "update": "pnpm up --interactive",
+    "update:force": "pnpm up --latest",
+    "postinstall": "nuxt prepare && husky install .husky"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.1",
+    "@commitlint/config-conventional": "^17.4.0",
+    "@commitlint/format": "^17.4.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "git-cz": "^4.9.0",
+    "husky": "^8.0.3",
     "nuxt": "3.0.0"
   },
-  "packageManager": "pnpm"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+	"commitlint": {
+    "formatter": "@commitlint/format",
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+  "pnpm": {
+    "allowedDeprecatedVersions": {
+      "sourcemap-codec": "1.4.8",
+      "rollup-plugin-terser": "7.0.2",
+      "stable": "0.1.8"
+    }
+  },
+  "packageManager": "pnpm@7.0.0"
 }
