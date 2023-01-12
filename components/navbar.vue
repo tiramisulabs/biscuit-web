@@ -14,13 +14,15 @@
                     </NuxtLink>
                 </li>
             </ul>
-            <Button buttonStyle="solid" icon-left="lucide:github">Github</Button>
+            <NuxtLink :href="config.public.githubUrl" target="__blank">
+                <Button buttonStyle="solid" icon-left="lucide:github">Github</Button>
+            </NuxtLink>
         </div>
     </nav>
 </template>
 
 
 <script lang="ts" setup>
+const config = useRuntimeConfig()
 const menuSections = [{ name: 'Home', path: '/' }, { name: 'Utilities', path: '/utilities' }, { name: 'Discord Server', path: 'https://discord.gg/sTaJ744d' }]
-const route = useRoute();
 </script>

@@ -40,9 +40,11 @@
                     <Button buttonStyle="solid" icon-left="lucide:party-popper">
                         Get started
                     </Button>
-                    <Button buttonStyle="ghost" icon-left="lucide:github">
-                        Github
-                    </Button>
+                    <NuxtLink :href="config.public.githubUrl" target="_blank">
+                        <Button buttonStyle="ghost" icon-left="lucide:github">
+                            Github
+                        </Button>
+                    </NuxtLink>
                 </div>
             </div>
             <div class="w-1/2">
@@ -160,16 +162,22 @@
                 </h4>
             </div>
             <div class="flex space-x-4">
-                <Button button-style="solid" icon-left="lucide:user">
-                    Join the support server
-                </Button>
-                <Button button-style="ghost" icon-left="lucide:github"> Github </Button>
+                <NuxtLink :href="config.public.discordSupportUrl" target="_blank">
+                    <Button button-style="solid" icon-left="lucide:user">
+                        Join the support server
+                    </Button>
+                </NuxtLink>
+                <NuxtLink :href="config.public.githubUrl" target="_blank">
+                    <Button button-style="ghost" icon-left="lucide:github"> Github </Button>
+                </NuxtLink>
             </div>
         </section>
     </main>
 </template>
 
 <script lang="ts" setup>
+const config = useRuntimeConfig()
+
 const commands = [
     "npm install @biscuitland/core",
     "npm run start",

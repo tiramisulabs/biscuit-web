@@ -27,6 +27,13 @@ export default defineNuxtConfig({
       ],
     },
   },
+  runtimeConfig: {
+    public: {
+      githubUrl: "https://github.com/oasisjs/biscuit",
+      discordSupportUrl: "https://discord.gg/RmW54ShzMA",
+      secretDiscordSupportUrl: "https://discord.gg/KAVzwsXdZu",
+    },
+  },
   delayHydration: {
     mode: "mount",
   },
