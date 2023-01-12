@@ -1,5 +1,5 @@
 <template>
-    <main class="mx-auto px-24 max-w-screen-xl flex justify-between flex-col">
+    <main class="mx-auto px-12 max-w-screen-xl flex justify-between flex-col">
         <section class="flex py-44 space-x-12">
             <div class="w-1/2 space-y-8">
                 <div class="flex flex-col space-y-5">
