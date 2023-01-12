@@ -2,7 +2,7 @@
     <nav class="flex text-white items-center justify-between mx-auto px-20 py-8 max-w-7xl">
         <NuxtLink :to="'/'">
             <div class="space-x-4 flex items-center cursor-pointer">
-                <img src="~/assets/icon.svg" alt="@biscuit/land icon" class="w-auto h-9">
+                <img src="/icon.svg" alt="@biscuit/land icon" class="w-auto h-9">
                 <h2 class="font-bold text-2xl">biscuitland <span class="text-blue-400">/web</span></h2>
             </div>
         </NuxtLink>
