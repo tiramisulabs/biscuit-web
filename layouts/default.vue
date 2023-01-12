@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-gray-900 min-h-screen">
-        <Navbar />
-        <slot />
-        <Footer />
-    </div>
+	<div class="bg-gray-900 min-h-screen">
+		<AppNavbar />
+		<slot />
+		<AppFooter />
+	</div>
 </template>

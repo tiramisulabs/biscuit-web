@@ -1,11 +1,11 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+	<NuxtLayout>
+		<NuxtPage />
+	</NuxtLayout>
 </template>
 
 <style>
 :root {
-  color-scheme: dark;
+	color-scheme: dark;
 }
 </style>
