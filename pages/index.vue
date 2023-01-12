@@ -93,16 +93,16 @@
                 </NuxtLink>
             </div>
             <div class="grid gap-4 grid-cols-3">
-                <div v-for="utilitie in utilities" :key="utilitie.name"
+                <div v-for="utility in utilities" :key="utility.name"
                     class="w-full rounded-xl bg-gray-800 hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2">
-                    <nuxt-img :src="utilitie.image" alt="Utilitie preview" class="w-full h-52 rounded-xl" />
+                    <nuxt-img :src="utility.image" :alt="`Utility ${utility.name}`" class="w-full h-52 rounded-xl" />
                     <div class="p-4 space-y-2">
                         <h4 class="font-medium text-2xl">
                             <span
                                 class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400">@biscuitland
-                                / </span>{{ utilitie.name }}
+                                / </span>{{ utility.name }}
                         </h4>
-                        <p class="text-gray-400">{{ utilitie.description }}</p>
+                        <p class="text-gray-400">{{ utility.description }}</p>
                     </div>
                 </div>
             </div>
