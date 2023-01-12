@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxt/image-edge",
     "@nuxtjs/web-vitals",
     "@nuxtjs/fontaine",
+    "nuxt-delay-hydration",
   ],
   app: {
     head: {
@@ -25,5 +26,8 @@ export default defineNuxtConfig({
         },
       ],
     },
+  },
+  delayHydration: {
+    mode: "mount",
   },
 });

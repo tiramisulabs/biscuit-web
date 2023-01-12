@@ -12,6 +12,7 @@ specifiers:
   git-cz: ^4.9.0
   husky: ^8.0.3
   nuxt: 3.0.0
+  nuxt-delay-hydration: ^1.0.5
   nuxt-icon: ^0.1.8
 
 devDependencies:
@@ -26,6 +27,7 @@ devDependencies:
   git-cz: 4.9.0
   husky: 8.0.3
   nuxt: 3.0.0
+  nuxt-delay-hydration: 1.0.5
   nuxt-icon: 0.1.8
 
 packages:
@@ -4840,6 +4842,18 @@ packages:
       fsevents: 2.3.2
     dev: true
 
+  /nuxt-delay-hydration/1.0.5:
+    resolution: {integrity: sha512-ral8XTno86o5Or5HpDBiW7xMmJBmtqKPkR83NtGdl2lfJUyHAGb08kjOacsZ0up867/fQinvTo4EUqSPuE3SHQ==}
+    dependencies:
+      '@nuxt/kit': 3.0.0
+      lodash.template: 4.5.0
+      packrup: 0.1.0
+      radix3: 1.0.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
   /nuxt-icon/0.1.8:
     resolution: {integrity: sha512-oPFlLOZCy80MN+hf49+mBkOIHWVF3sOqZREQZw3qD0N6wGlR15QeRQtKQC8qGeQcc+xvpLQm0GvrdJ8FxFOPYg==}
     dependencies:
@@ -5087,6 +5101,10 @@ packages:
   /p-try/2.2.0:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
     engines: {node: '>=6'}
+    dev: true
+
+  /packrup/0.1.0:
+    resolution: {integrity: sha512-HnUl9ztHGty5ZK13WM8Q7854SWPKH/eCT+MiTO0P1qCu1Y4S5PPJ8E9MwD3cnjSr7PUPzXDnmOVJIKM043OfJQ==}
     dev: true
 
   /pako/0.2.9:
