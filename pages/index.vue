@@ -134,7 +134,7 @@
 					<div class="bg-gray-200/30 w-fit p-2 rounded-lg">
 						<Icon class="text-3xl" name="lucide:download" />
 					</div>
-					<h1 class="text-5xl font-bold">{{ pending ? '...' : stats?.downloads }}+</h1>
+					<h1 class="text-5xl font-bold">{{ stats?.downloads }}+</h1>
 					<h5 class="text-xl text-white font-medium">— Downloads</h5>
 				</div>
 				<div
@@ -143,7 +143,7 @@
 					<div class="bg-gray-200/30 w-fit p-2 rounded-lg">
 						<Icon class="text-3xl" name="lucide:star" />
 					</div>
-					<h1 class="text-5xl font-bold">{{ pending ? '...' : stats?.stargazers }}+</h1>
+					<h1 class="text-5xl font-bold">{{ stats?.stargazers }}+</h1>
 					<h5 class="text-xl text-white font-medium">— Stars</h5>
 				</div>
 				<div
@@ -152,7 +152,7 @@
 					<div class="bg-gray-200/30 w-fit p-2 rounded-lg">
 						<Icon class="text-3xl" name="lucide:github" />
 					</div>
-					<h1 class="text-5xl font-bold">{{ pending ? '...' : stats?.forks }}+</h1>
+					<h1 class="text-5xl font-bold">{{ stats?.forks }}+</h1>
 					<h5 class="text-xl text-white font-medium">— Forks</h5>
 				</div>
 				<div
@@ -161,7 +161,7 @@
 					<div class="bg-gray-200/30 w-fit p-2 rounded-lg">
 						<Icon class="text-3xl" name="lucide:users" />
 					</div>
-					<h1 class="text-5xl font-bold">{{ pending ? '...' : stats?.discord_support_members }}+</h1>
+					<h1 class="text-5xl font-bold">{{ stats?.discord_support_members }}+</h1>
 					<h5 class="text-xl text-white font-medium">— Discord members</h5>
 				</div>
 			</div>
@@ -190,7 +190,7 @@
 
 <script lang="ts" setup>
 const config = useRuntimeConfig();
-const { data: stats, pending } = await useLazyFetch('/api/stats');
+const { data: stats } = await useFetch('/api/stats');
 
 const commands = [
 	'npm install @biscuitland/core',
