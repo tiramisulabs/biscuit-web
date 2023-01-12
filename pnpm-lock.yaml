@@ -19,6 +19,7 @@ specifiers:
   eslint-plugin-vue: ^9.8.0
   git-cz: ^4.9.0
   husky: ^8.0.3
+  ky: ^0.33.1
   lint-staged: ^13.1.0
   nuxt: 3.0.0
   nuxt-delay-hydration: ^1.0.5
@@ -45,6 +46,7 @@ devDependencies:
   eslint-plugin-vue: 9.8.0_eslint@8.31.0
   git-cz: 4.9.0
   husky: 8.0.3
+  ky: 0.33.1
   lint-staged: 13.1.0
   nuxt: 3.0.0_eslint@8.31.0
   nuxt-delay-hydration: 1.0.5
@@ -5034,6 +5036,11 @@ packages:
       vary: 1.1.2
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /ky/0.33.1:
+    resolution: {integrity: sha512-zZ9OlhgM4UEunvgJBH1bBl7+a7vas1HnCLSezu2CJawc4Ka+yJculRAVKbakUece4gW7kC5Dz+UGvbXIlpDt1w==}
+    engines: {node: '>=14.16'}
     dev: true
 
   /lazystream/1.0.1:
