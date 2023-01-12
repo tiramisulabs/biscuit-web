@@ -7,7 +7,8 @@
         </NuxtLink>
         <div class="flex space-x-5 items-center">
             <ul class="flex space-x-5">
-                <li v-for="menu in menuSections" class="font-semibold cursor-pointer hover:text-blue-400">
+                <li v-for="menu in menuSections" :key="menu.path"
+                    class="font-semibold cursor-pointer hover:text-blue-400">
                     <NuxtLink :href="menu.path" active-class="text-blue-400">
                         {{ menu.name }}
                     </NuxtLink>

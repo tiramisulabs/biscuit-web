@@ -1,79 +1,160 @@
 <template>
-    <div class="px-24 py-44 mx-auto max-w-screen-xl flex justify-between space-x-12">
-        <div class="w-1/2 space-y-8">
-            <div class="flex flex-col space-y-5">
-                <div class="flex text-gray-300 items-center space-x-2">
-                    <Icon class="text-orange-400" name="lucide:flame" />
-                    <p class="font-mono">Incredibly lightweight and object oriented</p>
+    <main class="mx-auto px-24 max-w-screen-xl flex justify-between flex-col">
+        <section class="flex py-44 space-x-12">
+            <div class="w-1/2 space-y-8">
+                <div class="flex flex-col space-y-5">
+                    <div class="flex text-gray-300 items-center space-x-2">
+                        <Icon class="text-orange-400" name="lucide:flame" />
+                        <p class="font-mono">Incredibly lightweight and object oriented</p>
+                    </div>
+                    <h1 class="text-6xl text-white font-semibold">
+                        Create wonderful bots with
+                        <span class="text-blue-400">biscuitjs.</span>
+                    </h1>
+                    <h4 class="text-2xl text-gray-200">
+                        A brand new bleeding edge non bloated Discord library.
+                    </h4>
                 </div>
-                <h1 class="text-6xl text-white font-semibold">
-                    Create wonderful bots with
-                    <span class="text-blue-400">biscuitjs.</span>
-                </h1>
-                <h4 class="text-2xl text-gray-200">
-                    A brand new bleeding edge non bloated Discord library.
+                <ul class="text-white font-medium tracking-wider">
+                    <li class="space-x-2 my-3 items-center" v-for="feature in features">
+                        <Icon :name="feature.icon" class="text-2xl text-blue-400" />
+                        <span>{{ feature.description }}</span>
+                    </li>
+                </ul>
+                <div class="flex space-x-4 items-center">
+                    <Button buttonStyle="solid" icon-left="lucide:party-popper">
+                        Get started
+                    </Button>
+                    <Button buttonStyle="ghost" icon-left="lucide:github">
+                        Github
+                    </Button>
+                </div>
+            </div>
+            <div class="w-1/2">
+                <div
+                    class="flex flex-col bg-gray-800 p-4 rounded-xl shadow-xl shadow-gray-800 space-y-5 hover:-translate-y-3 transition duration-300 cursor-pointer">
+                    <div class="flex justify-between items-center">
+                        <div class="flex space-x-3">
+                            <div
+                                class="bg-red-400 rounded-full w-5 h-5 cursor-pointer hover:scale-110 transition duration-300">
+                            </div>
+                            <div
+                                class="bg-yellow-400 rounded-full w-5 h-5 cursor-pointer hover:scale-110 transition duration-300">
+                            </div>
+                            <div
+                                class="bg-green-400 rounded-full w-5 h-5 cursor-pointer hover:scale-110 transition duration-300">
+                            </div>
+                        </div>
+                        <h3 class="text-gray-500 font-medium text-md space-x-2 items-center">
+                            <Icon name="lucide:folder" />
+                            <span>~/biscuit/super-bot</span>
+                        </h3>
+                        <h3 class="text-gray-200 font-medium text-lg">Terminal</h3>
+                    </div>
+                    <hr class="w-full border-gray-600" />
+                    <div class="flex flex-col bg-gray-900 w-full rounded-xl tracking-widest p-4">
+                        <p class="text-white" v-for="command in commands" :key="command">
+                            <span class="text-gray-500">$ ~/super-bot •</span> {{ command }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="flex py-20 flex-col space-y-10">
+            <div class="flex flex-col space-y-6 max-w-4xl">
+                <h1 class="text-4xl font-bold">Some utilities</h1>
+                <h3 class="text-2xl text-gray-400">
+                    Utilities that will help you to create a scalable bot based on
+                    microservices totally efficient and with low resource usage.
+                </h3>
+                <NuxtLink href="/utilities" class="w-fit">
+                    <h4 class="text-white text-xl font-medium space-x-2 hover:text-blue-400 transition duration-300">
+                        <span>Discover more utilities</span>
+                        <Icon name="lucide:corner-down-right" />
+                    </h4>
+                </NuxtLink>
+            </div>
+            <div class="grid gap-4 grid-cols-3">
+                <div v-for="utilitie in utilities" :key="utilitie.name"
+                    class="w-full rounded-xl bg-gray-800 cursor-pointer hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2">
+                    <img :src="utilitie.image" alt="Utilitie preview" class="w-full h-52 rounded-xl" />
+                    <div class="p-4 space-y-2">
+                        <h4 class="font-medium text-2xl">
+                            <span class="text-blue-400">@biscuitland / </span>{{ utilitie.name }}
+                        </h4>
+                        <p class="text-gray-400">{{ utilitie.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="flex py-20 flex-col space-y-10">
+            <div class="flex flex-col space-y-6 max-w-4xl">
+                <h1 class="text-4xl font-bold">Statistics</h1>
+                <h3 class="text-2xl text-gray-400">
+                    Our usage statistics of the utilities in common, thanks to all the
+                    loyal users who use them.
+                </h3>
+            </div>
+            <div class="grid gap-4 grid-cols-4">
+                <div
+                    class="w-full p-4 rounded-xl bg-gray-800 cursor-pointer hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2 space-y-4">
+                    <Icon class="text-3xl" name="lucide:download" />
+                    <h1 class="text-4xl font-bold">
+                        1,223+
+                    </h1>
+                    <h5 class="text-xl text-gray-400 font-medium">
+                        Downloads
+                    </h5>
+                </div>
+                <div
+                    class="w-full p-4 rounded-xl bg-gray-800 cursor-pointer hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2 space-y-4">
+                    <Icon class="text-3xl" name="lucide:star" />
+                    <h1 class="text-4xl font-bold">
+                        620+
+                    </h1>
+                    <h5 class="text-xl text-gray-400 font-medium">
+                        Stars
+                    </h5>
+                </div>
+                <div
+                    class="w-full p-4 rounded-xl bg-gray-800 cursor-pointer hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2 space-y-4">
+                    <Icon class="text-3xl" name="lucide:github" />
+                    <h1 class="text-4xl font-bold">
+                        67+
+                    </h1>
+                    <h5 class="text-xl text-gray-400 font-medium">
+                        Forks
+                    </h5>
+                </div>
+                <div
+                    class="w-full p-4 rounded-xl bg-gray-800 cursor-pointer hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2 space-y-4">
+                    <Icon class="text-3xl" name="lucide:users" />
+                    <h1 class="text-4xl font-bold">
+                        520+
+                    </h1>
+                    <h5 class="text-xl text-gray-400 font-medium">
+                        Discord members
+                    </h5>
+                </div>
+            </div>
+        </section>
+        <section class="flex py-20 flex-col space-y-10 justify-center items-center">
+            <div class="flex flex-col text-center space-y-5">
+                <h1 class="text-5xl font-bold">Start your <span class="text-blue-400">new adventure</span></h1>
+                <h4 class="text-2xl font-medium text-gray-400">
+                    Develop bots efficiently and become a great Discord bot developer.
                 </h4>
             </div>
-            <ul class="text-white font-medium tracking-wider">
-                <li class="space-x-2 my-3 items-center" v-for="feature in features">
-                    <Icon :name="feature.icon" class="text-2xl text-blue-400" />
-                    <span>{{ feature.description }}</span>
-                </li>
-            </ul>
-            <div class="flex space-x-4 items-center">
-                <Button buttonStyle="solid" icon-left="lucide:party-popper">
-                    Get started
+            <div class="flex space-x-4">
+                <Button button-style="solid" icon-left="lucide:user">
+                    Join the support server
                 </Button>
-                <Button buttonStyle="ghost" icon-left="lucide:github">
+                <Button button-style="ghost" icon-left="lucide:github">
                     Github
                 </Button>
             </div>
-        </div>
-        <div class="w-1/2">
-            <div class="flex flex-col bg-gray-800 p-4 rounded-xl shadow-xl shadow-gray-800 space-y-5">
-                <div class="flex justify-between items-center">
-                    <div class="flex space-x-3">
-                        <div
-                            class="bg-red-400 rounded-full w-5 h-5 cursor-pointer hover:scale-110 transition duration-300">
-                        </div>
-                        <div
-                            class="bg-yellow-400 rounded-full w-5 h-5  cursor-pointer hover:scale-110 transition duration-300">
-                        </div>
-                        <div
-                            class="bg-green-400 rounded-full w-5 h-5  cursor-pointer hover:scale-110 transition duration-300">
-                        </div>
-                    </div>
-                    <h3 class="text-gray-500 font-medium text-md space-x-2 items-center">
-                        <Icon name="lucide:folder" />
-                        <span>~/biscuit/super-bot</span>
-                    </h3>
-                    <h3 class="text-gray-200 font-medium text-lg">Terminal</h3>
-                </div>
-                <hr class="w-full border-gray-600" />
-                <div class="flex flex-col bg-gray-900 w-full rounded-xl tracking-widest p-4">
-                    <p class="text-white" v-for="command in commands">
-                        <span class="text-gray-500">$ ~/super-bot •</span> {{ command }}
-                    </p>
-                </div>
-                <div class="flex items-center space-x-2 text-gray-300 font-medium justify-center">
-                    <div class="flex items-center space-x-2">
-                        <Icon name="lucide:download" class="text-orange-400" />
-                        <p>5,000+</p>
-                    </div>
-                    <span>•</span>
-                    <div class="flex items-center space-x-2">
-                        <Icon name="lucide:star" class="text-yellow-400" />
-                        <p>5,000+</p>
-                    </div>
-                    <span>•</span>
-                    <div class="flex items-center space-x-2">
-                        <Icon name="lucide:award" class="text-blue-400" />
-                        <p>v1.0.0</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
 </template>
 
 <script lang="ts" setup>
@@ -103,6 +184,27 @@ const commands = [
     "Startup time: 5s",
     "================",
     "",
-    "Bot successfully started.",
+    "⚡ Bot successfully started.",
+];
+
+const utilities = [
+    {
+        name: "core",
+        image: "https://www.biscuitjs.com/home/sections/core-code.webp",
+        description:
+            "Classes, functions and main structures to create an application with biscuit. Core contains the essentials to launch you to develop your own customized and scalable bot.",
+    },
+    {
+        name: "api-types",
+        image: "https://www.biscuitjs.com/home/sections/api-types-code.webp",
+        description:
+            "1:1 type definition with the latest available in the Discord API. No need to worry about your code typing anymore.",
+    },
+    {
+        name: "cache",
+        image: "https://www.biscuitjs.com/home/sections/cache-code.webp",
+        description:
+            "A cache will help you avoid making HTTP requests to the Discord api, saving you network resources and avoiding a possible Rate Limit.",
+    },
 ];
 </script>
