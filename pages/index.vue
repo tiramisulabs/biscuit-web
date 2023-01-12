@@ -1,6 +1,6 @@
 <template>
     <main class="mx-auto px-12 max-w-screen-xl flex justify-between flex-col">
-        <section class="flex py-44 space-x-12">
+        <section class="flex py-44 space-x-10">
             <div class="w-1/2 space-y-8">
                 <div class="flex flex-col space-y-5">
                     <div class="flex text-gray-300 items-center space-x-2">
@@ -99,48 +99,34 @@
                 <div
                     class="w-full p-4 rounded-xl bg-gray-800 cursor-pointer hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2 space-y-4">
                     <Icon class="text-3xl" name="lucide:download" />
-                    <h1 class="text-4xl font-bold">
-                        1,223+
-                    </h1>
-                    <h5 class="text-xl text-gray-400 font-medium">
-                        Downloads
-                    </h5>
+                    <h1 class="text-4xl font-bold">1,223+</h1>
+                    <h5 class="text-xl text-gray-400 font-medium">Downloads</h5>
                 </div>
                 <div
                     class="w-full p-4 rounded-xl bg-gray-800 cursor-pointer hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2 space-y-4">
                     <Icon class="text-3xl" name="lucide:star" />
-                    <h1 class="text-4xl font-bold">
-                        620+
-                    </h1>
-                    <h5 class="text-xl text-gray-400 font-medium">
-                        Stars
-                    </h5>
+                    <h1 class="text-4xl font-bold">620+</h1>
+                    <h5 class="text-xl text-gray-400 font-medium">Stars</h5>
                 </div>
                 <div
                     class="w-full p-4 rounded-xl bg-gray-800 cursor-pointer hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2 space-y-4">
                     <Icon class="text-3xl" name="lucide:github" />
-                    <h1 class="text-4xl font-bold">
-                        67+
-                    </h1>
-                    <h5 class="text-xl text-gray-400 font-medium">
-                        Forks
-                    </h5>
+                    <h1 class="text-4xl font-bold">67+</h1>
+                    <h5 class="text-xl text-gray-400 font-medium">Forks</h5>
                 </div>
                 <div
                     class="w-full p-4 rounded-xl bg-gray-800 cursor-pointer hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2 space-y-4">
                     <Icon class="text-3xl" name="lucide:users" />
-                    <h1 class="text-4xl font-bold">
-                        520+
-                    </h1>
-                    <h5 class="text-xl text-gray-400 font-medium">
-                        Discord members
-                    </h5>
+                    <h1 class="text-4xl font-bold">520+</h1>
+                    <h5 class="text-xl text-gray-400 font-medium">Discord members</h5>
                 </div>
             </div>
         </section>
-        <section class="flex py-20 flex-col space-y-10 justify-center items-center">
+        <section class="flex pt-20 pb-44 flex-col space-y-10 justify-center items-center">
             <div class="flex flex-col text-center space-y-5">
-                <h1 class="text-5xl font-bold">Start your <span class="text-blue-400">new adventure</span></h1>
+                <h1 class="text-5xl font-bold">
+                    Start your <span class="text-blue-400">new adventure</span>
+                </h1>
                 <h4 class="text-2xl font-medium text-gray-400">
                     Develop bots efficiently and become a great Discord bot developer.
                 </h4>
@@ -149,9 +135,7 @@
                 <Button button-style="solid" icon-left="lucide:user">
                     Join the support server
                 </Button>
-                <Button button-style="ghost" icon-left="lucide:github">
-                    Github
-                </Button>
+                <Button button-style="ghost" icon-left="lucide:github"> Github </Button>
             </div>
         </section>
     </main>
