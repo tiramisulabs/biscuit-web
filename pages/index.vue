@@ -17,22 +17,28 @@
                     </h4>
                 </div>
                 <ul class="text-white font-medium tracking-wider">
-                    <li class="space-x-2 my-3 items-center">
-                        <Icon name="lucide:framer" class="text-3xl text-yellow-400 rounded-full bg-gray-200/10 p-1" />
+                    <li class="space-x-2 my-3 items-center flex">
+                        <div class="rounded-full p-2 bg-gray-200/10 w-fit">
+                            <Icon name="lucide:framer" class="text-xl text-yellow-400" />
+                        </div>
                         <span>Memory efficient, -100Mb on 200k servers.</span>
                     </li>
-                    <li class="space-x-2 my-3 items-center">
-                        <Icon name="lucide:clipboard-signature"
-                            class="text-3xl text-green-400 rounded-full bg-gray-200/10 p-1" />
+                    <li class="space-x-2 my-3 items-center flex">
+                        <div class="rounded-full p-2 bg-gray-200/10 w-fit">
+                            <Icon name="lucide:clipboard-signature" class="text-xl text-green-400" />
+                        </div>
                         <span>Easy to use, utility classes for better commands.</span>
                     </li>
-                    <li class="space-x-2 my-3 items-center">
-                        <Icon name="lucide:network" class="text-3xl text-purple-400 rounded-full bg-gray-200/10 p-1" />
+                    <li class="space-x-2 my-3 items-center flex">
+                        <div class="rounded-full p-2 bg-gray-200/10 w-fit">
+                            <Icon name="lucide:network" class="text-xl text-purple-400" />
+                        </div>
                         <span>Escable, with microservices.</span>
                     </li>
-                    <li class="space-x-2 my-3 items-center">
-                        <Icon name="lucide:package-check"
-                            class="text-3xl text-red-400 rounded-full bg-gray-200/10 p-1" />
+                    <li class="space-x-2 my-3 items-center flex">
+                        <div class="rounded-full p-2 bg-gray-200/10 w-fit">
+                            <Icon name="lucide:package-check" class="text-xl text-red-400" />
+                        </div>
                         <span>Optional cache, no more mandatory cache.</span>
                     </li>
                 </ul>
