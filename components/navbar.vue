@@ -14,11 +14,7 @@
                     </NuxtLink>
                 </li>
             </ul>
-            <button
-                class="flex py-2 px-6 bg-blue-400 rounded-full items-center space-x-2 hover:bg-blue-200 transition duration-300 text-blue-800 font-semibold tracking-wider">
-                <icon name="lucide:download" />
-                <span>Install</span>
-            </button>
+            <Button buttonStyle="solid" icon-left="lucide:download">Install</Button>
         </div>
     </nav>
 </template>
