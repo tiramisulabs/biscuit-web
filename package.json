@@ -16,6 +16,7 @@
     "@commitlint/cli": "^17.4.1",
     "@commitlint/config-conventional": "^17.4.0",
     "@commitlint/format": "^17.4.0",
+    "@nuxt/image-edge": "1.0.0-27840416.dc1ed65",
     "@nuxtjs/tailwindcss": "^6.2.0",
     "cz-conventional-changelog": "^3.3.0",
     "git-cz": "^4.9.0",
@@ -37,14 +38,14 @@
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
-        "webpack"
+        "webpack",
+        "vue"
       ]
     },
     "allowedDeprecatedVersions": {
       "sourcemap-codec": "*",
       "rollup-plugin-terser": "*",
-      "stable": "*",
-      "vue": "*"
+      "stable": "*"
     }
   },
   "packageManager": "pnpm@7.0.0"
