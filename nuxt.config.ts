@@ -33,6 +33,11 @@ export default defineNuxtConfig({
 			secretDiscordSupportUrl: 'https://discord.gg/KAVzwsXdZu',
 		},
 	},
+	nitro: {
+		prerender: {
+			routes: ['/'],
+		},
+	},
 	delayHydration: {
 		mode: 'mount',
 	},
