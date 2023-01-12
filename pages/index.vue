@@ -9,16 +9,29 @@
                     </div>
                     <h1 class="text-6xl text-white font-semibold">
                         Create wonderful bots with
-                        <span class="text-blue-400">biscuitjs.</span>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400">biscuitjs.</span>
                     </h1>
                     <h4 class="text-2xl text-gray-200">
                         A brand new bleeding edge non bloated Discord library.
                     </h4>
                 </div>
                 <ul class="text-white font-medium tracking-wider">
-                    <li class="space-x-2 my-3 items-center" v-for="feature in features">
-                        <Icon :name="feature.icon" class="text-2xl text-blue-400" />
-                        <span>{{ feature.description }}</span>
+                    <li class="space-x-2 my-3 items-center">
+                        <Icon name="lucide:framer" class="text-2xl text-yellow-400" />
+                        <span>Memory efficient, -100Mb on 200k servers.</span>
+                    </li>
+                    <li class="space-x-2 my-3 items-center">
+                        <Icon name="lucide:clipboard-signature" class="text-2xl text-green-400" />
+                        <span>Easy to use, utility classes for better commands.</span>
+                    </li>
+                    <li class="space-x-2 my-3 items-center">
+                        <Icon name="lucide:network" class="text-2xl text-purple-400" />
+                        <span>Escable, with microservices.</span>
+                    </li>
+                    <li class="space-x-2 my-3 items-center">
+                        <Icon name="lucide:package-check" class="text-2xl text-red-400" />
+                        <span>Optional cache, no more mandatory cache.</span>
                     </li>
                 </ul>
                 <div class="flex space-x-4 items-center">
@@ -32,7 +45,7 @@
             </div>
             <div class="w-1/2">
                 <div
-                    class="flex flex-col bg-gray-800 p-4 rounded-xl shadow-xl shadow-gray-800 space-y-5 hover:-translate-y-3 transition duration-300 cursor-pointer">
+                    class="flex flex-col bg-gray-800 p-4 rounded-xl shadow-xl shadow-gray-800 space-y-5 hover:-translate-y-3 transition duration-300">
                     <div class="flex justify-between items-center">
                         <div class="flex space-x-3">
                             <div
@@ -62,7 +75,10 @@
         </section>
         <section class="flex py-20 flex-col space-y-10">
             <div class="flex flex-col space-y-6 max-w-4xl">
-                <h1 class="text-4xl font-bold">Some utilities</h1>
+                <h1 class="text-5xl font-bold">
+                    Some <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-purple-400 font-extrabold">utilities</span>
+                </h1>
                 <h3 class="text-2xl text-gray-400">
                     Utilities that will help you to create a scalable bot based on
                     microservices totally efficient and with low resource usage.
@@ -76,11 +92,13 @@
             </div>
             <div class="grid gap-4 grid-cols-3">
                 <div v-for="utilitie in utilities" :key="utilitie.name"
-                    class="w-full rounded-xl bg-gray-800 cursor-pointer hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2">
+                    class="w-full rounded-xl bg-gray-800 hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2">
                     <img :src="utilitie.image" alt="Utilitie preview" class="w-full h-52 rounded-xl" />
                     <div class="p-4 space-y-2">
                         <h4 class="font-medium text-2xl">
-                            <span class="text-blue-400">@biscuitland / </span>{{ utilitie.name }}
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400">@biscuitland
+                                / </span>{{ utilitie.name }}
                         </h4>
                         <p class="text-gray-400">{{ utilitie.description }}</p>
                     </div>
@@ -89,7 +107,7 @@
         </section>
         <section class="flex py-20 flex-col space-y-10">
             <div class="flex flex-col space-y-6 max-w-4xl">
-                <h1 class="text-4xl font-bold">Statistics</h1>
+                <h1 class="text-5xl font-bold">Statistics</h1>
                 <h3 class="text-2xl text-gray-400">
                     Our usage statistics of the utilities in common, thanks to all the
                     loyal users who use them.
@@ -97,28 +115,36 @@
             </div>
             <div class="grid gap-4 grid-cols-4">
                 <div
-                    class="w-full p-4 rounded-xl bg-gray-800 cursor-pointer hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2 space-y-4">
-                    <Icon class="text-3xl" name="lucide:download" />
-                    <h1 class="text-4xl font-bold">1,223+</h1>
-                    <h5 class="text-xl text-gray-400 font-medium">Downloads</h5>
+                    class="w-full p-4 rounded-xl bg-green-400 hover:ring-4 transition duration-300 hover:ring-green-800 hover:-translate-y-2 space-y-4">
+                    <div class="bg-gray-200/30 w-fit p-2 rounded-lg">
+                        <Icon class="text-3xl" name="lucide:download" />
+                    </div>
+                    <h1 class="text-5xl font-bold">1,223+</h1>
+                    <h5 class="text-xl text-white font-medium">— Downloads</h5>
                 </div>
                 <div
-                    class="w-full p-4 rounded-xl bg-gray-800 cursor-pointer hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2 space-y-4">
-                    <Icon class="text-3xl" name="lucide:star" />
-                    <h1 class="text-4xl font-bold">620+</h1>
-                    <h5 class="text-xl text-gray-400 font-medium">Stars</h5>
+                    class="w-full p-4 rounded-xl bg-orange-400 hover:ring-4 transition duration-300 hover:ring-orange-800 hover:-translate-y-2 space-y-4">
+                    <div class="bg-gray-200/30 w-fit p-2 rounded-lg">
+                        <Icon class="text-3xl" name="lucide:star" />
+                    </div>
+                    <h1 class="text-5xl font-bold">620+</h1>
+                    <h5 class="text-xl text-white font-medium">— Stars</h5>
                 </div>
                 <div
-                    class="w-full p-4 rounded-xl bg-gray-800 cursor-pointer hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2 space-y-4">
-                    <Icon class="text-3xl" name="lucide:github" />
-                    <h1 class="text-4xl font-bold">67+</h1>
-                    <h5 class="text-xl text-gray-400 font-medium">Forks</h5>
+                    class="w-full p-4 rounded-xl bg-purple-400 hover:ring-4 transition duration-300 hover:ring-purple-800 hover:-translate-y-2 space-y-4">
+                    <div class="bg-gray-200/30 w-fit p-2 rounded-lg">
+                        <Icon class="text-3xl" name="lucide:github" />
+                    </div>
+                    <h1 class="text-5xl font-bold">67+</h1>
+                    <h5 class="text-xl text-white font-medium">— Forks</h5>
                 </div>
                 <div
-                    class="w-full p-4 rounded-xl bg-gray-800 cursor-pointer hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2 space-y-4">
-                    <Icon class="text-3xl" name="lucide:users" />
-                    <h1 class="text-4xl font-bold">520+</h1>
-                    <h5 class="text-xl text-gray-400 font-medium">Discord members</h5>
+                    class="w-full p-4 rounded-xl bg-blue-400 hover:ring-4 transition duration-300 hover:ring-blue-800 hover:-translate-y-2 space-y-4">
+                    <div class="bg-gray-200/30 w-fit p-2 rounded-lg">
+                        <Icon class="text-3xl" name="lucide:users" />
+                    </div>
+                    <h1 class="text-5xl font-bold">520+</h1>
+                    <h5 class="text-xl text-white font-medium">— Discord members</h5>
                 </div>
             </div>
         </section>
@@ -127,7 +153,7 @@
                 <h1 class="text-5xl font-bold">
                     Start your <span class="text-blue-400">new adventure</span>
                 </h1>
-                <h4 class="text-2xl font-medium text-gray-400">
+                <h4 class="text-2xl font-medium text-gray-300">
                     Develop bots efficiently and become a great Discord bot developer.
                 </h4>
             </div>
@@ -142,22 +168,6 @@
 </template>
 
 <script lang="ts" setup>
-const features = [
-    {
-        description: "Memory efficient, -100Mb on 200k servers.",
-        icon: "lucide:framer",
-    },
-    {
-        description: "Easy to use, utility classes for better commands.",
-        icon: "lucide:clipboard-signature",
-    },
-    { description: "Escable, with microservices.", icon: "lucide:network" },
-    {
-        description: "Optional cache, no more mandatory cache.",
-        icon: "lucide:package-check",
-    },
-];
-
 const commands = [
     "npm install @biscuitland/core",
     "npm run start",

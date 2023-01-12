@@ -14,7 +14,7 @@
                     </NuxtLink>
                 </li>
             </ul>
-            <Button buttonStyle="solid" icon-left="lucide:download">Install</Button>
+            <Button buttonStyle="solid" icon-left="lucide:github">Github</Button>
         </div>
     </nav>
 </template>
