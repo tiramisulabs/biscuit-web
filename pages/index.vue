@@ -52,7 +52,7 @@
                 <hr class="w-full border-gray-600" />
                 <div class="flex flex-col bg-gray-900 w-full rounded-xl tracking-widest p-4">
                     <p class="text-white" v-for="command in commands">
-                        $ ~/super-bot - {{ command }}
+                        <span class="text-gray-500">$ ~/super-bot •</span> {{ command }}
                     </p>
                 </div>
                 <div class="flex items-center space-x-2 text-gray-300 font-medium justify-center">

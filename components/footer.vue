@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-gray-800 w-full p-6 flex items-center justify-center flex-col space-y-5 rounded-t-3xl">
+    <footer class="bg-gray-800/30 w-full p-6 flex items-center justify-center flex-col space-y-5 rounded-t-3xl">
         <img src="/icon.svg" class="w-auto h-12" />
         <h1 class="text-xl text-white font-semibold">
             Made by ❤️ by <span
