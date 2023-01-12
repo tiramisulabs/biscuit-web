@@ -1,6 +1,6 @@
 <template>
-    <main class="mx-auto px-12 max-w-screen-xl flex justify-between flex-col">
-        <section class="flex py-44 space-x-10">
+    <main class="mx-auto px-12 max-w-screen-xl flex justify-between flex-col space-y-44">
+        <section class="flex py-40 space-x-10">
             <div class="w-1/2 space-y-8">
                 <div class="flex flex-col space-y-5">
                     <div class="flex text-gray-300 items-center space-x-2">
@@ -18,19 +18,21 @@
                 </div>
                 <ul class="text-white font-medium tracking-wider">
                     <li class="space-x-2 my-3 items-center">
-                        <Icon name="lucide:framer" class="text-2xl text-yellow-400" />
+                        <Icon name="lucide:framer" class="text-3xl text-yellow-400 rounded-full bg-gray-200/10 p-1" />
                         <span>Memory efficient, -100Mb on 200k servers.</span>
                     </li>
                     <li class="space-x-2 my-3 items-center">
-                        <Icon name="lucide:clipboard-signature" class="text-2xl text-green-400" />
+                        <Icon name="lucide:clipboard-signature"
+                            class="text-3xl text-green-400 rounded-full bg-gray-200/10 p-1" />
                         <span>Easy to use, utility classes for better commands.</span>
                     </li>
                     <li class="space-x-2 my-3 items-center">
-                        <Icon name="lucide:network" class="text-2xl text-purple-400" />
+                        <Icon name="lucide:network" class="text-3xl text-purple-400 rounded-full bg-gray-200/10 p-1" />
                         <span>Escable, with microservices.</span>
                     </li>
                     <li class="space-x-2 my-3 items-center">
-                        <Icon name="lucide:package-check" class="text-2xl text-red-400" />
+                        <Icon name="lucide:package-check"
+                            class="text-3xl text-red-400 rounded-full bg-gray-200/10 p-1" />
                         <span>Optional cache, no more mandatory cache.</span>
                     </li>
                 </ul>
@@ -73,7 +75,7 @@
                 </div>
             </div>
         </section>
-        <section class="flex py-20 flex-col space-y-10">
+        <section class="flex flex-col space-y-10">
             <div class="flex flex-col space-y-6 max-w-4xl">
                 <h1 class="text-5xl font-bold">
                     Some <span
@@ -105,7 +107,7 @@
                 </div>
             </div>
         </section>
-        <section class="flex py-20 flex-col space-y-10">
+        <section class="flex flex-col space-y-10">
             <div class="flex flex-col space-y-6 max-w-4xl">
                 <h1 class="text-5xl font-bold">Statistics</h1>
                 <h3 class="text-2xl text-gray-400">
@@ -148,7 +150,7 @@
                 </div>
             </div>
         </section>
-        <section class="flex pt-20 pb-44 flex-col space-y-10 justify-center items-center">
+        <section class="flex pb-40 flex-col space-y-10 justify-center items-center">
             <div class="flex flex-col text-center space-y-5">
                 <h1 class="text-5xl font-bold">
                     Start your <span class="text-blue-400">new adventure</span>
