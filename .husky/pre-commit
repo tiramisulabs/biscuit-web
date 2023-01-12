@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+pnpm exec pretty-quick --staged --pattern "**/*.{ts,tsx,vue}" --ignore-path .gitignore && pnpm exec lint-staged --allow-empty
