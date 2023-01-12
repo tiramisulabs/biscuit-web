@@ -107,7 +107,12 @@
 					:key="utility.name"
 					class="w-full rounded-xl bg-gray-800 hover:ring-4 transition duration-300 hover:ring-blue-400 hover:-translate-y-2"
 				>
-					<nuxt-img :src="utility.image" :alt="`Utility ${utility.name}`" class="w-full h-52 rounded-xl" />
+					<nuxt-img
+						:quality="80"
+						:src="utility.image"
+						:alt="`Utility ${utility.name}`"
+						class="w-full h-52 rounded-xl"
+					/>
 					<div class="p-4 space-y-2">
 						<h4 class="font-medium text-2xl">
 							<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400">
@@ -208,19 +213,19 @@ const commands = [
 const utilities = [
 	{
 		name: 'core',
-		image: 'https://www.biscuitjs.com/home/sections/core-code.webp',
+		image: '/code/core.webp',
 		description:
 			'Classes, functions and main structures to create an application with biscuit. Core contains the essentials to launch you to develop your own customized and scalable bot.',
 	},
 	{
 		name: 'api-types',
-		image: 'https://www.biscuitjs.com/home/sections/api-types-code.webp',
+		image: '/code/api-types.webp',
 		description:
 			'1:1 type definition with the latest available in the Discord API. No need to worry about your code typing anymore.',
 	},
 	{
 		name: 'cache',
-		image: 'https://www.biscuitjs.com/home/sections/cache-code.webp',
+		image: '/code/cache.webp',
 		description:
 			'A cache will help you avoid making HTTP requests to the Discord api, saving you network resources and avoiding a possible Rate Limit.',
 	},
