@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-gray-900 min-h-screen">
+	<div class="dark:bg-gray-900 bg-white min-h-screen">
 		<AppNavbar />
 		<slot />
 		<AppFooter />

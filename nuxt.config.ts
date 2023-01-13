@@ -7,6 +7,7 @@ export default defineNuxtConfig({
 		'@nuxtjs/web-vitals',
 		'@nuxtjs/fontaine',
 		'nuxt-delay-hydration',
+		'@nuxtjs/color-mode',
 	],
 	app: {
 		head: {
@@ -40,5 +41,13 @@ export default defineNuxtConfig({
 	},
 	delayHydration: {
 		mode: 'mount',
+	},
+	tailwindcss: {
+		exposeConfig: true,
+	},
+	colorMode: {
+		classSuffix: '',
+		preference: 'light',
+		fallback: 'dark',
 	},
 });
