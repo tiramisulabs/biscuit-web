@@ -30,19 +30,19 @@
 					</li>
 					<li class="space-x-2 my-3 items-center flex">
 						<div class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-fit">
-							<Icon name="lucide:clipboard-signature" class="text-lg lg:text-xl text-green-400" />
+							<Icon name="lucide:clipboard-signature" class="text-lg lg:text-xl text-green-400 shrink-0" />
 						</div>
 						<span class="text-sm lg:text-md">Easy to use, utility classes for better commands.</span>
 					</li>
 					<li class="space-x-2 my-3 items-center flex">
 						<div class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-fit">
-							<Icon name="lucide:network" class="text-lg lg:text-xl text-purple-400" />
+							<Icon name="lucide:network" class="text-lg lg:text-xl text-purple-400 shrink-0" />
 						</div>
 						<span class="text-sm lg:text-md">Escable, with microservices.</span>
 					</li>
 					<li class="space-x-2 my-3 items-center flex">
 						<div class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-fit">
-							<Icon name="lucide:package-check" class="text-lg lg:text-xl text-red-400" />
+							<Icon name="lucide:package-check" class="text-lg lg:text-xl text-red-400 shrink-0" />
 						</div>
 						<span class="text-sm lg:text-md">Optional cache, no more mandatory cache.</span>
 					</li>
