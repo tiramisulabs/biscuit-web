@@ -184,13 +184,28 @@
 			</div>
 		</section>
 	</main>
+	<Teleport to="body">
+		<Transition
+			enter-active-class="transition ease-out duration-100"
+			enter-from-class="transform opacity-0 scale-95"
+			enter-to-class="transform opacity-100 scale-100"
+			leave-active-class="transition ease-in duration-75"
+			leave-from-class="transform opacity-100 scale-100"
+			leave-to-class="transform opacity-0 scale-95"
+		>
+			<AppToast
+				v-if="toast.isVisible.value"
+				message="Install command copied"
+				icon-left="lucide:check"
+				color="bg-green-500"
+				:close-button="() => toast.hideAction()"
+			/>
+		</Transition>
+	</Teleport>
 </template>
 
 <script lang="ts" setup>
-// @ts-expect-error typescrip
-import { useToast } from 'vue-toastification/dist/index.mjs';
-
-const toast = useToast();
+const toast = useToast(60000);
 const config = useRuntimeConfig();
 const { data: stats } = await useFetch('/api/stats');
 
@@ -229,7 +244,7 @@ const utilities = [
 ];
 
 const copyInstallCommand = () => {
-	toast.success('Install command copied');
+	toast.showAction();
 	navigator.clipboard.writeText('xd?');
 };
 </script>

@@ -8,7 +8,6 @@ export default defineNuxtConfig({
 		'@nuxtjs/fontaine',
 		'@nuxtjs/color-mode',
 	],
-	css: ['vue-toastification/dist/index.css'],
 	app: {
 		head: {
 			titleTemplate: 'biscuitland - A brand new bleeding edge non bloated Discord library',
