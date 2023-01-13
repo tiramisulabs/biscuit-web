@@ -48,7 +48,12 @@
 					</li>
 				</ul>
 				<div class="flex space-y-4 md:space-y-0 space-x-0 md:space-x-4 items-center flex-col md:flex-row">
-					<SimpleButton class="w-full lg:w-fit" button-style="solid" icon-left="lucide:party-popper">
+					<SimpleButton
+						class="w-full lg:w-fit"
+						button-style="solid"
+						icon-left="lucide:party-popper"
+						@click="copyInstallCommand()"
+					>
 						Get started
 					</SimpleButton>
 					<NuxtLink class="w-full lg:w-fit" :href="config.public.githubUrl" target="_blank">
@@ -182,6 +187,10 @@
 </template>
 
 <script lang="ts" setup>
+// @ts-expect-error typescrip
+import { useToast } from 'vue-toastification/dist/index.mjs';
+
+const toast = useToast();
 const config = useRuntimeConfig();
 const { data: stats } = await useFetch('/api/stats');
 
@@ -218,4 +227,9 @@ const utilities = [
 			'A cache will help you avoid making HTTP requests to the Discord api, saving you network resources and avoiding a possible Rate Limit.',
 	},
 ];
+
+const copyInstallCommand = () => {
+	toast.success('Install command copied');
+	navigator.clipboard.writeText('xd?');
+};
 </script>
