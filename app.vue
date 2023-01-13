@@ -5,7 +5,11 @@
 </template>
 
 <style>
-:root {
+html[class*='light'] {
+	color-scheme: light;
+}
+
+html[class*='dark'] {
 	color-scheme: dark;
 }
 </style>
