@@ -19,6 +19,7 @@
 		"@commitlint/cli": "^17.4.1",
 		"@commitlint/config-conventional": "^17.4.0",
 		"@commitlint/format": "^17.4.0",
+		"@headlessui/vue": "^1.7.7",
 		"@nuxt/image-edge": "1.0.0-27840416.dc1ed65",
 		"@nuxtjs/color-mode": "^3.2.0",
 		"@nuxtjs/fontaine": "^0.2.4",
@@ -38,7 +39,6 @@
 		"ky": "^0.33.1",
 		"lint-staged": "^13.1.0",
 		"nuxt": "3.0.0",
-		"nuxt-delay-hydration": "^1.0.5",
 		"nuxt-icon": "^0.1.8",
 		"prettier": "^2.8.2",
 		"pretty-quick": "^3.1.3"

@@ -14,7 +14,7 @@
 					class="bg-green-400 rounded-full w-5 h-5 cursor-pointer hover:scale-110 transition duration-300"
 				></div>
 			</div>
-			<h3 class="text-gray-500 font-medium text-md space-x-2 items-center">
+			<h3 class="text-gray-500 font-medium text-md space-x-2 items-center hidden lg:flex">
 				<Icon name="lucide:folder" />
 				<span>~/biscuit/super-bot</span>
 			</h3>

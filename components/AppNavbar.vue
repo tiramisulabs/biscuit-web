@@ -1,5 +1,5 @@
 <template>
-	<nav class="flex text-white items-center justify-between mx-auto px-12 py-8 max-w-7xl">
+	<nav class="flex text-white items-center justify-between mx-auto px-6 lg:px-12 py-8 max-w-7xl">
 		<NuxtLink
 			:to="'/'"
 			class="space-x-4 flex items-center cursor-pointer hover:bg-blue-600/10 dark:hover:bg-blue-400/10 rounded-lg p-2 transition duration-300"
@@ -10,12 +10,12 @@
 				<span class="text-blue-400">/web</span>
 			</h2>
 		</NuxtLink>
-		<div class="flex space-x-5 items-center">
+		<div class="hidden lg:flex space-x-5 items-center">
 			<ul class="flex space-x-5">
 				<li
 					v-for="menu in menuSections"
 					:key="menu.path"
-					class="font-semibold cursor-pointer hover:text-blue-400 text-black dark:text-white"
+					class="font-semibold hover:text-blue-400 text-black dark:text-white"
 				>
 					<NuxtLink :href="menu.path" active-class="text-blue-400">
 						{{ menu.name }}
@@ -33,6 +33,40 @@
 				/>
 			</div>
 		</div>
+		<SimpleDropdownMenu class="lg:hidden" button-style="solid" button-icon-left="lucide:menu">
+			<div class="flex flex-col">
+				<p class="font-bold pb-2 pl-1 text-sm">Menu</p>
+				<ul class="space-y-3">
+					<li
+						v-for="menu in menuSections"
+						:key="menu.path"
+						class="hover:text-blue-400 text-black dark:text-white"
+					>
+						<NuxtLink :href="menu.path" active-class="text-blue-400">
+							{{ menu.name }}
+						</NuxtLink>
+					</li>
+					<li class="hover:text-blue-400 text-black dark:text-white">
+						<NuxtLink :href="config.public.githubUrl" target="_blank">Github</NuxtLink>
+					</li>
+				</ul>
+			</div>
+			<div class="flex flex-col pt-2">
+				<p class="font-bold pb-2 pl-1 text-sm">Theme</p>
+				<ul class="space-y-3">
+					<li>
+						<SimpleButton
+							:icon-left="colorMode.value === 'dark' ? 'lucide:sun' : 'lucide:moon'"
+							class="w-full"
+							button-style="ghost"
+							@click="changeTheme"
+						>
+							{{ colorMode.value === 'dark' ? 'Dark' : 'Light' }}
+						</SimpleButton>
+					</li>
+				</ul>
+			</div>
+		</SimpleDropdownMenu>
 	</nav>
 </template>
 

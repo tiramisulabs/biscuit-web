@@ -6,7 +6,6 @@ export default defineNuxtConfig({
 		'@nuxt/image-edge',
 		'@nuxtjs/web-vitals',
 		'@nuxtjs/fontaine',
-		'nuxt-delay-hydration',
 		'@nuxtjs/color-mode',
 	],
 	app: {
@@ -39,9 +38,6 @@ export default defineNuxtConfig({
 			routes: ['/'],
 		},
 	},
-	delayHydration: {
-		mode: 'mount',
-	},
 	tailwindcss: {
 		exposeConfig: true,
 	},
@@ -49,5 +45,8 @@ export default defineNuxtConfig({
 		classSuffix: '',
 		preference: 'light',
 		fallback: 'dark',
+	},
+	webVitals: {
+		provider: 'auto',
 	},
 });

@@ -1,6 +1,6 @@
 <template>
 	<button
-		class="font-medium tracking-wider flex rounded-full text-lg transition duration-300 items-center space-x-2"
+		class="font-medium tracking-wider flex justify-center rounded-full text-lg transition duration-300 items-center space-x-2 whitespace-nowrap"
 		:class="{
 			'dark:text-blue-900': buttonStyle === 'solid',
 			'dark:bg-blue-400': buttonStyle === 'solid',
@@ -14,7 +14,7 @@
 			'text-blue-500': buttonStyle === 'ghost',
 			'bg-blue-500/10': buttonStyle === 'ghost',
 			'hover:bg-blue-600/20': buttonStyle === 'ghost',
-			'py-2 px-5': $slots.default,
+			'lg:py-2 lg:px-5 py-2 px-3': $slots.default,
 			'p-4': !$slots.default,
 		}"
 	>

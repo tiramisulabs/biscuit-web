@@ -1,13 +1,15 @@
 <template>
-	<main class="mx-auto px-12 max-w-screen-xl flex justify-between flex-col space-y-44">
-		<section class="flex py-32 space-x-10">
-			<div class="w-1/2 space-y-8">
+	<main class="mx-auto px-6 lg:px-12 max-w-screen-xl flex justify-between flex-col space-y-44">
+		<section class="flex py-10 lg:py-32 space-y-10 lg:space-y-0 lg:space-x-10 flex-col lg:flex-row">
+			<div class="w-full lg:w-1/2 space-y-8">
 				<div class="flex flex-col space-y-5">
 					<div class="flex text-gray-500 dark:text-gray-300 items-center space-x-2">
 						<Icon class="text-orange-400" name="lucide:flame" />
-						<p class="font-mono">Incredibly lightweight and object oriented</p>
+						<p class="font-mono text-xs md:text-md lg:text-lg">
+							Incredibly lightweight and object oriented
+						</p>
 					</div>
-					<h1 class="text-6xl text-black dark:text-white font-semibold">
+					<h1 class="text-4xl lg:text-6xl text-black dark:text-white font-semibold">
 						Create wonderful bots with
 						<span
 							class="text-transparent bg-clip-text bg-gradient-to-r dark:from-blue-400 dark:to-green-400 from-blue-500 to-green-500"
@@ -15,50 +17,54 @@
 							biscuitjs.
 						</span>
 					</h1>
-					<h4 class="text-2xl text-gray-400 dark:text-gray-200">
+					<h4 class="text-xl lg:text-2xl text-gray-400 dark:text-gray-200">
 						A brand new bleeding edge non bloated Discord library.
 					</h4>
 				</div>
 				<ul class="text-black dark:text-white font-medium tracking-wider">
 					<li class="space-x-2 my-3 items-center flex">
 						<div class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-fit">
-							<Icon name="lucide:framer" class="text-xl text-yellow-400" />
+							<Icon name="lucide:framer" class="text-lg lg:text-xl text-yellow-400" />
 						</div>
-						<span>Memory efficient, -100Mb on 200k servers.</span>
+						<span class="text-sm lg:text-md">Memory efficient, -100Mb on 200k servers.</span>
 					</li>
 					<li class="space-x-2 my-3 items-center flex">
 						<div class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-fit">
-							<Icon name="lucide:clipboard-signature" class="text-xl text-green-400" />
+							<Icon name="lucide:clipboard-signature" class="text-lg lg:text-xl text-green-400" />
 						</div>
-						<span>Easy to use, utility classes for better commands.</span>
+						<span class="text-sm lg:text-md">Easy to use, utility classes for better commands.</span>
 					</li>
 					<li class="space-x-2 my-3 items-center flex">
 						<div class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-fit">
-							<Icon name="lucide:network" class="text-xl text-purple-400" />
+							<Icon name="lucide:network" class="text-lg lg:text-xl text-purple-400" />
 						</div>
-						<span>Escable, with microservices.</span>
+						<span class="text-sm lg:text-md">Escable, with microservices.</span>
 					</li>
 					<li class="space-x-2 my-3 items-center flex">
 						<div class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-fit">
-							<Icon name="lucide:package-check" class="text-xl text-red-400" />
+							<Icon name="lucide:package-check" class="text-lg lg:text-xl text-red-400" />
 						</div>
-						<span>Optional cache, no more mandatory cache.</span>
+						<span class="text-sm lg:text-md">Optional cache, no more mandatory cache.</span>
 					</li>
 				</ul>
-				<div class="flex space-x-4 items-center">
-					<SimpleButton button-style="solid" icon-left="lucide:party-popper">Get started</SimpleButton>
-					<NuxtLink :href="config.public.githubUrl" target="_blank">
-						<SimpleButton button-style="ghost" icon-left="lucide:github">Github</SimpleButton>
+				<div class="flex space-y-4 md:space-y-0 space-x-0 md:space-x-4 items-center flex-col md:flex-row">
+					<SimpleButton class="w-full lg:w-fit" button-style="solid" icon-left="lucide:party-popper">
+						Get started
+					</SimpleButton>
+					<NuxtLink class="w-full lg:w-fit" :href="config.public.githubUrl" target="_blank">
+						<SimpleButton class="w-full lg:w-fit" button-style="ghost" icon-left="lucide:github">
+							Github
+						</SimpleButton>
 					</NuxtLink>
 				</div>
 			</div>
-			<div class="w-1/2">
+			<div class="w-full lg:w-1/2">
 				<ConsolePreview :commands="commands" />
 			</div>
 		</section>
 		<section class="flex flex-col space-y-10">
 			<div class="flex flex-col space-y-6 max-w-4xl">
-				<h1 class="text-5xl font-bold text-black dark:text-white">
+				<h1 class="text-4xl lg:text-5xl font-bold text-black dark:text-white">
 					Some
 					<span
 						class="text-transparent bg-clip-text bg-gradient-to-r dark:from-green-400 dark:to-purple-400 font-extrabold from-green-500 to-purple-500"
@@ -66,20 +72,20 @@
 						utilities
 					</span>
 				</h1>
-				<h3 class="text-2xl text-gray-500 dark:text-gray-400">
+				<h3 class="text-lg lg:text-2xl text-gray-500 dark:text-gray-400">
 					Utilities that will help you to create a scalable bot based on microservices totally efficient and
 					with low resource usage.
 				</h3>
 				<NuxtLink href="/utilities" class="w-fit">
 					<h4
-						class="text-black dark:text-white text-xl font-medium space-x-2 hover:text-blue-400 transition duration-300"
+						class="text-black dark:text-white text-lg lg:text-xl font-medium space-x-2 hover:text-blue-400 transition duration-300"
 					>
 						<span>Discover more utilities</span>
 						<Icon name="lucide:corner-down-right" />
 					</h4>
 				</NuxtLink>
 			</div>
-			<div class="grid gap-4 grid-cols-3">
+			<div class="grid gap-8 lg:gap-4 grid-cols-1 lg:grid-cols-3">
 				<div
 					v-for="utility in utilities"
 					:key="utility.name"
@@ -92,7 +98,7 @@
 						class="w-full h-52 rounded-xl"
 					/>
 					<div class="p-4 space-y-2">
-						<h4 class="font-medium text-2xl text-black dark:text-white">
+						<h4 class="font-medium text-lg lg:text-2xl text-black dark:text-white">
 							<span
 								class="text-transparent bg-clip-text bg-gradient-to-r dark:from-blue-400 dark:to-green-400 from-blue-500 to-green-500"
 							>
@@ -107,66 +113,68 @@
 		</section>
 		<section class="flex flex-col space-y-10">
 			<div class="flex flex-col space-y-6 max-w-4xl">
-				<h1 class="text-5xl font-bold dark:text-white text-black">Statistics</h1>
-				<h3 class="text-2xl dark:text-gray-400 text-gray-500">
+				<h1 class="text-4xl lg:text-5xl font-bold dark:text-white text-black">Statistics</h1>
+				<h3 class="text-lg lg:text-2xl dark:text-gray-400 text-gray-500">
 					Our usage statistics of the core utility, thanks to all the loyal users who use them.
 				</h3>
 			</div>
-			<div class="grid gap-4 grid-cols-4">
+			<div class="grid gap-8 lg:gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
 				<div
 					class="w-full p-4 rounded-xl bg-green-400 hover:ring-4 transition duration-300 hover:ring-green-600 dark:hover:ring-green-800 hover:-translate-y-2 space-y-4"
 				>
-					<div class="bg-gray-200/30 w-fit p-2 rounded-lg">
+					<div class="bg-gray-200/30 w-fit p-1 lg:p-2 rounded-lg">
 						<Icon class="text-3xl" name="lucide:download" />
 					</div>
-					<h1 class="text-5xl font-bold">{{ stats?.downloads }}+</h1>
-					<h5 class="text-xl text-white font-medium">— Downloads</h5>
+					<h1 class="text-4xl lg:text-5xl font-bold">{{ stats?.downloads }}+</h1>
+					<h5 class="text-lg lg:text-xl text-white font-medium">— Downloads</h5>
 				</div>
 				<div
 					class="w-full p-4 rounded-xl bg-orange-400 hover:ring-4 transition duration-300 hover:ring-orange-600 dark:hover:ring-orange-800 hover:-translate-y-2 space-y-4"
 				>
-					<div class="bg-gray-200/30 w-fit p-2 rounded-lg">
+					<div class="bg-gray-200/30 w-fit p-1 lg:p-2 rounded-lg">
 						<Icon class="text-3xl" name="lucide:star" />
 					</div>
-					<h1 class="text-5xl font-bold">{{ stats?.stargazers }}+</h1>
-					<h5 class="text-xl text-white font-medium">— Stars</h5>
+					<h1 class="text-4xl lg:text-5xl font-bold">{{ stats?.stargazers }}+</h1>
+					<h5 class="text-lg lg:text-xl text-white font-medium">— Stars</h5>
 				</div>
 				<div
 					class="w-full p-4 rounded-xl bg-purple-400 hover:ring-4 transition duration-300 hover:ring-purple-600 dark:hover:ring-purple-800 hover:-translate-y-2 space-y-4"
 				>
-					<div class="bg-gray-200/30 w-fit p-2 rounded-lg">
+					<div class="bg-gray-200/30 w-fit p-1 lg:p-2 rounded-lg">
 						<Icon class="text-3xl" name="lucide:github" />
 					</div>
-					<h1 class="text-5xl font-bold">{{ stats?.forks }}+</h1>
-					<h5 class="text-xl text-white font-medium">— Forks</h5>
+					<h1 class="text-4xl lg:text-5xl font-bold">{{ stats?.forks }}+</h1>
+					<h5 class="text-lg lg:text-xl text-white font-medium">— Forks</h5>
 				</div>
 				<div
 					class="w-full p-4 rounded-xl bg-blue-400 hover:ring-4 transition duration-300 hover:ring-blue-600 dark:hover:ring-blue-800 hover:-translate-y-2 space-y-4"
 				>
-					<div class="bg-gray-200/30 w-fit p-2 rounded-lg">
+					<div class="bg-gray-200/30 w-fit p-1 lg:p-2 rounded-lg">
 						<Icon class="text-3xl" name="lucide:users" />
 					</div>
-					<h1 class="text-5xl font-bold">{{ stats?.discord_support_members }}+</h1>
-					<h5 class="text-xl text-white font-medium">— Discord members</h5>
+					<h1 class="text-4xl lg:text-5xl font-bold">{{ stats?.discord_support_members }}+</h1>
+					<h5 class="text-lg lg:text-xl text-white font-medium">— Discord members</h5>
 				</div>
 			</div>
 		</section>
 		<section class="flex pb-40 flex-col space-y-10 justify-center items-center">
 			<div class="flex flex-col text-center space-y-5">
-				<h1 class="text-5xl font-bold text-black dark:text-white">
+				<h1 class="text-4xl lg:text-5xl font-bold text-black dark:text-white">
 					Start your
 					<span class="text-blue-400">new adventure</span>
 				</h1>
-				<h4 class="text-2xl font-medium dark:text-gray-300 text-gray-500">
+				<h4 class="text-md lg:text-2xl font-medium dark:text-gray-300 text-gray-500">
 					Develop bots efficiently and become a great Discord bot developer.
 				</h4>
 			</div>
-			<div class="flex space-x-4">
-				<NuxtLink :href="config.public.discordSupportUrl" target="_blank">
-					<SimpleButton button-style="solid" icon-left="lucide:user">Join support server</SimpleButton>
+			<div class="flex md:space-x-4 flex-col md:flex-row space-y-4 md:space-y-0 w-full lg:w-fit">
+				<NuxtLink class="w-full" :href="config.public.discordSupportUrl" target="_blank">
+					<SimpleButton class="w-full" button-style="solid" icon-left="lucide:user">
+						Support server
+					</SimpleButton>
 				</NuxtLink>
-				<NuxtLink :href="config.public.githubUrl" target="_blank">
-					<SimpleButton button-style="ghost" icon-left="lucide:github">Github</SimpleButton>
+				<NuxtLink class="w-full" :href="config.public.githubUrl" target="_blank">
+					<SimpleButton class="w-full" button-style="ghost" icon-left="lucide:github">Github</SimpleButton>
 				</NuxtLink>
 			</div>
 		</section>
