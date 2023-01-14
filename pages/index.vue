@@ -103,7 +103,7 @@
 						class="w-full h-52 rounded-xl"
 					/>
 					<div class="p-4 space-y-2">
-						<h4 class="font-medium text-lg lg:text-2xl text-black dark:text-white">
+						<h4 class="font-medium text-xl lg:text-2xl text-black dark:text-white">
 							<span
 								class="text-transparent bg-clip-text bg-gradient-to-r dark:from-blue-400 dark:to-green-400 from-blue-500 to-green-500"
 							>
