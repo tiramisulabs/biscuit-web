@@ -130,7 +130,7 @@
 					<div class="bg-gray-200/30 w-fit p-1 lg:p-2 rounded-lg text-white">
 						<Icon class="text-3xl" name="lucide:download" />
 					</div>
-					<h1 class="text-4xl lg:text-5xl font-bold text-white">{{ stats?.downloads }}+</h1>
+					<h1 class="text-4xl lg:text-5xl font-bold text-white">{{ pending ? '0-0' : stats?.downloads }}+</h1>
 					<h5 class="text-lg lg:text-xl text-white font-medium">— Downloads</h5>
 				</div>
 				<div
@@ -139,7 +139,9 @@
 					<div class="bg-gray-200/30 w-fit p-1 lg:p-2 rounded-lg text-white">
 						<Icon class="text-3xl" name="lucide:star" />
 					</div>
-					<h1 class="text-4xl lg:text-5xl font-bold text-white">{{ stats?.stargazers }}+</h1>
+					<h1 class="text-4xl lg:text-5xl font-bold text-white">
+						{{ pending ? '0-0' : stats?.stargazers }}+
+					</h1>
 					<h5 class="text-lg lg:text-xl text-white font-medium">— Stars</h5>
 				</div>
 				<div
@@ -148,7 +150,7 @@
 					<div class="bg-gray-200/30 w-fit p-1 lg:p-2 rounded-lg text-white">
 						<Icon class="text-3xl" name="lucide:github" />
 					</div>
-					<h1 class="text-4xl lg:text-5xl font-bold text-white">{{ stats?.forks }}+</h1>
+					<h1 class="text-4xl lg:text-5xl font-bold text-white">{{ pending ? '0-0' : stats?.forks }}+</h1>
 					<h5 class="text-lg lg:text-xl text-white font-medium">— Forks</h5>
 				</div>
 				<div
@@ -157,7 +159,9 @@
 					<div class="bg-gray-200/30 w-fit p-1 lg:p-2 rounded-lg text-white">
 						<Icon class="text-3xl" name="lucide:users" />
 					</div>
-					<h1 class="text-4xl lg:text-5xl font-bold text-white">{{ stats?.discord_support_members }}+</h1>
+					<h1 class="text-4xl lg:text-5xl font-bold text-white">
+						{{ pending ? '0-0' : stats?.discord_support_members }}+
+					</h1>
 					<h5 class="text-lg lg:text-xl text-white font-medium">— Discord members</h5>
 				</div>
 			</div>
@@ -207,7 +211,7 @@
 <script lang="ts" setup>
 const toast = useToast(5_000);
 const config = useRuntimeConfig();
-const { data: stats } = await useFetch('/api/stats');
+const { data: stats, pending } = await useFetch('/api/stats');
 
 const commands = [
 	'npm install @biscuitland/core',
