@@ -2,7 +2,7 @@
 	<footer
 		class="bg-gray-50 dark:bg-gray-800 w-full p-6 flex items-center justify-center flex-col space-y-5 rounded-t-3xl text-center"
 	>
-		<nuxt-img
+		<NuxtImg
 			src="/icon.svg"
 			alt="biscuitland icon"
 			class="w-16 h-16 hover:bg-blue-600/10 dark:hover:bg-blue-400/10 p-2 cursor-pointer transition duration-300 rounded-full"

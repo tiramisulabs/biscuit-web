@@ -4,7 +4,7 @@
 			:to="'/'"
 			class="space-x-4 flex items-center cursor-pointer hover:bg-blue-600/10 dark:hover:bg-blue-400/10 rounded-lg p-2 transition duration-300"
 		>
-			<nuxt-img src="/icon.svg" alt="biscuitland icon" class="w-auto h-9" />
+			<NuxtImg src="/icon.svg" alt="biscuitland icon" class="w-auto h-9" />
 			<h2 class="font-bold text-2xl text-black dark:text-white">
 				biscuitland
 				<span class="text-blue-400">/web</span>
@@ -17,7 +17,7 @@
 					:key="menu.path"
 					class="font-semibold hover:text-blue-400 text-black dark:text-white"
 				>
-					<NuxtLink :href="menu.path" active-class="text-blue-400">
+					<NuxtLink :to="menu.path" active-class="text-blue-400">
 						{{ menu.name }}
 					</NuxtLink>
 				</li>
@@ -42,7 +42,7 @@
 						:key="menu.path"
 						class="hover:text-blue-400 text-black dark:text-white"
 					>
-						<NuxtLink :href="menu.path" active-class="text-blue-400">
+						<NuxtLink :to="menu.path" active-class="text-blue-400">
 							{{ menu.name }}
 						</NuxtLink>
 					</li>
