@@ -33,10 +33,8 @@ export default defineNuxtConfig({
 			secretDiscordSupportUrl: 'https://discord.gg/KAVzwsXdZu',
 		},
 	},
-	nitro: {
-		prerender: {
-			routes: ['/'],
-		},
+	routeRules: {
+		'/': { swr: 3600 },
 	},
 	tailwindcss: {
 		exposeConfig: true,
