@@ -65,4 +65,4 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Run Lint
-        run: pnpm eslint src --ext ts --fix=false
+        run: eslint --ext \".ts,.tsx,.vue\" --ignore-path .gitignore .
