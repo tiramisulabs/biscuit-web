@@ -2,7 +2,7 @@
 	<div class="p-3 lg:p-0 absolute z-50 botton-10 lg:top-10 lg:right-10 lg:w-72 w-full">
 		<div class="flex w-full p-4 bg-gray-800 rounded-lg items-center justify-between space-x-2" :class="[color]">
 			<div class="rounded-full p-2 bg-gray-300/20 shrink-0 w-8 h-8 items-center flex">
-				<Icon :name="iconLeft" class="text-lg lg:text-xl" />
+				<Icon :name="icon" class="text-lg lg:text-xl" />
 			</div>
 			<p class="shrink-0">{{ message }}</p>
 			<button
@@ -17,5 +17,31 @@
 </template>
 
 <script lang="ts" setup>
-defineProps<{ message: string; color: string; iconLeft: string; closeButton?: () => void }>();
+import { ToastTypes } from '~~/composables/toast';
+
+const props = defineProps<{
+	message: string;
+	type: ToastTypes;
+	closeButton?: () => void;
+}>();
+
+const icon = computed(() =>
+	props.type === 'success'
+		? 'lucide:check'
+		: props.type === 'error'
+		? 'lucide:x'
+		: props.type === 'warning'
+		? 'file-warning'
+		: 'help-circle',
+);
+
+const color = computed(() =>
+	props.type === 'success'
+		? 'bg-green-500'
+		: props.type === 'error'
+		? 'bg-red-500'
+		: props.type === 'warning'
+		? 'bg-yellow-500'
+		: 'bg-blue-500',
+);
 </script>

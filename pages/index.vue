@@ -23,25 +23,33 @@
 				</div>
 				<ul class="text-black dark:text-white font-medium tracking-wider">
 					<li class="space-x-2 my-3 items-center flex">
-						<div class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-10 h-10 items-center flex">
+						<div
+							class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-10 h-10 items-center justify-center flex"
+						>
 							<Icon name="lucide:framer" class="text-lg lg:text-xl text-yellow-400" />
 						</div>
 						<span class="text-sm lg:text-md">Memory efficient, -100Mb on 200k servers.</span>
 					</li>
 					<li class="space-x-2 my-3 items-center flex">
-						<div class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-10 h-10 items-center flex">
+						<div
+							class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-10 h-10 items-center justify-center flex"
+						>
 							<Icon name="lucide:clipboard-signature" class="text-lg lg:text-xl text-green-400" />
 						</div>
 						<span class="text-sm lg:text-md">Easy to use, utility classes for better commands.</span>
 					</li>
 					<li class="space-x-2 my-3 items-center flex">
-						<div class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-10 h-10 items-center flex">
+						<div
+							class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-10 h-10 items-center justify-center flex"
+						>
 							<Icon name="lucide:network" class="text-lg lg:text-xl text-purple-400" />
 						</div>
 						<span class="text-sm lg:text-md">Escable, with microservices.</span>
 					</li>
 					<li class="space-x-2 my-3 items-center flex">
-						<div class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-10 h-10 items-center flex">
+						<div
+							class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-10 h-10 items-center justify-center flex"
+						>
 							<Icon name="lucide:package-check" class="text-lg lg:text-xl text-red-400" />
 						</div>
 						<span class="text-sm lg:text-md">Optional cache, no more mandatory cache.</span>
@@ -198,18 +206,17 @@
 			leave-to-class="transform opacity-0 scale-95"
 		>
 			<AppToast
-				v-if="toast.isVisible.value"
-				message="Install command copied"
-				icon-left="lucide:check"
-				color="bg-green-500"
-				:close-button="() => toast.hideAction()"
+				v-if="toast.visible.value"
+				:message="toast.message.value"
+				:type="toast.type.value"
+				:close-button="() => toast.hide()"
 			/>
 		</Transition>
 	</Teleport>
 </template>
 
 <script lang="ts" setup>
-const toast = useToast(5_000);
+const toast = useToast(5_000, 'Install command copied', 'success');
 const config = useRuntimeConfig();
 const { data: stats, pending } = await useFetch('/api/stats');
 
@@ -248,7 +255,7 @@ const utilities = [
 ];
 
 const copyInstallCommand = () => {
-	toast.showAction();
+	toast.show();
 	navigator.clipboard.writeText('xd?');
 };
 </script>

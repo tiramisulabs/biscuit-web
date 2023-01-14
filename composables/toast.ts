@@ -1,14 +1,19 @@
-export const useToast = (time: number) => {
-	const isVisible = useState(() => false);
-	const showAction = async () => {
-		isVisible.value = true;
+export type ToastTypes = 'warning' | 'error' | 'success' | 'info';
+
+export const useToast = (time: number, m: string, t: ToastTypes) => {
+	const visible = useState(() => false);
+	const message = useState(() => m);
+	const type = useState(() => t);
+
+	const show = async () => {
+		visible.value = true;
 		await awaitTime(time);
-		isVisible.value = false;
+		visible.value = false;
 	};
 
-	const hideAction = () => {
-		isVisible.value = false;
+	const hide = () => {
+		visible.value = false;
 	};
 
-	return { showAction, hideAction, isVisible };
+	return { show, hide, visible, message, type };
 };
