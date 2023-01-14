@@ -7,7 +7,7 @@
 			<p class="shrink-0">{{ message }}</p>
 			<button
 				v-if="closeButton"
-				class="rounded-full p-2 bg-gray-300/20 hover:bg-red-300/50 active:bg-red-300/50 shrink-0 w-8 h-8 items-center flex"
+				class="rounded-full p-2 bg-gray-300/20 hover:bg-red-300/50 active:bg-red-300/50 shrink-0 w-8 h-8 items-center flex hover:text-red-700 transition duration-200"
 				@click="closeButton?.()"
 			>
 				<Icon name="lucide:x" class="text-lg lg:text-xl" />
