@@ -30,7 +30,19 @@ export default defineNuxtConfig({
 		},
 	},
 	routeRules: {
-		'/': { swr: 3600 },
+		'/': { swr: 86400 },
+	},
+	nitro: {
+		prerender: {
+			routes: [
+				'/utilities/api-types',
+				'/utilities/cache',
+				'/utilities/core',
+				'/utilities/helpers',
+				'/utilities/rest',
+				'/utilities/ws',
+			],
+		},
 	},
 	tailwindcss: {
 		exposeConfig: true,
