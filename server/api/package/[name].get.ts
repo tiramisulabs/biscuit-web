@@ -36,7 +36,8 @@ export default defineEventHandler(async (event) => {
 		.get('http://registry.npmjs.com/-/v1/search', {
 			searchParams: { text: `@biscuitland/${params.name}`, size: 1 },
 		})
-		.json<npmjsSearchPackages>();
+		.json<npmjsSearchPackages>()
+		.catch(() => null);
 
 	const npmDownloadsStats = await ky
 		.get(
@@ -44,7 +45,11 @@ export default defineEventHandler(async (event) => {
 				params.name
 			}`,
 		)
-		.json<npmDownloadsPackage>();
+		.json<npmDownloadsPackage>()
+		.catch(() => null);
+
+	if (!packages) throw createError({ statusCode: 404, statusMessage: 'Package not found.' });
+	if (!npmDownloadsStats) throw createError({ statusCode: 404, statusMessage: 'Package not found.' });
 
 	const readme = await ky
 		.get(`https://raw.githubusercontent.com/oasisjs/biscuit/main/packages/${params.name}/README.md`)
