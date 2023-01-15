@@ -8,15 +8,11 @@ export default defineNuxtConfig({
 		'@nuxtjs/fontaine',
 		'@nuxtjs/color-mode',
 	],
+	build: {
+		transpile: ['marked'],
+	},
 	app: {
 		head: {
-			titleTemplate: 'biscuitland - A brand new bleeding edge non bloated Discord library',
-			meta: [
-				{
-					name: 'description',
-					content: 'A brand new bleeding edge non bloated Discord library.',
-				},
-			],
 			link: [
 				{
 					rel: 'shortcut icon',

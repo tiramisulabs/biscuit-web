@@ -76,7 +76,7 @@ const colorMode = useColorMode();
 
 const menuSections = [
 	{ name: 'Home', path: '/' },
-	{ name: 'Utilities', path: '/utilities' },
+	{ name: 'Utilities', path: '/utilities/core' },
 	{ name: 'Discord Server', path: 'https://discord.gg/sTaJ744d' },
 ];
 

@@ -1,6 +1,6 @@
 import ky from 'ky';
 
-type npmDownloadsPackage = {
+export type npmDownloadsPackage = {
 	start: string;
 	end: string;
 	package: string;
