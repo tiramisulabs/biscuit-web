@@ -251,6 +251,6 @@ const utilities = [
 
 const copyInstallCommand = () => {
 	toast.show();
-	navigator.clipboard.writeText('xd?');
+	navigator.clipboard.writeText('npm install @biscuitland/core');
 };
 </script>

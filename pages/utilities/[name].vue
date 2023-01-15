@@ -189,7 +189,7 @@ const readme = computed(() => marked(pkg.value?.readme ?? '# Readme not found :(
 
 const copyInstallCommand = () => {
 	toast.show();
-	navigator.clipboard.writeText('xd?');
+	navigator.clipboard.writeText('npm install @biscuitland/core');
 };
 
 if (error.value) showError({ statusCode: 404, statusMessage: 'Package not found' });
