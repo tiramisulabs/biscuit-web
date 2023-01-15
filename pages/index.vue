@@ -89,7 +89,7 @@
 					Utilities that will help you to create a scalable bot based on microservices totally efficient and
 					with low resource usage.
 				</h3>
-				<NuxtLink to="/utilities" class="w-fit">
+				<NuxtLink to="/utilities/core" class="w-fit">
 					<h4
 						class="text-black dark:text-white text-lg lg:text-xl font-medium space-x-2 hover:text-blue-400 transition duration-300"
 					>

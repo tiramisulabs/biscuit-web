@@ -18,15 +18,17 @@
 						</li>
 					</NuxtLink>
 				</ul>
-				<hr class="border-gray-700" />
+				<hr class="dark:border-gray-700 border-gray-300" />
 			</div>
 			<div
 				class="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-5 items-center text-center lg:text-left p-8 lg:p-0"
 			>
-				<div class="p-4 bg-gradient-to-r bg-gray-700/20 rounded-lg items-center justify-center shrink-0">
+				<div
+					class="p-4 bg-gradient-to-r bg-gray-400/20 dark:bg-gray-700/20 rounded-lg items-center justify-center shrink-0"
+				>
 					<Icon
 						:name="utilitySelected?.icon ?? 'lucide:network'"
-						class="h-full w-28 bg-gray-700/40 rounded-lg p-2"
+						class="h-full w-28 bg-gray-400/20 dark:bg-gray-700/40 rounded-lg p-2 text-black dark:text-white"
 					/>
 				</div>
 				<div v-if="!pending" class="flex flex-col space-y-2 w-full">
@@ -41,7 +43,7 @@
 					<p class="text-gray-400">
 						{{ pkg?.description }}
 					</p>
-					<hr class="border-gray-700" />
+					<hr class="dark:border-gray-700 border-gray-300" />
 					<div class="flex space-x-2 text-gray-400 justify-center lg:justify-start">
 						<p>{{ pkg?.downloads }} installations</p>
 						<p>—</p>
@@ -52,7 +54,7 @@
 					<div class="w-full h-8 bg-slate-700 rounded" />
 					<div class="w-full h-4 bg-slate-700 rounded" />
 					<div class="w-full h-4 bg-slate-700 rounded" />
-					<hr class="border-gray-700" />
+					<hr class="dark:border-gray-700 border-gray-300" />
 					<div class="w-full h-4 bg-slate-700 rounded" />
 				</div>
 				<button
