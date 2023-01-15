@@ -1,13 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	modules: [
-		'@nuxtjs/tailwindcss',
-		'nuxt-icon',
-		'@nuxt/image-edge',
-		'@nuxtjs/web-vitals',
-		'@nuxtjs/fontaine',
-		'@nuxtjs/color-mode',
-	],
+	modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@nuxt/image-edge', '@nuxtjs/fontaine', '@nuxtjs/color-mode'],
 	build: {
 		transpile: ['marked'],
 	},
@@ -51,8 +44,5 @@ export default defineNuxtConfig({
 		classSuffix: '',
 		preference: 'light',
 		fallback: 'dark',
-	},
-	webVitals: {
-		provider: 'auto',
 	},
 });

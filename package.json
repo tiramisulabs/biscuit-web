@@ -24,7 +24,6 @@
 		"@nuxtjs/color-mode": "^3.2.0",
 		"@nuxtjs/fontaine": "^0.2.4",
 		"@nuxtjs/tailwindcss": "^6.2.0",
-		"@nuxtjs/web-vitals": "^0.2.2",
 		"@tailwindcss/typography": "^0.5.9",
 		"@types/marked": "^4.0.8",
 		"@types/prismjs": "^1.26.0",

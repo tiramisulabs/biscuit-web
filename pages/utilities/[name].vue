@@ -184,11 +184,13 @@ const utilities = [
 const utilitySelected = computed(() => utilities.find((u) => u.name === route.params.name));
 const toast = useToast(5_000, 'Install command copied', 'success');
 
-const { data: pkg, pending } = useFetch(`/api/package/${route.params.name}`);
+const { data: pkg, pending, error } = useFetch(`/api/package/${route.params.name}`);
 const readme = computed(() => marked(pkg.value?.readme ?? '# Readme not found :('));
 
 const copyInstallCommand = () => {
 	toast.show();
 	navigator.clipboard.writeText('xd?');
 };
+
+if (error.value) showError({ statusCode: 404, statusMessage: 'Package not found' });
 </script>
