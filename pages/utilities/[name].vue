@@ -184,7 +184,7 @@ const utilities = [
 const utilitySelected = computed(() => utilities.find((u) => u.name === route.params.name));
 const toast = useToast(5_000, 'Install command copied', 'success');
 
-const { data: pkg, pending, error } = useFetch(`/api/package/${route.params.name}`);
+const { data: pkg, pending } = useFetch(`/api/package/${route.params.name}`);
 const readme = computed(() => marked(pkg.value?.readme ?? '# Readme not found :('));
 
 const copyInstallCommand = () => {
@@ -192,5 +192,7 @@ const copyInstallCommand = () => {
 	navigator.clipboard.writeText('npm install @biscuitland/core');
 };
 
-if (error.value) showError({ statusCode: 404, statusMessage: 'Package not found' });
+if (!pkg.value && !pending.value) {
+	showError({ statusCode: 404, statusMessage: 'Package Not Found', fatal: true });
+}
 </script>
