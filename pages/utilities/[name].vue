@@ -4,16 +4,17 @@
 		<Meta name="description" :content="pkg?.description" />
 	</Head>
 	<main class="mx-auto px-6 lg:px-12 max-w-screen-xl space-y-6 min-h-screen">
-		<section class="p-0 md:p-8 bg-gray-100 dark:bg-gray-800 rounded-t-xl space-y-5">
-			<div class="flex flex-col space-y-5">
+		<section class="p-0 md:p-8 bg-gray-100 dark:bg-gray-800 rounded-xl space-y-5">
+			<div class="flex flex-col space-y-3">
 				<ul class="flex space-x-5 items-center w-full justify-center lg:justify-start overflow-x-auto">
 					<NuxtLink
 						v-for="utility in utilities"
 						:key="utility.name"
 						:to="`/utilities/${utility.name}`"
-						active-class="font-bold border-b-2 border-blue-400 bg-blue-400/10 rounded-t-lg"
+						class="py-1 px-3 transition duration-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 rounded-md"
+						active-class="font-medium bg-gray-300/50 dark:bg-gray-700/50"
 					>
-						<li class="py-2 px-4 transition duration-300 font-mono uppercase hover:font-bold">
+						<li class="capitalize">
 							{{ utility.name }}
 						</li>
 					</NuxtLink>
@@ -51,14 +52,14 @@
 					</div>
 				</div>
 				<div v-else class="w-full animate-pulse flex space-y-4 flex-col">
-					<div class="w-full h-8 bg-slate-700 rounded" />
-					<div class="w-full h-4 bg-slate-700 rounded" />
-					<div class="w-full h-4 bg-slate-700 rounded" />
+					<div class="w-full h-8 bg-slate-200 dark:bg-slate-700 rounded" />
+					<div class="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded" />
+					<div class="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded" />
 					<hr class="dark:border-gray-700 border-gray-300" />
-					<div class="w-full h-4 bg-slate-700 rounded" />
+					<div class="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded" />
 				</div>
 				<button
-					class="p-4 bg-black rounded-xl shrink-0 font-mono hover:ring-blue-400 hover:ring-4 transition duration-200 text-white"
+					class="p-4 bg-black rounded-xl shrink-0 font-mono dark:hover:ring-blue-400 hover:ring-blue-600 hover:ring-4 transition duration-200 text-white"
 					@click="copyInstallCommand()"
 				>
 					$ pnpm install @biscuitland/{{ route.params.name }}
@@ -66,61 +67,93 @@
 			</div>
 		</section>
 		<section class="flex flex-col lg:flex-row lg:space-x-5 space-y-5 lg:space-y-0">
-			<div class="w-full lg:w-[70%] bg-gray-100 dark:bg-gray-800 rounded-b-xl p-8">
+			<div class="w-full lg:w-[70%] bg-gray-100 dark:bg-gray-800 rounded-lg p-8">
 				<article
 					v-if="!pending"
-					class="prose dark:prose-invert max-w-none prose-a:text-blue-400 break-words"
+					class="prose dark:prose-invert max-w-none dark:prose-a:text-blue-400 prose-a:text-blue-600 break-words"
 					v-html="readme"
 				></article>
 				<div v-else class="w-full animate-pulse flex space-y-4 flex-col">
-					<div class="w-full h-8 bg-slate-700 rounded" />
-					<div class="w-full h-4 bg-slate-700 rounded" />
-					<div class="w-full h-8 bg-slate-700 rounded" />
-					<div class="w-full h-4 bg-slate-700 rounded" />
-					<div class="w-full h-4 bg-slate-700 rounded" />
-					<div class="w-full h-8 bg-slate-700 rounded" />
-					<div class="w-full h-4 bg-slate-700 rounded" />
+					<div class="w-full h-8 bg-slate-200 dark:bg-slate-700 rounded" />
+					<div class="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded" />
+					<div class="w-full h-8 bg-slate-200 dark:bg-slate-700 rounded" />
+					<div class="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded" />
+					<div class="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded" />
+					<div class="w-full h-8 bg-slate-200 dark:bg-slate-700 rounded" />
+					<div class="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded" />
 				</div>
 			</div>
 			<div class="w-full lg:w-[30%]">
-				<div class="bg-gray-100 dark:bg-gray-800 rounded-b-xl p-4 space-y-3 sticky top-5">
-					<h4 class="font-medium text-xl">Useful links</h4>
-					<ul v-if="!pending">
-						<li class="hover:text-blue-400 transition duration-150">
-							<NuxtLink
-								:href="`https://github.com/oasisjs/biscuit/tree/main/packages/${route.params.name}`"
-								target="_blank"
-								class="flex space-x-2 items-center"
+				<div class="flex flex-col space-y-5 sticky top-5">
+					<div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-3">
+						<h4 class="font-medium text-lg">Useful links</h4>
+						<hr class="dark:border-gray-700 border-gray-300" />
+						<ul v-if="!pending">
+							<li class="hover:text-blue-600 dark:hover:text-blue-400 transition duration-150">
+								<NuxtLink
+									:href="`https://github.com/oasisjs/biscuit/tree/main/packages/${route.params.name}`"
+									target="_blank"
+									class="flex space-x-2 items-center"
+								>
+									<Icon name="lucide:github" />
+									<p>Github respository</p>
+								</NuxtLink>
+							</li>
+							<li class="hover:text-blue-600 dark:hover:text-blue-400 transition duration-150">
+								<NuxtLink
+									href="https://github.com/oasisjs/biscuit/issues"
+									target="_blank"
+									class="flex space-x-2 items-center"
+								>
+									<Icon name="lucide:flag-triangle-right" />
+									<p>Report issue</p>
+								</NuxtLink>
+							</li>
+							<li class="hover:text-blue-600 dark:hover:text-blue-400 transition duration-150">
+								<NuxtLink
+									href="https://github.com/oasisjs/biscuit/pulls"
+									target="_blank"
+									class="flex space-x-2 items-center"
+								>
+									<Icon name="lucide:git-pull-request" />
+									<p>Pull request</p>
+								</NuxtLink>
+							</li>
+							<li class="hover:text-blue-600 dark:hover:text-blue-400 transition duration-150">
+								<NuxtLink
+									:href="`https://docs.biscuitjs.com/modules/${utilitySelected?.name}_src.html`"
+									target="_blank"
+									class="flex space-x-2 items-center"
+								>
+									<Icon name="lucide:book" />
+									<p>Documentation</p>
+								</NuxtLink>
+							</li>
+						</ul>
+						<div v-else class="w-full animate-pulse flex space-y-4 flex-col">
+							<div class="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded" />
+							<div class="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded" />
+							<div class="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded" />
+							<div class="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded" />
+						</div>
+					</div>
+					<div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-3 sticky top-5">
+						<h4 class="font-medium text-lg">Maintainers</h4>
+						<hr class="dark:border-gray-700 border-gray-300" />
+						<div v-if="!pending" class="grid grid-cols-3 gap-2">
+							<p
+								v-for="maintainer in pkg?.maintainers"
+								:key="maintainer.email"
+								class="bg-gray-200/30 dark:bg-gray-700/30 p-1 rounded-lg text-center hover:bg-gray-300/50 dark:hover:bg-gray-700/50"
 							>
-								<Icon name="lucide:github" />
-								<p>Github respository</p>
-							</NuxtLink>
-						</li>
-						<li class="hover:text-blue-400 transition duration-150">
-							<NuxtLink
-								href="https://github.com/oasisjs/biscuit/issues"
-								target="_blank"
-								class="flex space-x-2 items-center"
-							>
-								<Icon name="lucide:flag-triangle-right" />
-								<p>Report issue</p>
-							</NuxtLink>
-						</li>
-						<li class="hover:text-blue-400 transition duration-150">
-							<NuxtLink
-								href="https://github.com/oasisjs/biscuit/pulls"
-								target="_blank"
-								class="flex space-x-2 items-center"
-							>
-								<Icon name="lucide:git-pull-request" />
-								<p>Pull request</p>
-							</NuxtLink>
-						</li>
-					</ul>
-					<div v-else class="w-full animate-pulse flex space-y-4 flex-col">
-						<div class="w-full h-4 bg-slate-700 rounded" />
-						<div class="w-full h-4 bg-slate-700 rounded" />
-						<div class="w-full h-4 bg-slate-700 rounded" />
+								{{ maintainer.username }}
+							</p>
+						</div>
+						<div v-else class="w-full animate-pulse flex space-x-2">
+							<div class="w-full h-6 bg-slate-200 dark:bg-slate-700 rounded" />
+							<div class="w-full h-6 bg-slate-200 dark:bg-slate-700 rounded" />
+							<div class="w-full h-6 bg-slate-200 dark:bg-slate-700 rounded" />
+						</div>
 					</div>
 				</div>
 			</div>

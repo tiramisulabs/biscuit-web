@@ -26,6 +26,7 @@ export type PackageInfo = {
 	readme: string;
 	score: npmjsPackageScore;
 	downloads: number;
+	maintainers: Array<{ username: string; email: string }>;
 };
 
 export default defineEventHandler(async (event) => {
@@ -57,5 +58,6 @@ export default defineEventHandler(async (event) => {
 		links: pkg.links,
 		readme: Buffer.from(readme).toString(),
 		downloads: npmDownloadsStats.downloads.reduce<number>((a, b) => a + b.downloads, 0),
+		maintainers: pkg.maintainers,
 	};
 });

@@ -57,7 +57,7 @@
 				</ul>
 				<div class="flex space-y-4 md:space-y-0 space-x-0 md:space-x-4 items-center flex-col md:flex-row">
 					<div
-						class="w-full lg:w-fit bg-black p-3 rounded-lg font-mono text-white shadow-black/30 dark:shadow-black/70 shadow-xl cursor-pointer"
+						class="w-full lg:w-fit bg-black p-3 rounded-lg font-mono text-white shadow-black/30 dark:shadow-black/70 shadow-xl cursor-pointer hover:ring-blue-400 hover:ring-4 transition duration-150"
 						button-style="solid"
 						icon-left="lucide:party-popper"
 						@click="copyInstallCommand()"
