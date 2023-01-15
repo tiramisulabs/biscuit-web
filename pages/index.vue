@@ -1,4 +1,9 @@
 <template>
+	<Head>
+		<Title>biscuitland - A brand new bleeding edge non bloated Discord library</Title>
+		<Meta name="description" content="A brand new bleeding edge non bloated Discord library." />
+	</Head>
+
 	<main class="mx-auto px-6 lg:px-12 max-w-screen-xl flex justify-between flex-col space-y-44">
 		<section class="flex py-10 lg:py-28 space-y-10 lg:space-y-0 lg:space-x-10 flex-col lg:flex-row">
 			<div class="w-full lg:w-1/2 space-y-8">
