@@ -3,7 +3,7 @@
 		<AppNavbar />
 		<slot />
 		<footer
-			class="bg-gray-50 dark:bg-gray-800 w-full p-6 flex items-center justify-center flex-col space-y-5 rounded-t-3xl text-center mt-10"
+			class="bg-gray-100 dark:bg-gray-800 w-full p-6 flex items-center justify-center flex-col space-y-5 rounded-t-3xl text-center mt-5"
 		>
 			<NuxtImg
 				src="/icon.svg"

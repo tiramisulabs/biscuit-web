@@ -29,7 +29,7 @@
 				<ul class="text-black dark:text-white font-medium tracking-wider">
 					<li class="space-x-2 my-3 items-center flex">
 						<div
-							class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-10 h-10 items-center justify-center flex"
+							class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-10 h-10 items-center justify-center flex shrink-0"
 						>
 							<Icon name="lucide:framer" class="text-lg lg:text-xl text-yellow-400" />
 						</div>
@@ -37,7 +37,7 @@
 					</li>
 					<li class="space-x-2 my-3 items-center flex">
 						<div
-							class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-10 h-10 items-center justify-center flex"
+							class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-10 h-10 items-center justify-center flex shrink-0"
 						>
 							<Icon name="lucide:clipboard-signature" class="text-lg lg:text-xl text-green-400" />
 						</div>
@@ -45,7 +45,7 @@
 					</li>
 					<li class="space-x-2 my-3 items-center flex">
 						<div
-							class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-10 h-10 items-center justify-center flex"
+							class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-10 h-10 items-center justify-center flex shrink-0"
 						>
 							<Icon name="lucide:network" class="text-lg lg:text-xl text-purple-400" />
 						</div>
@@ -53,14 +53,14 @@
 					</li>
 					<li class="space-x-2 my-3 items-center flex">
 						<div
-							class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-10 h-10 items-center justify-center flex"
+							class="rounded-full p-2 bg-gray-300/10 dark:bg-gray-200/10 w-10 h-10 items-center justify-center flex shrink-0"
 						>
 							<Icon name="lucide:package-check" class="text-lg lg:text-xl text-red-400" />
 						</div>
 						<span class="text-sm lg:text-md">Optional cache, no more mandatory cache.</span>
 					</li>
 				</ul>
-				<div class="flex space-y-4 md:space-y-0 space-x-0 md:space-x-4 items-center flex-col md:flex-row">
+				<div class="flex space-y-6 md:space-y-0 space-x-0 md:space-x-4 items-center flex-col md:flex-row">
 					<div
 						class="w-full lg:w-fit bg-black p-3 rounded-lg font-mono text-white shadow-black/30 dark:shadow-black/70 shadow-xl cursor-pointer hover:ring-blue-400 hover:ring-4 transition duration-150"
 						button-style="solid"
@@ -95,10 +95,8 @@
 					with low resource usage.
 				</h3>
 				<NuxtLink to="/utilities/core" class="w-fit">
-					<h4
-						class="text-black dark:text-white text-lg lg:text-xl font-medium space-x-2 hover:text-blue-400 transition duration-300"
-					>
-						<span>Discover more utilities</span>
+					<h4 class="hover:text-blue-400 transition duration-300 text-lg lg:text-xl font-medium">
+						Discover more utilities
 						<Icon name="lucide:corner-down-right" />
 					</h4>
 				</NuxtLink>

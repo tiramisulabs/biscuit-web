@@ -7,7 +7,7 @@
 			<NuxtImg src="/icon.svg" alt="biscuitland icon" class="w-auto h-9" />
 			<h2 class="font-bold text-2xl text-black dark:text-white">
 				biscuitland
-				<span class="text-blue-400">/web</span>
+				<span class="text-blue-600 dark:text-blue-400">/web</span>
 			</h2>
 		</NuxtLink>
 		<div class="hidden lg:flex space-x-5 items-center">
@@ -15,9 +15,9 @@
 				<li
 					v-for="menu in menuSections"
 					:key="menu.path"
-					class="font-semibold hover:text-blue-400 text-black dark:text-white"
+					class="font-semibold hover:text-blue-600 dark:hover:text-blue-400 text-black dark:text-white"
 				>
-					<NuxtLink :to="menu.path" active-class="text-blue-400">
+					<NuxtLink :to="menu.path" active-class="text-blue-600 dark:text-blue-400">
 						{{ menu.name }}
 					</NuxtLink>
 				</li>
@@ -40,13 +40,13 @@
 					<li
 						v-for="menu in menuSections"
 						:key="menu.path"
-						class="hover:text-blue-400 text-black dark:text-white"
+						class="hover:text-blue-600 dark:hover:text-blue-400 text-black dark:text-white"
 					>
 						<NuxtLink :to="menu.path" active-class="text-blue-400">
 							{{ menu.name }}
 						</NuxtLink>
 					</li>
-					<li class="hover:text-blue-400 text-black dark:text-white">
+					<li class="hover:text-blue-600 dark:hover:text-blue-400 text-black dark:text-white">
 						<NuxtLink :href="config.public.githubUrl" target="_blank">Github</NuxtLink>
 					</li>
 				</ul>

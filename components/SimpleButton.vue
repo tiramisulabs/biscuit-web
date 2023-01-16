@@ -4,10 +4,10 @@
 		:class="{
 			'dark:text-blue-900': buttonStyle === 'solid',
 			'dark:bg-blue-400': buttonStyle === 'solid',
-			'dark:hover:bg-blue-200': buttonStyle === 'solid',
+			'dark:hover:bg-blue-300': buttonStyle === 'solid',
 			'text-blue-50': buttonStyle === 'solid',
 			'bg-blue-500': buttonStyle === 'solid',
-			'hover:bg-blue-800': buttonStyle === 'solid',
+			'hover:bg-blue-600': buttonStyle === 'solid',
 			'dark:text-blue-400': buttonStyle === 'ghost',
 			'dark:bg-blue-400/10': buttonStyle === 'ghost',
 			'dark:hover:bg-blue-400/20': buttonStyle === 'ghost',

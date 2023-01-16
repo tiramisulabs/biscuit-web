@@ -4,21 +4,19 @@
 		<Meta name="description" :content="pkg?.description" />
 	</Head>
 	<main class="mx-auto px-6 lg:px-12 max-w-screen-xl space-y-6 min-h-screen">
-		<section class="p-0 md:p-8 bg-gray-100 dark:bg-gray-800 rounded-xl space-y-5">
+		<section class="bg-gray-100 dark:bg-gray-800 rounded-xl space-y-5 p-4">
 			<div class="flex flex-col space-y-3">
-				<ul class="flex space-x-5 items-center w-full justify-center lg:justify-start overflow-x-auto">
+				<div class="flex space-x-2 overflow-x-auto">
 					<NuxtLink
 						v-for="utility in utilities"
 						:key="utility.name"
 						:to="`/utilities/${utility.name}`"
-						class="py-1 px-3 transition duration-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 rounded-md"
-						active-class="font-medium bg-gray-300/50 dark:bg-gray-700/50"
+						class="hover:bg-gray-300/50 dark:hover:bg-gray-700/50 rounded-md px-3 py-1 shrink-0"
+						:active-class="`font-medium bg-gray-300/50 dark:bg-gray-700/50`"
 					>
-						<li class="capitalize">
-							{{ utility.name }}
-						</li>
+						{{ utility.name }}
 					</NuxtLink>
-				</ul>
+				</div>
 				<hr class="dark:border-gray-700 border-gray-300" />
 			</div>
 			<div
@@ -39,13 +37,13 @@
 						>
 							@biscuitland /
 						</span>
-						<span class="font-medium">{{ route.params.name }}</span>
+						<span class="font-medium text-blue-600 dark:text-blue-400">{{ route.params.name }}</span>
 					</h1>
-					<p class="text-gray-400">
+					<p class="text-gray-500 dark:text-gray-400">
 						{{ pkg?.description }}
 					</p>
 					<hr class="dark:border-gray-700 border-gray-300" />
-					<div class="flex space-x-2 text-gray-400 justify-center lg:justify-start">
+					<div class="flex space-x-2 text-gray-500 dark:text-gray-400 justify-center lg:justify-start">
 						<p>{{ pkg?.downloads }} installations</p>
 						<p>—</p>
 						<p>Version {{ pkg?.version }}</p>
@@ -67,7 +65,7 @@
 			</div>
 		</section>
 		<section class="flex flex-col lg:flex-row lg:space-x-5 space-y-5 lg:space-y-0">
-			<div class="w-full lg:w-[70%] bg-gray-100 dark:bg-gray-800 rounded-lg p-8">
+			<div class="w-full lg:w-[70%] bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
 				<article
 					v-if="!pending"
 					class="prose dark:prose-invert max-w-none dark:prose-a:text-blue-400 prose-a:text-blue-600 break-words"
@@ -137,17 +135,19 @@
 							<div class="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded" />
 						</div>
 					</div>
-					<div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-3 sticky top-5">
+					<div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-3">
 						<h4 class="font-medium text-lg">Maintainers</h4>
 						<hr class="dark:border-gray-700 border-gray-300" />
 						<div v-if="!pending" class="grid grid-cols-3 gap-2">
-							<p
+							<NuxtLink
 								v-for="maintainer in pkg?.maintainers"
 								:key="maintainer.email"
-								class="bg-gray-200/30 dark:bg-gray-700/30 p-1 rounded-lg text-center hover:bg-gray-300/50 dark:hover:bg-gray-700/50"
+								class="bg-gray-300/30 dark:bg-gray-700/30 p-1 rounded-lg text-center hover:bg-gray-300/50 dark:hover:bg-gray-700/50"
+								:href="`https://github.com/${maintainer.username}`"
+								target="_blank"
 							>
 								{{ maintainer.username }}
-							</p>
+							</NuxtLink>
 						</div>
 						<div v-else class="w-full animate-pulse flex space-x-2">
 							<div class="w-full h-6 bg-slate-200 dark:bg-slate-700 rounded" />
@@ -174,12 +174,12 @@ import { marked } from 'marked';
 const route = useRoute();
 
 const utilities = [
-	{ name: 'api-types', icon: 'lucide:type', color: 'blue' },
-	{ name: 'cache', icon: 'lucide:save', color: 'red' },
-	{ name: 'core', icon: 'lucide:network', color: 'yellow' },
-	{ name: 'helpers', icon: 'lucide:help-circle', color: 'pink' },
-	{ name: 'rest', icon: 'lucide:wifi', color: 'purple' },
-	{ name: 'ws', icon: 'lucide:component', color: 'orange' },
+	{ name: 'api-types', icon: 'lucide:type' },
+	{ name: 'cache', icon: 'lucide:save' },
+	{ name: 'core', icon: 'lucide:network' },
+	{ name: 'helpers', icon: 'lucide:help-circle' },
+	{ name: 'rest', icon: 'lucide:wifi' },
+	{ name: 'ws', icon: 'lucide:component' },
 ];
 const utilitySelected = computed(() => utilities.find((u) => u.name === route.params.name));
 const toast = useToast(5_000, 'Install command copied', 'success');
