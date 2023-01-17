@@ -63,7 +63,7 @@ export default defineEventHandler(async (event) => {
 		description: pkg.description,
 		links: pkg.links,
 		readme: Buffer.from(readme).toString(),
-		downloads: npmDownloadsStats.downloads.reduce<number>((a, b) => a + b.downloads, 0),
+		downloads: npmDownloadsStats.downloads.reduce<number>((a, b) => a + b.downloads, 0).toLocaleString(),
 		maintainers: pkg.maintainers,
 		score: {
 			quality: Math.round(score.quality * 100),
