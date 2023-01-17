@@ -44,9 +44,15 @@
 					</p>
 					<hr class="dark:border-gray-700 border-gray-300" />
 					<div class="flex space-x-2 text-gray-500 dark:text-gray-400 justify-center lg:justify-start">
-						<p>{{ pkg?.downloads }} installations</p>
+						<p>
+							<Icon name="lucide:download" />
+							{{ pkg?.downloads }} installations
+						</p>
 						<p>—</p>
-						<p>Version {{ pkg?.version }}</p>
+						<p>
+							<Icon name="lucide:package-check" />
+							Version {{ pkg?.version }}
+						</p>
 					</div>
 				</div>
 				<div v-else class="w-full animate-pulse flex space-y-4 flex-col">
