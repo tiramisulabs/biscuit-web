@@ -20,7 +20,7 @@
 				<hr class="dark:border-gray-700 border-gray-300" />
 			</div>
 			<div
-				class="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-5 items-center text-center lg:text-left p-8 lg:p-0"
+				class="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-5 items-center text-center lg:text-left"
 			>
 				<div
 					class="p-4 bg-gradient-to-r bg-gray-400/20 dark:bg-gray-700/20 rounded-lg items-center justify-center shrink-0"
@@ -30,26 +30,27 @@
 						class="h-full w-28 bg-gray-400/20 dark:bg-gray-700/40 rounded-lg p-2 text-black dark:text-white"
 					/>
 				</div>
-				<div v-if="!pending" class="flex flex-col space-y-2 w-full">
-					<h1 class="text-4xl">
+				<div v-if="!pending" class="flex flex-col space-y-3 w-full">
+					<h1 class="text-4xl font-bold">
 						<span
-							class="text-transparent bg-clip-text bg-gradient-to-r dark:from-blue-400 dark:to-green-400 from-blue-500 to-green-500 font-bold"
+							class="text-transparent bg-clip-text bg-gradient-to-r dark:from-blue-400 dark:to-green-400 from-blue-500 to-green-500"
 						>
 							@biscuitland /
 						</span>
-						<span class="font-medium text-blue-600 dark:text-blue-400">{{ route.params.name }}</span>
+						<span class="text-blue-600 dark:text-blue-400">{{ route.params.name }}</span>
 					</h1>
 					<p class="text-gray-500 dark:text-gray-400">
 						{{ pkg?.description }}
 					</p>
 					<hr class="dark:border-gray-700 border-gray-300" />
-					<div class="flex space-x-2 text-gray-500 dark:text-gray-400 justify-center lg:justify-start">
-						<p>
+					<div
+						class="flex flex-col lg:flex-row lg:space-x-2 space-y-2 lg:space-y-0 text-gray-500 dark:text-gray-400 justify-center lg:justify-start lg:items-center"
+					>
+						<p class="p-2 bg-gray-300/40 dark:bg-gray-700/40 rounded-md">
 							<Icon name="lucide:download" />
 							{{ pkg?.downloads }} installations
 						</p>
-						<p>—</p>
-						<p>
+						<p class="p-2 bg-gray-300/40 dark:bg-gray-700/40 rounded-md">
 							<Icon name="lucide:package-check" />
 							Version {{ pkg?.version }}
 						</p>
@@ -72,7 +73,12 @@
 		</section>
 		<section class="flex flex-col lg:flex-row lg:space-x-5 space-y-5 lg:space-y-0">
 			<div class="w-full lg:w-[70%] bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-2">
-				<h4 class="font-medium text-lg">Readme</h4>
+				<div class="font-medium text-lg flex items-center space-x-2">
+					<div class="p-1 bg-gray-300/40 dark:bg-gray-700/40 rounded-md flex items-center">
+						<Icon name="lucide:book" />
+					</div>
+					<h4>Readme</h4>
+				</div>
 				<hr class="dark:border-gray-700 border-gray-300" />
 				<article
 					v-if="!pending"
@@ -92,7 +98,12 @@
 			<div class="w-full lg:w-[30%]">
 				<div class="flex flex-col space-y-5 sticky top-5">
 					<div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-3">
-						<h4 class="font-medium text-lg">Useful links</h4>
+						<div class="font-medium text-lg flex items-center space-x-2">
+							<div class="p-1 bg-gray-300/40 dark:bg-gray-700/40 rounded-md flex items-center">
+								<Icon name="lucide:link" />
+							</div>
+							<h4 class="font-medium text-lg">Useful links</h4>
+						</div>
 						<hr class="dark:border-gray-700 border-gray-300" />
 						<ul v-if="!pending">
 							<li class="hover:text-blue-600 dark:hover:text-blue-400 transition duration-150">
@@ -144,7 +155,12 @@
 						</div>
 					</div>
 					<div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-3">
-						<h4 class="font-medium text-lg">Maintainers</h4>
+						<div class="font-medium text-lg flex items-center space-x-2">
+							<div class="p-1 bg-gray-300/40 dark:bg-gray-700/40 rounded-md flex items-center">
+								<Icon name="lucide:user" />
+							</div>
+							<h4 class="font-medium text-lg">Maintainers</h4>
+						</div>
 						<hr class="dark:border-gray-700 border-gray-300" />
 						<div v-if="!pending" class="grid grid-cols-3 gap-2">
 							<NuxtLink
@@ -164,7 +180,12 @@
 						</div>
 					</div>
 					<div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-2">
-						<h4 class="font-medium text-lg">Status</h4>
+						<div class="font-medium text-lg flex items-center space-x-2">
+							<div class="p-1 bg-gray-300/40 dark:bg-gray-700/40 rounded-md flex items-center">
+								<Icon name="lucide:bean" />
+							</div>
+							<h4 class="font-medium text-lg">Status</h4>
+						</div>
 						<hr class="dark:border-gray-700 border-gray-300" />
 						<div v-if="!pending" class="flex flex-col space-y-3">
 							<div v-for="(value, key) in pkg?.score" :key="key">
