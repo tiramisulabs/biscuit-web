@@ -65,7 +65,9 @@
 			</div>
 		</section>
 		<section class="flex flex-col lg:flex-row lg:space-x-5 space-y-5 lg:space-y-0">
-			<div class="w-full lg:w-[70%] bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+			<div class="w-full lg:w-[70%] bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-2">
+				<h4 class="font-medium text-lg">Readme</h4>
+				<hr class="dark:border-gray-700 border-gray-300" />
 				<article
 					v-if="!pending"
 					class="prose dark:prose-invert max-w-none dark:prose-a:text-blue-400 prose-a:text-blue-600 break-words"
@@ -150,6 +152,32 @@
 							</NuxtLink>
 						</div>
 						<div v-else class="w-full animate-pulse flex space-x-2">
+							<div class="w-full h-6 bg-slate-200 dark:bg-slate-700 rounded" />
+							<div class="w-full h-6 bg-slate-200 dark:bg-slate-700 rounded" />
+							<div class="w-full h-6 bg-slate-200 dark:bg-slate-700 rounded" />
+						</div>
+					</div>
+					<div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-2">
+						<h4 class="font-medium text-lg">Status</h4>
+						<hr class="dark:border-gray-700 border-gray-300" />
+						<div v-if="!pending" class="flex flex-col space-y-3">
+							<div v-for="(value, key) in pkg?.score" :key="key">
+								<div
+									class="bg-blue-600 dark:bg-blue-400 h-1 rounded-full"
+									:style="`width: ${value}%`"
+								/>
+								<div class="flex justify-between items-center">
+									<p class="capitalize">
+										<Icon v-show="key === 'quality'" name="lucide:book-open-check" />
+										<Icon v-show="key === 'popularity'" name="lucide:cat" />
+										<Icon v-show="key === 'maintenance'" name="lucide:codepen" />
+										{{ key }}
+									</p>
+									<p>{{ value }}%</p>
+								</div>
+							</div>
+						</div>
+						<div v-else class="w-full animate-pulse flex flex-col space-y-2">
 							<div class="w-full h-6 bg-slate-200 dark:bg-slate-700 rounded" />
 							<div class="w-full h-6 bg-slate-200 dark:bg-slate-700 rounded" />
 							<div class="w-full h-6 bg-slate-200 dark:bg-slate-700 rounded" />

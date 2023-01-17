@@ -56,6 +56,7 @@ export default defineEventHandler(async (event) => {
 		.arrayBuffer();
 
 	const pkg = packages.objects[0].package;
+	const score = packages.objects[0].score.detail;
 	return {
 		name: pkg.name,
 		version: pkg.version,
@@ -64,5 +65,10 @@ export default defineEventHandler(async (event) => {
 		readme: Buffer.from(readme).toString(),
 		downloads: npmDownloadsStats.downloads.reduce<number>((a, b) => a + b.downloads, 0),
 		maintainers: pkg.maintainers,
+		score: {
+			quality: Math.round(score.quality * 100),
+			popularity: Math.round(score.popularity * 100),
+			maintenance: Math.round(score.maintenance * 100),
+		},
 	};
 });
