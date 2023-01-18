@@ -1,4 +1,5 @@
 <template>
+	<div id="toast"></div>
 	<NuxtLayout>
 		<NuxtLoadingIndicator />
 		<NuxtPage />
