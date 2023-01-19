@@ -22,19 +22,10 @@ export default defineNuxtConfig({
 			secretDiscordSupportUrl: 'https://discord.gg/KAVzwsXdZu',
 		},
 	},
-	routeRules: {
-		'/': { swr: 86400 },
-	},
 	nitro: {
 		prerender: {
-			routes: [
-				'/utilities/api-types',
-				'/utilities/cache',
-				'/utilities/core',
-				'/utilities/helpers',
-				'/utilities/rest',
-				'/utilities/ws',
-			],
+			routes: ['/'],
+			crawlLinks: true,
 		},
 	},
 	tailwindcss: {
