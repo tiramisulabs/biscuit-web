@@ -78,6 +78,5 @@
 		"**/*.{ts,tsx,vue,html,css}": [
 			"pnpm lint:fix"
 		]
-	},
-	"packageManager": "pnpm@7.0.0"
+	}
 }
