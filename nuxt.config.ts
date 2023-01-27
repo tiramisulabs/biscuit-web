@@ -1,9 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@nuxt/image-edge', '@nuxtjs/fontaine', '@nuxtjs/color-mode'],
-	build: {
-		transpile: ['marked'],
-	},
 	app: {
 		head: {
 			link: [
@@ -21,15 +18,6 @@ export default defineNuxtConfig({
 			discordSupportUrl: 'https://discord.gg/RmW54ShzMA',
 			secretDiscordSupportUrl: 'https://discord.gg/KAVzwsXdZu',
 		},
-	},
-	nitro: {
-		prerender: {
-			routes: ['/'],
-			crawlLinks: true,
-		},
-	},
-	tailwindcss: {
-		exposeConfig: true,
 	},
 	colorMode: {
 		classSuffix: '',
