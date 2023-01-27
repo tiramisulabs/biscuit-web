@@ -19,6 +19,12 @@ export default defineNuxtConfig({
 			secretDiscordSupportUrl: 'https://discord.gg/KAVzwsXdZu',
 		},
 	},
+	nitro: {
+		prerender: {
+			routes: ['/'],
+			crawlLinks: true,
+		},
+	},
 	colorMode: {
 		classSuffix: '',
 		preference: 'light',
