@@ -1,9 +1,9 @@
 <template>
-	<Head>
-		<Title>biscuitland — {{ pkg?.name }}</Title>
-		<Meta name="description" :content="pkg?.description" />
-	</Head>
 	<main class="mx-auto px-6 lg:px-12 max-w-screen-xl space-y-6 min-h-screen">
+		<Head>
+			<Title>biscuitland - A brand new bleeding edge non bloated Discord library</Title>
+			<Meta name="description" content="A brand new bleeding edge non bloated Discord library." />
+		</Head>
 		<section class="bg-gray-100 dark:bg-gray-800 rounded-xl space-y-5 p-4">
 			<div class="flex flex-col space-y-3">
 				<div class="flex space-x-2 overflow-x-auto">
