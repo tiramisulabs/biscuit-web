@@ -1,6 +1,6 @@
 <template>
 	<div class="dark:bg-gray-900 bg-white min-h-screen">
-		<div id="toast"></div>
+		<div id="toast" class="sticky top-0 right-0"></div>
 		<AppNavbar />
 		<slot />
 		<footer
