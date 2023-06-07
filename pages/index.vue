@@ -10,7 +10,7 @@
 					<div class="flex text-gray-500 dark:text-gray-300 items-center space-x-2">
 						<Icon class="text-orange-400" name="lucide:flame" />
 						<p class="font-mono text-xs md:text-md lg:text-lg">
-							Incredibly lightweight and object oriented
+							Incredibly lightweight and minimalistic
 						</p>
 					</div>
 					<h1 class="text-4xl lg:text-6xl text-black dark:text-white font-semibold">
@@ -230,19 +230,19 @@ const utilities = [
 		name: 'core',
 		image: '/code/core.webp',
 		description:
-			'Classes, functions and main structures to create an application with biscuit. Core contains the essentials to launch you to develop your own customized and scalable bot.',
+			'Core contains the essentials to launch you to develop your own customized and scalable bot.',
 	},
 	{
-		name: 'api-types',
-		image: '/code/api-types.webp',
+		name: 'helpers',
+		image: '/code/helpers.webp',
 		description:
-			'1:1 type definition with the latest available in the Discord API. No need to worry about your code typing anymore.',
+			'A collection of builders to make your life easier, not built into the core library due to performance concerns.',
 	},
 	{
-		name: 'cache',
-		image: '/code/cache.webp',
+		name: 'common',
+		image: '/code/common.webp',
 		description:
-			'A cache will help you avoid making HTTP requests to the Discord api, saving you network resources and avoiding a possible Rate Limit.',
+			'Custom types, functions and utility classes, a feature-rich package for sharing in the biscuit libraries.',
 	},
 ];
 

@@ -229,8 +229,7 @@ import { marked } from 'marked';
 const route = useRoute();
 
 const utilities = [
-	{ name: 'api-types', icon: 'lucide:type' },
-	{ name: 'cache', icon: 'lucide:save' },
+	{ name: 'common', icon: 'lucide:puzzle'},
 	{ name: 'core', icon: 'lucide:network' },
 	{ name: 'helpers', icon: 'lucide:help-circle' },
 	{ name: 'rest', icon: 'lucide:wifi' },
