@@ -213,23 +213,28 @@
 				</div>
 			</div>
 		</section>
+		<AppToast
+			:visible="toast.visible.value"
+			:message="toast.message.value"
+			:type="toast.type.value"
+			:close-button="true"
+			@close="toast.hide()"
+		/>
 	</main>
-	<AppToast
-		:visible="toast.visible.value"
-		:message="toast.message.value"
-		:type="toast.type.value"
-		:close-button="true"
-		@close="toast.hide()"
-	/>
 </template>
 
 <script lang="ts" setup>
 import { marked } from 'marked';
 
 const route = useRoute();
+const { data: pkg, pending } = await useFetch(`/api/package/${route.params.name}`);
+
+if (!pkg.value) {
+	throw createError({ statusCode: 404, statusMessage: 'Package Not Found', fatal: true });
+}
 
 const utilities = [
-	{ name: 'common', icon: 'lucide:puzzle'},
+	{ name: 'common', icon: 'lucide:puzzle' },
 	{ name: 'core', icon: 'lucide:network' },
 	{ name: 'helpers', icon: 'lucide:help-circle' },
 	{ name: 'rest', icon: 'lucide:wifi' },
@@ -238,15 +243,12 @@ const utilities = [
 const utilitySelected = computed(() => utilities.find((u) => u.name === route.params.name));
 const toast = useToast(5_000, 'Install command copied', 'success');
 
-const { data: pkg, pending } = await useFetch(`/api/package/${route.params.name}`);
-const readme = computed(() => marked(pkg.value?.readme ?? '# Readme not found :('));
+const readme = computed(() =>
+	marked(pkg.value?.readme ?? '# Readme not found :(', { mangle: false, headerIds: false }),
+);
 
 const copyInstallCommand = () => {
 	toast.show();
 	navigator.clipboard.writeText('npm install @biscuitland/core');
 };
-
-if (!pkg.value && !pending.value) {
-	throw createError({ statusCode: 404, statusMessage: 'Package Not Found', fatal: true });
-}
 </script>

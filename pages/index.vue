@@ -9,9 +9,7 @@
 				<div class="flex flex-col space-y-5">
 					<div class="flex text-gray-500 dark:text-gray-300 items-center space-x-2">
 						<Icon class="text-orange-400" name="lucide:flame" />
-						<p class="font-mono text-xs md:text-md lg:text-lg">
-							Incredibly lightweight and minimalistic
-						</p>
+						<p class="font-mono text-xs md:text-md lg:text-lg">Incredibly lightweight and minimalistic</p>
 					</div>
 					<h1 class="text-4xl lg:text-6xl text-black dark:text-white font-semibold">
 						Create wonderful bots with
@@ -197,14 +195,14 @@
 				</NuxtLink>
 			</div>
 		</section>
+		<AppToast
+			:visible="toast.visible.value"
+			:message="toast.message.value"
+			:type="toast.type.value"
+			:close-button="true"
+			@close="toast.hide()"
+		/>
 	</main>
-	<AppToast
-		:visible="toast.visible.value"
-		:message="toast.message.value"
-		:type="toast.type.value"
-		:close-button="true"
-		@close="toast.hide()"
-	/>
 </template>
 
 <script lang="ts" setup>
@@ -229,8 +227,7 @@ const utilities = [
 	{
 		name: 'core',
 		image: '/code/core.webp',
-		description:
-			'Core contains the essentials to launch you to develop your own customized and scalable bot.',
+		description: 'Core contains the essentials to launch you to develop your own customized and scalable bot.',
 	},
 	{
 		name: 'helpers',
