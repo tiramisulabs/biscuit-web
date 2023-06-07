@@ -1,0 +1,30 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "labels": [
+        "deps",
+        "enhancement"
+    ],
+    "assignees": [
+        "sawa-ko"
+    ],
+    "assigneesFromCodeOwners": true,
+    "baseBranches": [
+        "next"
+    ],
+    "cloneSubmodules": true,
+    "packageRules": [
+        {
+            "matchUpdateTypes": [
+                "minor",
+                "patch",
+                "pin",
+                "digest"
+            ],
+            "automerge": true
+        }
+    ],
+    "extends": [
+        "@nuxtjs",
+        ":gitSignOff"
+    ]
+}
