@@ -5,11 +5,12 @@
         "enhancement"
     ],
     "assignees": [
-        "sawa-ko"
+        "sawa-ko",
+        "socram03"
     ],
     "assigneesFromCodeOwners": true,
     "baseBranches": [
-        "next"
+        "main"
     ],
     "cloneSubmodules": true,
     "packageRules": [
