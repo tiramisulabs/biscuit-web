@@ -22,7 +22,7 @@
 		"@commitlint/config-conventional": "^17.6.5",
 		"@commitlint/format": "^17.4.4",
 		"@headlessui/vue": "^1.7.14",
-		"@nuxt/image-edge": "1.0.0-rc.1-28112642.b1c2038",
+		"@nuxt/image-edge": "1.0.0-rc.1-28115091.5b2c7df",
 		"@nuxtjs/color-mode": "^3.2.0",
 		"@nuxtjs/fontaine": "^0.4.0",
 		"@nuxtjs/tailwindcss": "^6.7.2",
