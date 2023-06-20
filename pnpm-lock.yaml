@@ -27,8 +27,8 @@ devDependencies:
     specifier: ^0.4.0
     version: 0.4.0
   '@nuxtjs/tailwindcss':
-    specifier: ^6.7.2
-    version: 6.7.2(ts-node@10.9.1)
+    specifier: ^6.8.0
+    version: 6.8.0(ts-node@10.9.1)
   '@tailwindcss/typography':
     specifier: ^0.5.9
     version: 0.5.9
@@ -1247,8 +1247,8 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxtjs/tailwindcss@6.7.2(ts-node@10.9.1):
-    resolution: {integrity: sha512-Zd4fm+o8bXcu+kc4JtegWAHXVms8pud8fhkJDZjKUa9CpawaWdnIf0fSzYyXdm2dWpDlH4YUdjN0HDaFRFQMDw==}
+  /@nuxtjs/tailwindcss@6.8.0(ts-node@10.9.1):
+    resolution: {integrity: sha512-jzuvD1nfA2BPnSbHtKK0aiI51ndMa7lNGL1iDEFuEPsltzilZ9ED7zOP6niGTrImg0n5Yt4GEJpixi6yWwp9Hw==}
     dependencies:
       '@nuxt/kit': 3.5.3
       '@nuxt/postcss8': 1.1.3
@@ -1265,7 +1265,7 @@ packages:
       pathe: 1.1.1
       postcss: 8.4.24
       postcss-custom-properties: 13.2.0(postcss@8.4.24)
-      postcss-nesting: 11.2.2(postcss@8.4.24)
+      postcss-nesting: 11.3.0(postcss@8.4.24)
       radix3: 1.0.1
       tailwind-config-viewer: 1.7.2(tailwindcss@3.3.2)
       tailwindcss: 3.3.2(ts-node@10.9.1)
@@ -6642,8 +6642,8 @@ packages:
       postcss-selector-parser: 6.0.13
     dev: true
 
-  /postcss-nesting@11.2.2(postcss@8.4.24):
-    resolution: {integrity: sha512-aOTiUniAB1bcPE6GGiynWRa6PZFPhOTAm5q3q5cem6QeSijIHHkWr6gs65ukCZMXeak8yXeZVbBJET3VM+HlhA==}
+  /postcss-nesting@11.3.0(postcss@8.4.24):
+    resolution: {integrity: sha512-JlS10AQm/RzyrUGgl5irVkAlZYTJ99mNueUl+Qab+TcHhVedLiylWVkKBhRale+rS9yWIJK48JVzQlq3LcSdeA==}
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
       postcss: ^8.4
