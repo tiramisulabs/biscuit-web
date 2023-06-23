@@ -22,7 +22,7 @@
 		"@commitlint/config-conventional": "^17.6.5",
 		"@commitlint/format": "^17.4.4",
 		"@headlessui/vue": "^1.7.14",
-		"@nuxt/image-edge": "1.0.0-rc.1-28124054.2f62c05",
+		"@nuxt/image-edge": "1.0.0-rc.1-28125550.081b49c",
 		"@nuxtjs/color-mode": "^3.3.0",
 		"@nuxtjs/fontaine": "^0.4.0",
 		"@nuxtjs/tailwindcss": "^6.8.0",
@@ -43,7 +43,7 @@
 		"ky": "^0.33.3",
 		"lint-staged": "^13.2.2",
 		"marked": "^5.1.0",
-		"nuxt": "3.5.3",
+		"nuxt": "3.6.0",
 		"nuxt-icon": "^0.4.1",
 		"prettier": "^2.8.8",
 		"pretty-quick": "^3.1.3"
