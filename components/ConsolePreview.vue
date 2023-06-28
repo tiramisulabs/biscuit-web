@@ -18,7 +18,7 @@
 			</h3>
 			<h3 class="text-gray-400 dark:text-gray-200 font-medium text-lg">Terminal</h3>
 		</div>
-		<div class="flex flex-col bg-gray-950 w-full rounded-xl tracking-widest p-4">
+		<div class="flex flex-col bg-gray-100 dark:bg-gray-950 w-full rounded-xl tracking-widest p-4">
 			<p v-for="command in commands" :key="command" class="text-white">
 				<span class="text-emerald-500">[ /bsct/bot ]</span>
 				$

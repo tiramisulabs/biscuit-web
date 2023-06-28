@@ -49,7 +49,7 @@ const icon = computed(() =>
 
 const color = computed(() =>
 	props.type === 'success'
-		? 'bg-gray-900 border border-gray-800'
+		? 'dark:bg-gray-900 border border-gray-300 bg-gray-200 dark:border-gray-800'
 		: props.type === 'error'
 		? 'bg-red-500'
 		: props.type === 'warning'
