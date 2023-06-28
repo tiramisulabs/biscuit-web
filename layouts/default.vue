@@ -4,7 +4,7 @@
 		<AppNavbar />
 		<slot />
 		<footer
-			class="bg-gray-100 dark:bg-gray-800 w-full p-6 flex items-center justify-center flex-col space-y-3 text-center mt-5"
+			class="bg-gray-100 dark:bg-gray-900 w-full p-6 flex items-center justify-center flex-col space-y-3 text-center mt-5"
 		>
 			<NuxtImg src="/icon.svg" alt="biscuitland icon" class="w-14 h-14 hover:scale-110 transition duration-150" />
 			<h1 class="text-xl dark:text-white text-black font-semibold">

@@ -37,16 +37,6 @@ const props = defineProps<{
 	visible?: boolean;
 }>();
 
-const icon = computed(() =>
-	props.type === 'success'
-		? 'lucide:check'
-		: props.type === 'error'
-		? 'lucide:x'
-		: props.type === 'warning'
-		? 'file-warning'
-		: 'help-circle',
-);
-
 const color = computed(() =>
 	props.type === 'success'
 		? 'dark:bg-gray-900 border border-gray-300 bg-gray-200 dark:border-gray-800'
