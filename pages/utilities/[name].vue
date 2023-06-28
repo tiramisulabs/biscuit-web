@@ -35,7 +35,7 @@
 						<span
 							class="text-transparent bg-clip-text bg-gradient-to-r dark:from-blue-400 dark:to-green-400 from-blue-500 to-green-500"
 						>
-							@biscuitland /
+							@biscuitland/
 						</span>
 						<span class="text-blue-600 dark:text-blue-400">{{ route.params.name }}</span>
 					</h1>
@@ -46,11 +46,11 @@
 					<div
 						class="flex flex-col lg:flex-row lg:space-x-2 space-y-2 lg:space-y-0 text-gray-500 dark:text-gray-400 justify-center lg:justify-start lg:items-center"
 					>
-						<p class="p-2 bg-gray-300/40 dark:bg-gray-700/40 rounded-md">
+						<p class="py-2 px-3 bg-gray-300/40 dark:bg-gray-700/40 rounded-md">
 							<Icon name="lucide:download" />
-							{{ pkg?.downloads }} installations
+							{{ pkg?.downloads }} downloads
 						</p>
-						<p class="p-2 bg-gray-300/40 dark:bg-gray-700/40 rounded-md">
+						<p class="py-2 px-3 bg-gray-300/40 dark:bg-gray-700/40 rounded-md">
 							<Icon name="lucide:package-check" />
 							Version {{ pkg?.version }}
 						</p>
@@ -162,11 +162,11 @@
 							<h4 class="font-medium text-lg">Maintainers</h4>
 						</div>
 						<hr class="dark:border-gray-700 border-gray-300" />
-						<div v-if="!pending" class="grid grid-cols-3 gap-2">
+						<div v-if="!pending" class="flex flex-row flex-wrap gap-2">
 							<NuxtLink
 								v-for="maintainer in pkg?.maintainers"
 								:key="maintainer.email"
-								class="bg-gray-300/30 dark:bg-gray-700/30 p-1 rounded-lg text-center hover:bg-gray-300/50 dark:hover:bg-gray-700/50"
+								class="bg-gray-300/30 dark:bg-gray-700/30 w-fit py-1 px-3 rounded-lg text-left hover:bg-gray-300/50 dark:hover:bg-gray-700/50"
 								:href="`https://github.com/${maintainer.username}`"
 								target="_blank"
 							>
