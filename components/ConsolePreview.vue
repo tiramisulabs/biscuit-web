@@ -14,7 +14,7 @@
 			</div>
 			<h3 class="text-gray-400 font-medium text-md space-x-2 items-center hidden lg:flex">
 				<Icon name="lucide:folder" />
-				<span>~/biscuit/super-bot</span>
+				<span>~/bsct/bot</span>
 			</h3>
 			<h3 class="text-gray-400 dark:text-gray-200 font-medium text-lg">Terminal</h3>
 		</div>
