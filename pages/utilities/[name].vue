@@ -27,7 +27,7 @@
 				>
 					<Icon
 						:name="utilitySelected?.icon ?? 'lucide:network'"
-						class="h-full w-28 bg-gray-400/20 dark:bg-gray-700/40 rounded-lg p-2 text-black dark:text-white"
+						class="h-full w-28 text-gray-800 dark:text-gray-300"
 					/>
 				</div>
 				<div v-if="!pending" class="flex flex-col space-y-3 w-full">
@@ -46,14 +46,21 @@
 					<div
 						class="flex flex-col lg:flex-row lg:space-x-2 space-y-2 lg:space-y-0 text-gray-500 dark:text-gray-400 justify-center lg:justify-start lg:items-center"
 					>
-						<p class="py-2 px-3 bg-gray-300/40 dark:bg-gray-700/40 rounded-md">
+						<p class="py-2 px-3 flex items-center gap-2 bg-gray-300/40 dark:bg-gray-700/40 rounded-md">
 							<Icon name="lucide:download" />
 							{{ pkg?.downloads }} downloads
 						</p>
-						<p class="py-2 px-3 bg-gray-300/40 dark:bg-gray-700/40 rounded-md">
+						<p class="py-2 px-3 flex items-center gap-2 bg-gray-300/40 dark:bg-gray-700/40 rounded-md">
 							<Icon name="lucide:package-check" />
 							Version {{ pkg?.version }}
 						</p>
+						<button
+							class="py-2 px-3 flex items-center gap-2 bg-gray-300/40 dark:bg-gray-700/40 rounded-md"
+							@click="copyInstallCommand()"
+						>
+							<Icon name="lucide:clipboard" />
+							npm i @biscuitland/{{ route.params.name }}
+						</button>
 					</div>
 				</div>
 				<div v-else class="w-full animate-pulse flex space-y-4 flex-col">
@@ -63,12 +70,6 @@
 					<hr class="dark:border-gray-700 border-gray-300" />
 					<div class="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded" />
 				</div>
-				<button
-					class="p-4 bg-black rounded-xl shrink-0 font-mono dark:hover:ring-blue-400 hover:ring-blue-600 hover:ring-4 transition duration-200 text-white"
-					@click="copyInstallCommand()"
-				>
-					$ pnpm install @biscuitland/{{ route.params.name }}
-				</button>
 			</div>
 		</section>
 		<section class="flex flex-col lg:flex-row lg:space-x-5 space-y-5 lg:space-y-0">
