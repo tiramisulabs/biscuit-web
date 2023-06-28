@@ -94,7 +94,7 @@
 				<div
 					v-for="utility in utilities"
 					:key="utility.name"
-					class="w-full rounded-xl cursor-pointer bg-gray-50 dark:bg-gray-950 hover:ring-2 transition duration-300 ring-blue-600 dark:ring-blue-400"
+					class="w-full rounded-xl cursor-pointer bg-gray-50 dark:bg-gray-900 hover:ring-2 transition duration-300 ring-blue-600 dark:ring-blue-400"
 				>
 					<NuxtImg
 						:quality="80"
