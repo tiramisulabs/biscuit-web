@@ -11,7 +11,7 @@ type npmjsPackageScore = {
 };
 
 type npmjsSearchPackages = {
-	objects: Array<{ package: PackageInfo; score: npmjsPackageScore }>;
+	objects: { package: PackageInfo; score: npmjsPackageScore }[];
 	total: number;
 	time: string;
 };
@@ -26,7 +26,7 @@ export type PackageInfo = {
 	readme: string;
 	score: npmjsPackageScore;
 	downloads: number;
-	maintainers: Array<{ username: string; email: string }>;
+	maintainers: { username: string; email: string }[];
 };
 
 export default defineEventHandler(async (event) => {
@@ -57,6 +57,7 @@ export default defineEventHandler(async (event) => {
 
 	const pkg = packages.objects[0].package;
 	const score = packages.objects[0].score.detail;
+
 	return {
 		name: pkg.name,
 		version: pkg.version,

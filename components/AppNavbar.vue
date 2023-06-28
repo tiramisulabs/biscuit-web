@@ -1,14 +1,7 @@
 <template>
 	<nav class="flex text-white items-center justify-between mx-auto px-6 lg:px-12 py-8 max-w-7xl">
-		<NuxtLink
-			:to="'/'"
-			class="space-x-4 flex items-center cursor-pointer hover:bg-blue-600/10 dark:hover:bg-blue-400/10 rounded-lg p-2 transition duration-300"
-		>
-			<NuxtImg src="/icon.svg" alt="biscuitland icon" class="w-auto h-9" />
-			<h2 class="font-bold text-2xl text-black dark:text-white">
-				biscuitland
-				<span class="text-blue-600 dark:text-blue-400">/web</span>
-			</h2>
+		<NuxtLink :to="'/'" class="cursor-pointer hover:underline transition duration-150">
+			<NuxtImg src="/icon.svg" alt="biscuitland icon" class="w-12 hover:scale-110 duration-150" />
 		</NuxtLink>
 		<div class="hidden lg:flex space-x-5 items-center">
 			<ul class="flex space-x-5">
@@ -22,7 +15,7 @@
 					</NuxtLink>
 				</li>
 			</ul>
-			<div class="flex space-x-2">
+			<div class="flex space-x-2 items-center">
 				<NuxtLink :href="config.public.githubUrl" target="_blank">
 					<SimpleButton button-style="solid" icon-left="lucide:github">Github</SimpleButton>
 				</NuxtLink>

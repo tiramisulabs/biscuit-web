@@ -4,7 +4,7 @@
 			<Title>biscuitland - A brand new bleeding edge non bloated Discord library</Title>
 			<Meta name="description" content="A brand new bleeding edge non bloated Discord library." />
 		</Head>
-		<section class="bg-gray-100 dark:bg-gray-800 rounded-xl space-y-5 p-4">
+		<section class="bg-gray-100 dark:bg-gray-900 rounded-xl space-y-5 p-4">
 			<div class="flex flex-col space-y-3">
 				<div class="flex space-x-2 overflow-x-auto">
 					<NuxtLink
@@ -27,7 +27,7 @@
 				>
 					<Icon
 						:name="utilitySelected?.icon ?? 'lucide:network'"
-						class="h-full w-28 bg-gray-400/20 dark:bg-gray-700/40 rounded-lg p-2 text-black dark:text-white"
+						class="h-full w-28 text-gray-800 dark:text-gray-300"
 					/>
 				</div>
 				<div v-if="!pending" class="flex flex-col space-y-3 w-full">
@@ -35,7 +35,7 @@
 						<span
 							class="text-transparent bg-clip-text bg-gradient-to-r dark:from-blue-400 dark:to-green-400 from-blue-500 to-green-500"
 						>
-							@biscuitland /
+							@biscuitland/
 						</span>
 						<span class="text-blue-600 dark:text-blue-400">{{ route.params.name }}</span>
 					</h1>
@@ -46,14 +46,21 @@
 					<div
 						class="flex flex-col lg:flex-row lg:space-x-2 space-y-2 lg:space-y-0 text-gray-500 dark:text-gray-400 justify-center lg:justify-start lg:items-center"
 					>
-						<p class="p-2 bg-gray-300/40 dark:bg-gray-700/40 rounded-md">
+						<p class="py-2 px-3 flex items-center gap-2 bg-gray-300/40 dark:bg-gray-700/40 rounded-md">
 							<Icon name="lucide:download" />
-							{{ pkg?.downloads }} installations
+							{{ pkg?.downloads }} downloads
 						</p>
-						<p class="p-2 bg-gray-300/40 dark:bg-gray-700/40 rounded-md">
+						<p class="py-2 px-3 flex items-center gap-2 bg-gray-300/40 dark:bg-gray-700/40 rounded-md">
 							<Icon name="lucide:package-check" />
 							Version {{ pkg?.version }}
 						</p>
+						<button
+							class="py-2 px-3 flex items-center gap-2 bg-gray-300/40 dark:bg-gray-700/40 rounded-md"
+							@click="copyInstallCommand()"
+						>
+							<Icon name="lucide:clipboard" />
+							npm i @biscuitland/{{ route.params.name }}
+						</button>
 					</div>
 				</div>
 				<div v-else class="w-full animate-pulse flex space-y-4 flex-col">
@@ -63,16 +70,10 @@
 					<hr class="dark:border-gray-700 border-gray-300" />
 					<div class="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded" />
 				</div>
-				<button
-					class="p-4 bg-black rounded-xl shrink-0 font-mono dark:hover:ring-blue-400 hover:ring-blue-600 hover:ring-4 transition duration-200 text-white"
-					@click="copyInstallCommand()"
-				>
-					$ pnpm install @biscuitland/{{ route.params.name }}
-				</button>
 			</div>
 		</section>
 		<section class="flex flex-col lg:flex-row lg:space-x-5 space-y-5 lg:space-y-0">
-			<div class="w-full lg:w-[70%] bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-2">
+			<div class="w-full lg:w-[70%] bg-gray-100 dark:bg-gray-900 rounded-lg p-4 space-y-2">
 				<div class="font-medium text-lg flex items-center space-x-2">
 					<div class="p-1 bg-gray-300/40 dark:bg-gray-700/40 rounded-md flex items-center">
 						<Icon name="lucide:book" />
@@ -97,7 +98,7 @@
 			</div>
 			<div class="w-full lg:w-[30%]">
 				<div class="flex flex-col space-y-5 sticky top-5">
-					<div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-3">
+					<div class="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 space-y-3">
 						<div class="font-medium text-lg flex items-center space-x-2">
 							<div class="p-1 bg-gray-300/40 dark:bg-gray-700/40 rounded-md flex items-center">
 								<Icon name="lucide:link" />
@@ -154,7 +155,7 @@
 							<div class="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded" />
 						</div>
 					</div>
-					<div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-3">
+					<div class="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 space-y-3">
 						<div class="font-medium text-lg flex items-center space-x-2">
 							<div class="p-1 bg-gray-300/40 dark:bg-gray-700/40 rounded-md flex items-center">
 								<Icon name="lucide:user" />
@@ -162,11 +163,11 @@
 							<h4 class="font-medium text-lg">Maintainers</h4>
 						</div>
 						<hr class="dark:border-gray-700 border-gray-300" />
-						<div v-if="!pending" class="grid grid-cols-3 gap-2">
+						<div v-if="!pending" class="flex flex-row flex-wrap gap-2">
 							<NuxtLink
 								v-for="maintainer in pkg?.maintainers"
 								:key="maintainer.email"
-								class="bg-gray-300/30 dark:bg-gray-700/30 p-1 rounded-lg text-center hover:bg-gray-300/50 dark:hover:bg-gray-700/50"
+								class="bg-gray-300/30 dark:bg-gray-700/30 w-fit py-1 px-3 rounded-lg text-left hover:bg-gray-300/50 dark:hover:bg-gray-700/50"
 								:href="`https://github.com/${maintainer.username}`"
 								target="_blank"
 							>
@@ -179,7 +180,7 @@
 							<div class="w-full h-6 bg-slate-200 dark:bg-slate-700 rounded" />
 						</div>
 					</div>
-					<div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-2">
+					<div class="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 space-y-2">
 						<div class="font-medium text-lg flex items-center space-x-2">
 							<div class="p-1 bg-gray-300/40 dark:bg-gray-700/40 rounded-md flex items-center">
 								<Icon name="lucide:bean" />

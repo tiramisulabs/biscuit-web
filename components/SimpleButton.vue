@@ -1,6 +1,6 @@
 <template>
 	<button
-		class="font-medium tracking-wider flex justify-center rounded-full text-lg transition duration-300 items-center space-x-2 whitespace-nowrap"
+		class="font-medium flex font-bold justify-center rounded-full text-lg transition duration-150 items-center space-x-2 whitespace-nowrap"
 		aria-label="Action button"
 		:class="{
 			'dark:text-blue-900': buttonStyle === 'solid',
