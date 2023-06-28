@@ -4,7 +4,7 @@
 			<Title>biscuitland - A brand new bleeding edge non bloated Discord library</Title>
 			<Meta name="description" content="A brand new bleeding edge non bloated Discord library." />
 		</Head>
-		<section class="bg-gray-100 dark:bg-gray-800 rounded-xl space-y-5 p-4">
+		<section class="bg-gray-100 dark:bg-gray-900 rounded-xl space-y-5 p-4">
 			<div class="flex flex-col space-y-3">
 				<div class="flex space-x-2 overflow-x-auto">
 					<NuxtLink
@@ -72,7 +72,7 @@
 			</div>
 		</section>
 		<section class="flex flex-col lg:flex-row lg:space-x-5 space-y-5 lg:space-y-0">
-			<div class="w-full lg:w-[70%] bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-2">
+			<div class="w-full lg:w-[70%] bg-gray-100 dark:bg-gray-900 rounded-lg p-4 space-y-2">
 				<div class="font-medium text-lg flex items-center space-x-2">
 					<div class="p-1 bg-gray-300/40 dark:bg-gray-700/40 rounded-md flex items-center">
 						<Icon name="lucide:book" />
@@ -97,7 +97,7 @@
 			</div>
 			<div class="w-full lg:w-[30%]">
 				<div class="flex flex-col space-y-5 sticky top-5">
-					<div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-3">
+					<div class="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 space-y-3">
 						<div class="font-medium text-lg flex items-center space-x-2">
 							<div class="p-1 bg-gray-300/40 dark:bg-gray-700/40 rounded-md flex items-center">
 								<Icon name="lucide:link" />
@@ -154,7 +154,7 @@
 							<div class="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded" />
 						</div>
 					</div>
-					<div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-3">
+					<div class="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 space-y-3">
 						<div class="font-medium text-lg flex items-center space-x-2">
 							<div class="p-1 bg-gray-300/40 dark:bg-gray-700/40 rounded-md flex items-center">
 								<Icon name="lucide:user" />
@@ -179,7 +179,7 @@
 							<div class="w-full h-6 bg-slate-200 dark:bg-slate-700 rounded" />
 						</div>
 					</div>
-					<div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 space-y-2">
+					<div class="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 space-y-2">
 						<div class="font-medium text-lg flex items-center space-x-2">
 							<div class="p-1 bg-gray-300/40 dark:bg-gray-700/40 rounded-md flex items-center">
 								<Icon name="lucide:bean" />
