@@ -18,8 +18,8 @@ devDependencies:
     specifier: ^1.7.14
     version: 1.7.14
   '@nuxt/image-edge':
-    specifier: 1.0.0-rc.1-28139579.37395b7
-    version: 1.0.0-rc.1-28139579.37395b7
+    specifier: 1.0.0-rc.1-28143901.afe4120
+    version: 1.0.0-rc.1-28143901.afe4120
   '@nuxtjs/color-mode':
     specifier: ^3.3.0
     version: 3.3.0
@@ -1248,12 +1248,12 @@ packages:
     resolution: {integrity: sha512-GBzP8zOc7CGWyFQS6dv1lQz8VVpz5C2yRszbXufwG/9zhStTIH50EtD87NmWbTMwXDvZLNg8GIpb1UFdH93JCA==}
     dev: true
 
-  /@nuxt/image-edge@1.0.0-rc.1-28139579.37395b7:
-    resolution: {integrity: sha512-VFPSQhFG6SEA7rzyHJV30E3PnfBjW9kyE/VE8hGMORJlMqb+AaeojEF/hGo0Zgg4R0WofUeW8cs52Ptp3OlfhA==}
+  /@nuxt/image-edge@1.0.0-rc.1-28143901.afe4120:
+    resolution: {integrity: sha512-xfYEjbYhFDnHe22q2QcPiqPUPJFima++/nHF31a860qbM1DRWfJNBhkZSQKOCPFBKX/L390BPI2IxbVCkB5cdw==}
     engines: {node: ^14.16.0 || >=16.11.0}
     dependencies:
-      '@nuxt/kit': 3.6.1
-      consola: 3.2.2
+      '@nuxt/kit': 3.6.2
+      consola: 3.2.3
       defu: 6.1.2
       h3: 1.7.1
       image-meta: 0.1.1
@@ -1301,7 +1301,7 @@ packages:
     dependencies:
       '@nuxt/schema': 3.6.2
       c12: 1.4.2
-      consola: 3.2.2
+      consola: 3.2.3
       defu: 6.1.2
       globby: 13.2.2
       hash-sum: 2.0.0
@@ -2946,6 +2946,11 @@ packages:
 
   /consola@3.2.2:
     resolution: {integrity: sha512-r921u0vbF4lQsoIqYvSSER+yZLPQGijOHrYcWoCNVNBZmn/bRR+xT/DgerTze/nLD9TTGzdDa378TVhx7RDOYg==}
+    engines: {node: ^14.18.0 || >=16.10.0}
+    dev: true
+
+  /consola@3.2.3:
+    resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
     dev: true
 
@@ -4985,7 +4990,7 @@ packages:
     requiresBuild: true
     dependencies:
       '@fastify/accept-negotiator': 1.1.0
-      consola: 3.2.2
+      consola: 3.2.3
       defu: 6.1.2
       destr: 1.2.2
       etag: 1.8.1
