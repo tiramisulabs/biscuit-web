@@ -13,10 +13,6 @@
 					the biscuit team.
 				</NuxtLink>
 			</h1>
-			<p>
-				redesign by
-				<NuxtLink href="https://github.com/simxnet" class="underline" target="_blank">simxnet</NuxtLink>
-			</p>
 		</footer>
 	</div>
 </template>
