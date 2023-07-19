@@ -81,8 +81,8 @@ devDependencies:
     specifier: ^5.1.1
     version: 5.1.1
   nuxt:
-    specifier: 3.6.3
-    version: 3.6.3(@types/node@20.3.2)(eslint@8.45.0)
+    specifier: 3.6.5
+    version: 3.6.5(@types/node@20.3.2)(eslint@8.45.0)
   nuxt-icon:
     specifier: ^0.4.2
     version: 0.4.2
@@ -462,15 +462,6 @@ packages:
       conventional-changelog-conventionalcommits: 5.0.0
     dev: true
 
-  /@commitlint/config-validator@17.4.4:
-    resolution: {integrity: sha512-bi0+TstqMiqoBAQDvdEP4AFh0GaKyLFlPPEObgI29utoKEYoPQTvF0EYqIwYYLEoJYhj5GfMIhPHJkTJhagfeg==}
-    engines: {node: '>=v14'}
-    dependencies:
-      '@commitlint/types': 17.4.4
-      ajv: 8.12.0
-    dev: true
-    optional: true
-
   /@commitlint/config-validator@17.6.7:
     resolution: {integrity: sha512-vJSncmnzwMvpr3lIcm0I8YVVDJTzyjy7NZAeXbTXy+MPUdAr9pKyyg7Tx/ebOQ9kqzE6O9WT6jg2164br5UdsQ==}
     engines: {node: '>=v14'}
@@ -522,34 +513,10 @@ packages:
       '@commitlint/types': 17.4.4
     dev: true
 
-  /@commitlint/load@17.5.0:
-    resolution: {integrity: sha512-l+4W8Sx4CD5rYFsrhHH8HP01/8jEP7kKf33Xlx2Uk2out/UKoKPYMOIRcDH5ppT8UXLMV+x6Wm5osdRKKgaD1Q==}
-    engines: {node: '>=v14'}
-    requiresBuild: true
-    dependencies:
-      '@commitlint/config-validator': 17.4.4
-      '@commitlint/execute-rule': 17.4.0
-      '@commitlint/resolve-extends': 17.4.4
-      '@commitlint/types': 17.4.4
-      '@types/node': 20.3.2
-      chalk: 4.1.2
-      cosmiconfig: 8.2.0
-      cosmiconfig-typescript-loader: 4.3.0(@types/node@20.3.2)(cosmiconfig@8.2.0)(ts-node@10.9.1)(typescript@5.1.5)
-      lodash.isplainobject: 4.0.6
-      lodash.merge: 4.6.2
-      lodash.uniq: 4.5.0
-      resolve-from: 5.0.0
-      ts-node: 10.9.1(@types/node@20.3.2)(typescript@5.1.5)
-      typescript: 5.1.5
-    transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
-    dev: true
-    optional: true
-
   /@commitlint/load@17.6.7:
     resolution: {integrity: sha512-QZ2rJTbX55BQdYrCm/p6+hh/pFBgC9nTJxfsrK6xRPe2thiQzHN0AQDBqBwAirn6gIkHrjIbCbtAE6kiDYLjrw==}
     engines: {node: '>=v14'}
+    requiresBuild: true
     dependencies:
       '@commitlint/config-validator': 17.6.7
       '@commitlint/execute-rule': 17.4.0
@@ -594,19 +561,6 @@ packages:
       git-raw-commits: 2.0.11
       minimist: 1.2.8
     dev: true
-
-  /@commitlint/resolve-extends@17.4.4:
-    resolution: {integrity: sha512-znXr1S0Rr8adInptHw0JeLgumS11lWbk5xAWFVno+HUFVN45875kUtqjrI6AppmD3JI+4s0uZlqqlkepjJd99A==}
-    engines: {node: '>=v14'}
-    dependencies:
-      '@commitlint/config-validator': 17.4.4
-      '@commitlint/types': 17.4.4
-      import-fresh: 3.3.0
-      lodash.mergewith: 4.6.2
-      resolve-from: 5.0.0
-      resolve-global: 1.0.0
-    dev: true
-    optional: true
 
   /@commitlint/resolve-extends@17.6.7:
     resolution: {integrity: sha512-PfeoAwLHtbOaC9bGn/FADN156CqkFz6ZKiVDMjuC2N5N0740Ke56rKU7Wxdwya8R8xzLK9vZzHgNbuGhaOVKIg==}
@@ -1368,11 +1322,11 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxt/kit@3.6.3:
-    resolution: {integrity: sha512-Eq+2whSIsZ+2IdB9J3okYOc+nZHassjt13vJZowxO3dw0rsXTnWGFHx40IX+wrBYE6eiOHjU/cXQ1XHdiU2GyQ==}
+  /@nuxt/kit@3.6.5:
+    resolution: {integrity: sha512-uBI5I2Zx6sk+vRHU+nBmifwxg/nyXCGZ1g5hUKrUfgv1ZfiKB8JkN5T9iRoduDOaqbwM6XSnEl1ja73iloDcrw==}
     engines: {node: ^14.18.0 || >=16.10.0}
     dependencies:
-      '@nuxt/schema': 3.6.3
+      '@nuxt/schema': 3.6.5
       c12: 1.4.2
       consola: 3.2.3
       defu: 6.1.2
@@ -1445,8 +1399,8 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxt/schema@3.6.3:
-    resolution: {integrity: sha512-ZkcDt1DbgKX4Zv6Y+uLdn4Zt2WUDsZy+cuVx9XTRPoGVaG9PXZEgQr1XYoVH1vBMH/8VgDApvjok/Vzo+x+Nrg==}
+  /@nuxt/schema@3.6.5:
+    resolution: {integrity: sha512-UPUnMB0W5TZ/Pi1fiF71EqIsPlj8LGZqzhSf8wOeh538KHwxbA9r7cuvEUU92eXRksOZaylbea3fJxZWhOITVw==}
     engines: {node: ^14.18.0 || >=16.10.0}
     dependencies:
       defu: 6.1.2
@@ -1467,7 +1421,7 @@ packages:
     resolution: {integrity: sha512-sXO8Qt0A1GKy6otyicKIO+FuhqzSWDJdWIY5RohxxaB9MOLuf7us39geZb+hIZYdXl7ILsypTGGj9TfR8byjOA==}
     hasBin: true
     dependencies:
-      '@nuxt/kit': 3.6.3
+      '@nuxt/kit': 3.6.5
       chalk: 5.3.0
       ci-info: 3.8.0
       consola: 3.2.3
@@ -1495,8 +1449,8 @@ packages:
     resolution: {integrity: sha512-MSZza7dxccNb/p7nuzGF8/m4POaFpHzVhNdR7f4xahOpH7Ja02lFeYR+rHtoHIJC0yym4qriqv0mQ+Qf/R61bQ==}
     dev: true
 
-  /@nuxt/vite-builder@3.6.3(@types/node@20.3.2)(eslint@8.45.0)(vue@3.3.4):
-    resolution: {integrity: sha512-VWxuZ/GKp3IYMSW34yl+K8rEiDjb6gFt2avU1y9oNjkW/ONBLtBP5P7SFVtlzqs3Oxlk9zWAQc8D1dubBC3fEQ==}
+  /@nuxt/vite-builder@3.6.5(@types/node@20.3.2)(eslint@8.45.0)(vue@3.3.4):
+    resolution: {integrity: sha512-pwSpt257ApCp3XWUs8vrC7X9QHeHUv5PbbIR3+5w0n5f95XPNOQWDJa2fTPX/H6oaRJCPYAsBPqiQhQ7qW/NZQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
     peerDependencies:
       vue: ^3.3.4
@@ -1504,7 +1458,7 @@ packages:
       vue:
         optional: true
     dependencies:
-      '@nuxt/kit': 3.6.3
+      '@nuxt/kit': 3.6.5
       '@rollup/plugin-replace': 5.0.2(rollup@3.25.3)
       '@vitejs/plugin-vue': 4.2.3(vite@4.3.9)(vue@3.3.4)
       '@vitejs/plugin-vue-jsx': 3.0.1(vite@4.3.9)(vue@3.3.4)
@@ -3372,7 +3326,7 @@ packages:
       longest: 2.0.1
       word-wrap: 1.2.3
     optionalDependencies:
-      '@commitlint/load': 17.5.0
+      '@commitlint/load': 17.6.7
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -6215,7 +6169,7 @@ packages:
     resolution: {integrity: sha512-iwXuFrMAcFVi/ZoZiqq8BzAdsLw9kxDfTC0HMyjXfSL/6CSDAGD5UmR7azrAgWV1zKYq7dUUMj4owusBWKLsiQ==}
     engines: {node: '>=10'}
     dependencies:
-      semver: 7.5.3
+      semver: 7.5.4
     dev: true
     optional: true
 
@@ -6334,8 +6288,8 @@ packages:
       boolbase: 1.0.0
     dev: true
 
-  /nuxi@3.6.3:
-    resolution: {integrity: sha512-UVokD+9Pq0EoPp2nmkS5K96g/P1BWYEpYCmtX4XW5oZqvkPlEBBdellOWPEb9wgSCBjWYVNpxA2uIRb4yhg1Nw==}
+  /nuxi@3.6.5:
+    resolution: {integrity: sha512-4XEXYz71UiWWiKC1/cJCzqRSUEImYRmjcvKpSsBKMU58ALYVSx5KIoas5SwLO8tEKO5BS4DAe4u7MYix7hfuHQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
     hasBin: true
     optionalDependencies:
@@ -6353,8 +6307,8 @@ packages:
       - vue
     dev: true
 
-  /nuxt@3.6.3(@types/node@20.3.2)(eslint@8.45.0):
-    resolution: {integrity: sha512-FiD2Ok81wPvQjNBO61h1fA7aqL0EloNspDC05eoQZl13kCthn7103esJNS+KAZNlPcXOYruEe3rGt066Sb/TwA==}
+  /nuxt@3.6.5(@types/node@20.3.2)(eslint@8.45.0):
+    resolution: {integrity: sha512-0A7V8B1HrIXX9IlqPc2w+5ZPXi+7MYa9QVhtuGYuLvjRKoSFANhCoMPRP6pKdoxigM1MBxhLue2VmHA/VbtJCw==}
     engines: {node: ^14.18.0 || >=16.10.0}
     hasBin: true
     peerDependencies:
@@ -6365,11 +6319,11 @@ packages:
         optional: true
     dependencies:
       '@nuxt/devalue': 2.0.2
-      '@nuxt/kit': 3.6.3
-      '@nuxt/schema': 3.6.3
+      '@nuxt/kit': 3.6.5
+      '@nuxt/schema': 3.6.5
       '@nuxt/telemetry': 2.3.0
       '@nuxt/ui-templates': 1.2.0
-      '@nuxt/vite-builder': 3.6.3(@types/node@20.3.2)(eslint@8.45.0)(vue@3.3.4)
+      '@nuxt/vite-builder': 3.6.5(@types/node@20.3.2)(eslint@8.45.0)(vue@3.3.4)
       '@types/node': 20.3.2
       '@unhead/ssr': 1.1.30
       '@unhead/vue': 1.1.30(vue@3.3.4)
@@ -6395,7 +6349,7 @@ packages:
       magic-string: 0.30.1
       mlly: 1.4.0
       nitropack: 2.5.2
-      nuxi: 3.6.3
+      nuxi: 3.6.5
       nypm: 0.2.2
       ofetch: 1.1.1
       ohash: 1.1.2
@@ -7771,7 +7725,7 @@ packages:
       detect-libc: 2.0.1
       node-addon-api: 6.1.0
       prebuild-install: 7.1.1
-      semver: 7.5.3
+      semver: 7.5.4
       simple-get: 4.0.1
       tar-fs: 2.1.1
       tunnel-agent: 0.6.0
