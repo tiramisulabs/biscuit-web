@@ -78,8 +78,8 @@ devDependencies:
     specifier: ^13.2.3
     version: 13.2.3
   marked:
-    specifier: ^6.0.0
-    version: 6.0.0
+    specifier: ^7.0.0
+    version: 7.0.0
   nuxt:
     specifier: 3.6.5
     version: 3.6.5(@types/node@20.3.2)(eslint@8.46.0)
@@ -5807,8 +5807,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /marked@6.0.0:
-    resolution: {integrity: sha512-7E3m/xIlymrFL5gWswIT4CheIE3fDeh51NV09M4x8iOc7NDYlyERcQMLAIHcSlrvwliwbPQ4OGD+MpPSYiQcqw==}
+  /marked@7.0.0:
+    resolution: {integrity: sha512-7Gv1Ry8tqR352ElQOQfxdGpIh8kNZh/yYjNCxAQCN1DDbY4bCTG3qDCSkZWlRElSseeEILDxkY/G9w7cgziBNw==}
     engines: {node: '>= 16'}
     hasBin: true
     dev: true
