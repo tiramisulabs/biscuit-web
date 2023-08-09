@@ -18,8 +18,8 @@
 		"update:f": "pnpm up --latest"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^17.6.7",
-		"@commitlint/config-conventional": "^17.6.7",
+		"@commitlint/cli": "^17.7.0",
+		"@commitlint/config-conventional": "^17.7.0",
 		"@commitlint/format": "^17.4.4",
 		"@headlessui/vue": "^1.7.15",
 		"@nuxt/image-edge": "1.0.0-rc.1-28180077.d51e794",
@@ -37,7 +37,7 @@
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-nuxt": "^4.0.0",
 		"eslint-plugin-prettier": "^5.0.0",
-		"eslint-plugin-vue": "^9.16.1",
+		"eslint-plugin-vue": "^9.17.0",
 		"git-cz": "^4.9.0",
 		"husky": "^8.0.3",
 		"ky": "^0.33.3",
