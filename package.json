@@ -18,7 +18,7 @@
 		"update:f": "pnpm up --latest"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^17.7.0",
+		"@commitlint/cli": "^17.7.1",
 		"@commitlint/config-conventional": "^17.7.0",
 		"@commitlint/format": "^17.4.4",
 		"@headlessui/vue": "^1.7.15",
@@ -42,7 +42,7 @@
 		"husky": "^8.0.3",
 		"ky": "^0.33.3",
 		"lint-staged": "^13.2.3",
-		"marked": "^7.0.1",
+		"marked": "^7.0.2",
 		"nuxt": "3.6.5",
 		"nuxt-icon": "^0.5.0",
 		"prettier": "^3.0.1",
