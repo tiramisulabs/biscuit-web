@@ -15,8 +15,8 @@ devDependencies:
     specifier: ^17.4.4
     version: 17.4.4
   '@headlessui/vue':
-    specifier: ^1.7.15
-    version: 1.7.15
+    specifier: ^1.7.16
+    version: 1.7.16
   '@nuxt/image-edge':
     specifier: 1.0.0-rc.1-28180077.d51e794
     version: 1.0.0-rc.1-28180077.d51e794
@@ -1090,8 +1090,8 @@ packages:
     dev: true
     optional: true
 
-  /@headlessui/vue@1.7.15:
-    resolution: {integrity: sha512-3ozVEgQ8mw09nWvUPN+8S6C8l3SM0lVT1aEN/+oP5Y4LF0WNMM9UrVisVTN9LLQ06v/X3EFA0blyL/vg8XNZlg==}
+  /@headlessui/vue@1.7.16:
+    resolution: {integrity: sha512-nKT+nf/q6x198SsyK54mSszaQl/z+QxtASmgMEJtpxSX2Q0OPJX0upS/9daDyiECpeAsvjkoOrm2O/6PyBQ+Qg==}
     engines: {node: '>=10'}
     peerDependencies:
       vue: ^3.2.0
