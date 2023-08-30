@@ -18,8 +18,8 @@ devDependencies:
     specifier: ^1.7.16
     version: 1.7.16
   '@nuxt/image-edge':
-    specifier: 1.0.0-rc.1-28221965.bad4420
-    version: 1.0.0-rc.1-28221965.bad4420
+    specifier: 1.0.0-rc.1-28223221.9f026b2
+    version: 1.0.0-rc.1-28223221.9f026b2
   '@nuxtjs/color-mode':
     specifier: ^3.3.0
     version: 3.3.0
@@ -1403,8 +1403,8 @@ packages:
     resolution: {integrity: sha512-GBzP8zOc7CGWyFQS6dv1lQz8VVpz5C2yRszbXufwG/9zhStTIH50EtD87NmWbTMwXDvZLNg8GIpb1UFdH93JCA==}
     dev: true
 
-  /@nuxt/image-edge@1.0.0-rc.1-28221965.bad4420:
-    resolution: {integrity: sha512-WF7i6MJVYkHJOPapeUGwDcb0koMb/1K+irLWZmUV8Fa9GkN8G7AmeU8zcaj+XahIWY+7YsICDwdQZLXEUgl37Q==}
+  /@nuxt/image-edge@1.0.0-rc.1-28223221.9f026b2:
+    resolution: {integrity: sha512-1rLA12Sc4g3rTKWJG90g2cE5DTsmYFNNeEj8bic5eQ+Xthmy1oMoIYG/mGwOak9Je4M/xso+7Yf0GlXj5z4IuA==}
     engines: {node: ^14.16.0 || >=16.11.0}
     dependencies:
       '@nuxt/kit': 3.7.0
@@ -7810,6 +7810,7 @@ packages:
   /punycode@2.3.0:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
     engines: {node: '>=6'}
+    requiresBuild: true
     dev: true
 
   /queue-microtask@1.2.3:
