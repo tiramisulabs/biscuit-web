@@ -30,8 +30,8 @@ devDependencies:
     specifier: ^6.8.0
     version: 6.8.0(ts-node@10.9.1)
   '@tailwindcss/typography':
-    specifier: ^0.5.9
-    version: 0.5.9
+    specifier: ^0.5.10
+    version: 0.5.10
   '@types/marked':
     specifier: ^5.0.1
     version: 5.0.1
@@ -72,8 +72,8 @@ devDependencies:
     specifier: ^8.0.3
     version: 8.0.3
   ky:
-    specifier: ^1.0.0
-    version: 1.0.0
+    specifier: ^1.0.1
+    version: 1.0.1
   lint-staged:
     specifier: ^14.0.1
     version: 14.0.1
@@ -1689,6 +1689,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
+      napi-wasm: 1.1.0
     dev: true
     bundledDependencies:
       - napi-wasm
@@ -1930,8 +1931,8 @@ packages:
       tslib: 2.6.0
     dev: true
 
-  /@tailwindcss/typography@0.5.9:
-    resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
+  /@tailwindcss/typography@0.5.10:
+    resolution: {integrity: sha512-Pe8BuPJQJd3FfRnm6H0ulKIGoMEQS+Vq01R6M5aCrFB/ccR/shT+0kXLjouGC1gFLm9hopTFN+DMP0pfwRWzPw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     peerDependenciesMeta:
@@ -5795,8 +5796,8 @@ packages:
       - supports-color
     dev: true
 
-  /ky@1.0.0:
-    resolution: {integrity: sha512-ptUup6btycj2IXLL/L5Bh/QC9ghYC2k/BsnnSf0ccEap8FpCvJ32FL5s5Potb8NkH6HOTdnVGmyI1wkHZ3mfEQ==}
+  /ky@1.0.1:
+    resolution: {integrity: sha512-UvcwpQO0LOuZwG0Ti3VDo6w57KYt+r4bWEYlNaMt82hgyFtse86QtOGum1RzsZni31FndXQl6NvtDArfunt2JQ==}
     engines: {node: '>=18'}
     dev: true
 
@@ -6426,7 +6427,6 @@ packages:
     resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
     requiresBuild: true
     dev: true
-    optional: true
 
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
