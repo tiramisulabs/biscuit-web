@@ -9,7 +9,7 @@
 			<NuxtImg src="/icon.svg" alt="biscuitland icon" class="w-14 h-14 hover:scale-110 transition duration-150" />
 			<h1 class="text-xl dark:text-white text-black font-semibold">
 				Made with ❤️ by
-				<NuxtLink class="underline" :href="config.public.secretDiscordSupportUrl" target="_blank">
+				<NuxtLink class="underline" :href="config.public.discordSupportUrl" target="_blank">
 					the biscuit team.
 				</NuxtLink>
 			</h1>
