@@ -27,7 +27,7 @@
 		"@nuxtjs/fontaine": "^0.4.1",
 		"@nuxtjs/tailwindcss": "^6.8.0",
 		"@tailwindcss/typography": "^0.5.10",
-		"@types/marked": "^5.0.1",
+		"@types/marked": "^5.0.2",
 		"@types/prismjs": "^1.26.1",
 		"@typescript-eslint/eslint-plugin": "^6.7.3",
 		"@typescript-eslint/parser": "^6.7.3",
