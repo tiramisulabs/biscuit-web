@@ -18,7 +18,7 @@
 		"update:f": "pnpm up --latest"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^17.7.1",
+		"@commitlint/cli": "^17.7.2",
 		"@commitlint/config-conventional": "^17.7.0",
 		"@commitlint/format": "^17.4.4",
 		"@headlessui/vue": "^1.7.16",
