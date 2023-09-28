@@ -18,8 +18,8 @@ devDependencies:
     specifier: ^1.7.16
     version: 1.7.16
   '@nuxt/image-edge':
-    specifier: 1.0.0-rc.2-28263752.92e1787
-    version: 1.0.0-rc.2-28263752.92e1787
+    specifier: 1.0.0-rc.2-28264832.2387d47
+    version: 1.0.0-rc.2-28264832.2387d47
   '@nuxtjs/color-mode':
     specifier: ^3.3.0
     version: 3.3.0
@@ -322,6 +322,7 @@ packages:
   /@babel/highlight@7.22.10:
     resolution: {integrity: sha512-78aUtVcT7MUscr0K5mIEnkwxPE0MaxkR5RxRwuHaQ+JuU5AmTPhY+do2mdzVTnIJJpyBglql2pehuBIWHug+WQ==}
     engines: {node: '>=6.9.0'}
+    requiresBuild: true
     dependencies:
       '@babel/helper-validator-identifier': 7.22.5
       chalk: 2.4.2
@@ -1148,6 +1149,7 @@ packages:
 
   /@ioredis/commands@1.2.0:
     resolution: {integrity: sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg==}
+    requiresBuild: true
     dev: true
 
   /@jridgewell/gen-mapping@0.3.3:
@@ -1282,14 +1284,14 @@ packages:
     resolution: {integrity: sha512-GBzP8zOc7CGWyFQS6dv1lQz8VVpz5C2yRszbXufwG/9zhStTIH50EtD87NmWbTMwXDvZLNg8GIpb1UFdH93JCA==}
     dev: true
 
-  /@nuxt/image-edge@1.0.0-rc.2-28263752.92e1787:
-    resolution: {integrity: sha512-e8tUFsDV6nsjCGSgucHkCpWZaI5OLrl4KVTN+rLLx6d6KfCbYcP+2804J6KmPpWJ2agERg+XBdwYOSMg7Vt/OQ==}
+  /@nuxt/image-edge@1.0.0-rc.2-28264832.2387d47:
+    resolution: {integrity: sha512-m7hGR32EWu2BrE6YidRo13DKeY+WrFe7FZVJdOCU6L2xuyUknuC0NLeb7Esdn0TjCekqotIHeXmdH2X12eiC5A==}
     engines: {node: ^14.16.0 || >=16.11.0}
     dependencies:
       '@nuxt/kit': 3.7.4
       consola: 3.2.3
       defu: 6.1.2
-      h3: 1.8.1
+      h3: 1.8.2
       image-meta: 0.1.1
       node-fetch-native: 1.4.0
       ohash: 1.1.3
@@ -1297,8 +1299,19 @@ packages:
       std-env: 3.4.3
       ufo: 1.3.0
     optionalDependencies:
-      ipx: 1.3.0
+      ipx: 2.0.0-1
     transitivePeerDependencies:
+      - '@azure/app-configuration'
+      - '@azure/cosmos'
+      - '@azure/data-tables'
+      - '@azure/identity'
+      - '@azure/keyvault-secrets'
+      - '@azure/storage-blob'
+      - '@capacitor/preferences'
+      - '@planetscale/database'
+      - '@upstash/redis'
+      - '@vercel/kv'
+      - idb-keyval
       - rollup
       - supports-color
     dev: true
@@ -3107,6 +3120,7 @@ packages:
   /cluster-key-slot@1.1.2:
     resolution: {integrity: sha512-RMr0FhtfXemyinomL4hrWcYJxmX6deFdCxpJzhDttxgO1+bcCnkk+9drydLVDmAMG7NE6aN/fl4F7ucU/90gAA==}
     engines: {node: '>=0.10.0'}
+    requiresBuild: true
     dev: true
 
   /co@4.6.0:
@@ -3458,12 +3472,6 @@ packages:
     hasBin: true
     dev: true
 
-  /cssfilter@0.0.10:
-    resolution: {integrity: sha512-FAaLDaplstoRsDR8XGYH51znUN0UY7nMc6Z9/fvE8EXGwvJE9hu7W2vHwx1+bd6gCYnln9nLbzxFTrcO9YQDZw==}
-    requiresBuild: true
-    dev: true
-    optional: true
-
   /cssnano-preset-default@6.0.1(postcss@8.4.30):
     resolution: {integrity: sha512-7VzyFZ5zEB1+l1nToKyrRkuaJIx0zi/1npjvZfbBwbtNTzhLtlvYraK/7/uqmX2Wb2aQtd983uuGw79jAjLSuQ==}
     engines: {node: ^14 || ^16 || >=18.0}
@@ -3701,6 +3709,7 @@ packages:
   /denque@2.1.0:
     resolution: {integrity: sha512-HVQE3AAb/pxF8fQAoiqpvg9i3evqug3hoiwakOyZAwJm+6vZehbkYXZ0l4JxS+I3QxM97v5aaRNhj8v5oBhekw==}
     engines: {node: '>=0.10'}
+    requiresBuild: true
     dev: true
 
   /depd@1.1.2:
@@ -5008,6 +5017,19 @@ packages:
       unenv: 1.7.4
     dev: true
 
+  /h3@1.8.2:
+    resolution: {integrity: sha512-1Ca0orJJlCaiFY68BvzQtP2lKLk46kcLAxVM8JgYbtm2cUg6IY7pjpYgWMwUvDO9QI30N5JAukOKoT8KD3Q0PQ==}
+    dependencies:
+      cookie-es: 1.0.0
+      defu: 6.1.2
+      destr: 2.0.1
+      iron-webcrypto: 0.10.1
+      radix3: 1.1.0
+      ufo: 1.3.0
+      uncrypto: 0.1.3
+      unenv: 1.7.4
+    dev: true
+
   /hard-rejection@2.1.0:
     resolution: {integrity: sha512-VIZB+ibDhx7ObhAe7OVtoEbuP4h/MuOTHJ+J8h/eBXotJYl0fBgR72xDFCKgIh22OJZIOVNxBMWuhAr10r8HdA==}
     engines: {node: '>=6'}
@@ -5279,6 +5301,7 @@ packages:
   /ioredis@5.3.2:
     resolution: {integrity: sha512-1DKMMzlIHM02eBBVOFQ1+AolGjs6+xEcM4PDL7NqOS6szq7H9jSaEkIUH6/a5Hl241LzW6JLSiAbNvTQjUupUA==}
     engines: {node: '>=12.22.0'}
+    requiresBuild: true
     dependencies:
       '@ioredis/commands': 1.2.0
       cluster-key-slot: 1.1.2
@@ -5293,25 +5316,44 @@ packages:
       - supports-color
     dev: true
 
-  /ipx@1.3.0:
-    resolution: {integrity: sha512-Jfu+zQ0NGZwSeZ11CGMOnqWFlIyVcT8dW48e5UxKnMjQXXDy8VLTl8FIP7vRIJ9hd3ZPaJ/RIXXLJfZmBqRXWQ==}
+  /ipx@2.0.0-1:
+    resolution: {integrity: sha512-aAQ0sB1c2y77Zu72q+rV+wriTF4e1fKnoRClo5LRgmxWSV2HSXqHk+N+ly76EjRr6Zgk44aN2ikMzs9ISJH2Iw==}
     hasBin: true
     requiresBuild: true
     dependencies:
       '@fastify/accept-negotiator': 1.1.0
+      citty: 0.1.4
       consola: 3.2.3
       defu: 6.1.2
       destr: 2.0.1
       etag: 1.8.1
+      h3: 1.8.2
       image-meta: 0.1.1
-      listhen: 1.5.0
-      node-fetch-native: 1.4.0
+      listhen: 1.5.5
+      ofetch: 1.3.3
       pathe: 1.1.1
-      sharp: 0.32.5
+      sharp: 0.32.6
       ufo: 1.3.0
-      xss: 1.0.14
+      unstorage: 1.9.0
+    transitivePeerDependencies:
+      - '@azure/app-configuration'
+      - '@azure/cosmos'
+      - '@azure/data-tables'
+      - '@azure/identity'
+      - '@azure/keyvault-secrets'
+      - '@azure/storage-blob'
+      - '@capacitor/preferences'
+      - '@planetscale/database'
+      - '@upstash/redis'
+      - '@vercel/kv'
+      - idb-keyval
+      - supports-color
     dev: true
     optional: true
+
+  /iron-webcrypto@0.10.1:
+    resolution: {integrity: sha512-QGOS8MRMnj/UiOa+aMIgfyHcvkhqNUsUxb1XzskENvbo+rEfp6TOwqd1KPuDzXC4OnGHcMSVxDGRoilqB8ViqA==}
+    dev: true
 
   /iron-webcrypto@0.7.1:
     resolution: {integrity: sha512-K/UmlEhPCPXEHV5hAtH5C0tI5JnFuOrv4yO/j7ODPl3HaiiHBLbOLTde+ieUaAyfCATe4LoAnclyF+hmSCOVmQ==}
@@ -5820,6 +5862,30 @@ packages:
       uqr: 0.1.2
     dev: true
 
+  /listhen@1.5.5:
+    resolution: {integrity: sha512-LXe8Xlyh3gnxdv4tSjTjscD1vpr/2PRpzq8YIaMJgyKzRG8wdISlWVWnGThJfHnlJ6hmLt2wq1yeeix0TEbuoA==}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@parcel/watcher': 2.3.0
+      '@parcel/watcher-wasm': 2.3.0
+      citty: 0.1.4
+      clipboardy: 3.0.0
+      consola: 3.2.3
+      defu: 6.1.2
+      get-port-please: 3.1.1
+      h3: 1.8.2
+      http-shutdown: 1.2.2
+      jiti: 1.20.0
+      mlly: 1.4.2
+      node-forge: 1.3.1
+      pathe: 1.1.1
+      std-env: 3.4.3
+      ufo: 1.3.0
+      untun: 0.1.2
+      uqr: 0.1.2
+    dev: true
+
   /listr2@6.6.1:
     resolution: {integrity: sha512-+rAXGHh0fkEWdXBmX+L6mmfmXmXvDGEKzkjxO+8mP3+nI/r/CWznVBvsibXdxda9Zz0OW2e2ikphN3OwCT/jSg==}
     engines: {node: '>=16.0.0'}
@@ -5883,10 +5949,12 @@ packages:
 
   /lodash.defaults@4.2.0:
     resolution: {integrity: sha512-qjxPLHd3r5DnsdGacqOMU6pb/avJzdh9tFX2ymgoZE27BmjXrNy/y4LoaiTeAb+O3gL8AfpJGtqfX/ae2leYYQ==}
+    requiresBuild: true
     dev: true
 
   /lodash.isarguments@3.1.0:
     resolution: {integrity: sha512-chi4NHZlZqZD18a0imDHnZPrDeBbTtVN7GXMwuGdRH9qotxAjYs3aVLKc7zNOG9eddR5Ksd8rvFEBc9SsggPpg==}
+    requiresBuild: true
     dev: true
 
   /lodash.isfunction@3.0.9:
@@ -5982,6 +6050,7 @@ packages:
   /lru-cache@10.0.0:
     resolution: {integrity: sha512-svTf/fzsKHffP42sujkO/Rjs37BCIsQVRCeNYIm9WN8rgT7ffoUnRtZCqU+6BqcSBdv8gwJeTz8knJpgACeQMw==}
     engines: {node: 14 || >=16.14}
+    requiresBuild: true
     dev: true
 
   /lru-cache@5.1.1:
@@ -7759,11 +7828,13 @@ packages:
   /redis-errors@1.2.0:
     resolution: {integrity: sha512-1qny3OExCf0UvUV/5wpYKf2YwPcOqXzkwKKSmKHiE6ZMQs5heeE/c8eXK+PNllPvmjgAbfnsbpkGZWy8cBpn9w==}
     engines: {node: '>=4'}
+    requiresBuild: true
     dev: true
 
   /redis-parser@3.0.0:
     resolution: {integrity: sha512-DJnGAeenTdpMEH6uAJRK/uiyEIH9WVsUmoLwzudwGJUwZPp80PDBWPHXSAGNPwNvIXAbe7MSUB1zQFugFml66A==}
     engines: {node: '>=4'}
+    requiresBuild: true
     dependencies:
       redis-errors: 1.2.0
     dev: true
@@ -8047,8 +8118,8 @@ packages:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
     dev: true
 
-  /sharp@0.32.5:
-    resolution: {integrity: sha512-0dap3iysgDkNaPOaOL4X/0akdu0ma62GcdC2NBQ+93eqpePdDdr2/LM0sFdDSMmN7yS+odyZtPsb7tx/cYBKnQ==}
+  /sharp@0.32.6:
+    resolution: {integrity: sha512-KyLTWwgcR9Oe4d9HwCwNM2l7+J0dUQwn/yf7S0EnTtb0eVS4RxO0eUSvxPtzT4F3SY+C4K6fqdv/DO27sJ/v/w==}
     engines: {node: '>=14.15.0'}
     requiresBuild: true
     dependencies:
@@ -8190,6 +8261,7 @@ packages:
 
   /standard-as-callback@2.1.0:
     resolution: {integrity: sha512-qoRRSyROncaz1z0mvYqIE4lCd9p2R90i6GxW3uZv5ucSu8tU7B5HXUP1gG8pVZsYNVaXjk8ClXHPttLyxAL48A==}
+    requiresBuild: true
     dev: true
 
   /statuses@1.5.0:
@@ -8975,9 +9047,9 @@ packages:
       anymatch: 3.1.3
       chokidar: 3.5.3
       destr: 2.0.1
-      h3: 1.8.1
+      h3: 1.8.2
       ioredis: 5.3.2
-      listhen: 1.5.0
+      listhen: 1.5.5
       lru-cache: 10.0.0
       mri: 1.2.0
       node-fetch-native: 1.4.0
@@ -9384,17 +9456,6 @@ packages:
     resolution: {integrity: sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw==}
     engines: {node: '>=12'}
     dev: true
-
-  /xss@1.0.14:
-    resolution: {integrity: sha512-og7TEJhXvn1a7kzZGQ7ETjdQVS2UfZyTlsEdDOqvQF7GoxNfY+0YLCzBy1kPdsDDx4QuNAonQPddpsn6Xl/7sw==}
-    engines: {node: '>= 0.10.0'}
-    hasBin: true
-    requiresBuild: true
-    dependencies:
-      commander: 2.20.3
-      cssfilter: 0.0.10
-    dev: true
-    optional: true
 
   /xxhashjs@0.2.2:
     resolution: {integrity: sha512-AkTuIuVTET12tpsVIQo+ZU6f/qDmKuRUcjaqR+OIvm+aCBsZ95i7UVY5WJ9TMsSaZ0DA2WxoZ4acu0sPH+OKAw==}
