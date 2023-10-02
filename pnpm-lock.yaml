@@ -18,8 +18,8 @@ devDependencies:
     specifier: ^1.7.16
     version: 1.7.16
   '@nuxt/image-edge':
-    specifier: 1.0.0-rc.3-28270967.9815055
-    version: 1.0.0-rc.3-28270967.9815055
+    specifier: 1.0.0-rc.3-28271297.f1bc89f
+    version: 1.0.0-rc.3-28271297.f1bc89f
   '@nuxtjs/color-mode':
     specifier: ^3.3.0
     version: 3.3.0
@@ -1284,8 +1284,8 @@ packages:
     resolution: {integrity: sha512-GBzP8zOc7CGWyFQS6dv1lQz8VVpz5C2yRszbXufwG/9zhStTIH50EtD87NmWbTMwXDvZLNg8GIpb1UFdH93JCA==}
     dev: true
 
-  /@nuxt/image-edge@1.0.0-rc.3-28270967.9815055:
-    resolution: {integrity: sha512-Qg/YxmVNtpWzBkB564qpapJlqr+6qcOLY9GTJp2PauRn42utveWD88w55y+GzclBlFCqewqvnESX1aLCiDyTEw==}
+  /@nuxt/image-edge@1.0.0-rc.3-28271297.f1bc89f:
+    resolution: {integrity: sha512-ybdNxkFAYH9GCeaIovlpKXjI3EjsO5/lnB51DGL9NbRAQkXf/ar9m7UmMYaq6UuMbkut6ApnERK8zRLKT1RkEg==}
     engines: {node: ^14.16.0 || >=16.11.0}
     dependencies:
       '@nuxt/kit': 3.7.4
