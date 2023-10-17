@@ -72,8 +72,8 @@ devDependencies:
     specifier: ^8.0.3
     version: 8.0.3
   ky:
-    specifier: ^1.0.1
-    version: 1.0.1
+    specifier: ^1.1.0
+    version: 1.1.0
   lint-staged:
     specifier: ^15.0.1
     version: 15.0.1
@@ -5792,8 +5792,8 @@ packages:
       - supports-color
     dev: true
 
-  /ky@1.0.1:
-    resolution: {integrity: sha512-UvcwpQO0LOuZwG0Ti3VDo6w57KYt+r4bWEYlNaMt82hgyFtse86QtOGum1RzsZni31FndXQl6NvtDArfunt2JQ==}
+  /ky@1.1.0:
+    resolution: {integrity: sha512-n/rS/Yw+pc/j61kl353yIhxpM/FN0VidhPeiMv6Y/QyyCUpSJtHtHlX655wYolZ/Wc3BKO4Q5syWKfzJ5CT7Bg==}
     engines: {node: '>=18'}
     dev: true
 
