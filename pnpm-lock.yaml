@@ -18,8 +18,8 @@ devDependencies:
     specifier: ^1.7.16
     version: 1.7.16
   '@nuxt/image-edge':
-    specifier: 1.0.0-rc.3-28293585.49d6651
-    version: 1.0.0-rc.3-28293585.49d6651
+    specifier: 1.0.0-rc.3-28294248.a578636
+    version: 1.0.0-rc.3-28294248.a578636
   '@nuxtjs/color-mode':
     specifier: ^3.3.0
     version: 3.3.0
@@ -36,8 +36,8 @@ devDependencies:
     specifier: ^5.0.2
     version: 5.0.2
   '@types/prismjs':
-    specifier: ^1.26.1
-    version: 1.26.1
+    specifier: ^1.26.2
+    version: 1.26.2
   '@typescript-eslint/eslint-plugin':
     specifier: ^6.8.0
     version: 6.8.0(@typescript-eslint/parser@6.8.0)(eslint@8.51.0)
@@ -1284,8 +1284,8 @@ packages:
     resolution: {integrity: sha512-GBzP8zOc7CGWyFQS6dv1lQz8VVpz5C2yRszbXufwG/9zhStTIH50EtD87NmWbTMwXDvZLNg8GIpb1UFdH93JCA==}
     dev: true
 
-  /@nuxt/image-edge@1.0.0-rc.3-28293585.49d6651:
-    resolution: {integrity: sha512-brm80xOzTwvdWlOIFWObru5h9aJOaTgO+hiSLXE+i19VHvxtyFagntpJrtmjpOADAxqBXZVdzuxZjZHwVHOJPg==}
+  /@nuxt/image-edge@1.0.0-rc.3-28294248.a578636:
+    resolution: {integrity: sha512-/SQVcpclKK4rxGFRzyeNBLAw7EdeEjqTFsCuqG6xFTWmEeNJnz5xbcm5nqo/sOcYHfur+T5GXhEUIOxoNF+Xlw==}
     engines: {node: ^14.16.0 || >=16.11.0}
     dependencies:
       '@nuxt/kit': 3.7.4
@@ -2005,8 +2005,8 @@ packages:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
     dev: true
 
-  /@types/prismjs@1.26.1:
-    resolution: {integrity: sha512-Q7jDsRbzcNHIQje15CS/piKhu6lMLb9jwjxSfEIi4KcFKXW23GoJMkwQiJ8VObyfx+VmUaDcJxXaWN+cTCjVog==}
+  /@types/prismjs@1.26.2:
+    resolution: {integrity: sha512-/r7Cp7iUIk7gts26mHXD66geUC+2Fo26TZYjQK6Nr4LDfi6lmdRmMqM0oPwfiMhUwoBAOFe8GstKi2pf6hZvwA==}
     dev: true
 
   /@types/resolve@1.20.2:
