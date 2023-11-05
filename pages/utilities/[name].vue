@@ -1,3 +1,5 @@
+<!-- eslint-disable vue/no-v-html -->
+
 <template>
 	<main class="mx-auto px-6 lg:px-12 max-w-screen-xl space-y-6 min-h-screen">
 		<Head>
@@ -244,9 +246,7 @@ const utilities = [
 const utilitySelected = computed(() => utilities.find((u) => u.name === route.params.name));
 const toast = useToast(5_000, 'Install command copied', 'success');
 
-const readme = computed(() =>
-	marked(pkg.value?.readme ?? '# Readme not found :(', { mangle: false, headerIds: false }),
-);
+const readme = computed(() => marked(pkg.value?.readme ?? '# Readme not found :('));
 
 const copyInstallCommand = () => {
 	toast.show();
