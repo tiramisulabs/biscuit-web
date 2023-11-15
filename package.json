@@ -24,7 +24,7 @@
 		"@headlessui/vue": "^1.7.16",
 		"@nuxt/image": "^1.0.0",
 		"@nuxt/image-edge": "1.0.0-28332785.93a5fe3",
-		"@nuxtjs/color-mode": "^3.3.0",
+		"@nuxtjs/color-mode": "^3.3.2",
 		"@nuxtjs/fontaine": "^0.4.1",
 		"@nuxtjs/tailwindcss": "^6.9.4",
 		"@tailwindcss/typography": "^0.5.10",
