@@ -41,9 +41,9 @@ const color = computed(() =>
 	props.type === 'success'
 		? 'dark:bg-gray-900 border border-gray-300 bg-gray-200 dark:border-gray-800'
 		: props.type === 'error'
-		? 'bg-red-500'
-		: props.type === 'warning'
-		? 'bg-yellow-500'
-		: 'bg-blue-500',
+		  ? 'bg-red-500'
+		  : props.type === 'warning'
+		    ? 'bg-yellow-500'
+		    : 'bg-blue-500',
 );
 </script>
