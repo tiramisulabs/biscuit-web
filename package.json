@@ -18,8 +18,8 @@
 		"update:f": "pnpm up --latest"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^18.4.1",
-		"@commitlint/config-conventional": "^18.4.0",
+		"@commitlint/cli": "^18.4.2",
+		"@commitlint/config-conventional": "^18.4.2",
 		"@commitlint/format": "^18.4.0",
 		"@headlessui/vue": "^1.7.16",
 		"@nuxt/image": "^1.0.0",
