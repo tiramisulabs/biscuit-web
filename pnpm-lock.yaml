@@ -21,8 +21,8 @@ devDependencies:
     specifier: ^1.0.0
     version: 1.0.0
   '@nuxt/image-edge':
-    specifier: 1.0.0-28332785.93a5fe3
-    version: 1.0.0-28332785.93a5fe3
+    specifier: 1.0.0-28335738.04c5372
+    version: 1.0.0-28335738.04c5372
   '@nuxtjs/color-mode':
     specifier: ^3.3.2
     version: 3.3.2
@@ -30,8 +30,8 @@ devDependencies:
     specifier: ^0.4.1
     version: 0.4.1
   '@nuxtjs/tailwindcss':
-    specifier: ^6.9.4
-    version: 6.9.4
+    specifier: ^6.9.5
+    version: 6.9.5
   '@tailwindcss/typography':
     specifier: ^0.5.10
     version: 0.5.10
@@ -555,31 +555,10 @@ packages:
       '@commitlint/types': 18.4.0
     dev: true
 
-  /@commitlint/load@18.4.1(typescript@5.2.2):
-    resolution: {integrity: sha512-o/plBiPJQgbSq/4ipDpsq4HCmURjBAEjr1EO/p2falr3VhwV0WGXTvb8NlihgI8xtSyO6lHvtycrE535GMLQbA==}
-    engines: {node: '>=v18'}
-    requiresBuild: true
-    dependencies:
-      '@commitlint/config-validator': 18.4.0
-      '@commitlint/execute-rule': 18.4.0
-      '@commitlint/resolve-extends': 18.4.0
-      '@commitlint/types': 18.4.0
-      '@types/node': 18.18.8
-      chalk: 4.1.2
-      cosmiconfig: 8.3.6(typescript@5.2.2)
-      cosmiconfig-typescript-loader: 5.0.0(@types/node@18.18.8)(cosmiconfig@8.3.6)(typescript@5.2.2)
-      lodash.isplainobject: 4.0.6
-      lodash.merge: 4.6.2
-      lodash.uniq: 4.5.0
-      resolve-from: 5.0.0
-    transitivePeerDependencies:
-      - typescript
-    dev: true
-    optional: true
-
   /@commitlint/load@18.4.2(typescript@5.2.2):
     resolution: {integrity: sha512-CKmzXdF9XwZJoVijAqpUlV9qzZOkyiYni4KuSCtTZVAAVudi9H84cJ4FqZxSwEP9G21vmoJiNrW8G042AsduVg==}
     engines: {node: '>=v18'}
+    requiresBuild: true
     dependencies:
       '@commitlint/config-validator': 18.4.0
       '@commitlint/execute-rule': 18.4.0
@@ -1524,8 +1503,8 @@ packages:
       - xml2js
     dev: true
 
-  /@nuxt/image-edge@1.0.0-28332785.93a5fe3:
-    resolution: {integrity: sha512-1px4AXGHaxrKnToKozYLkJ5aBQW+CJEcZ1y7oFwokZxOLUB6lQ6qb8/MGL3T954ewHpBZE0j1WLccUTsw/E62w==}
+  /@nuxt/image-edge@1.0.0-28335738.04c5372:
+    resolution: {integrity: sha512-c0t5fYt2Po02TpMVSvn209IybzyJsfd2wssuDXLwf+BRZPWNjD7bbX3CfGMQliciWurh6SS99bglDP/axdVt/A==}
     engines: {node: ^14.16.0 || >=16.11.0}
     dependencies:
       '@nuxt/kit': 3.8.1
@@ -1537,7 +1516,7 @@ packages:
       ohash: 1.1.3
       pathe: 1.1.1
       std-env: 3.5.0
-      ufo: 1.3.1
+      ufo: 1.3.2
     optionalDependencies:
       ipx: 2.0.2
     transitivePeerDependencies:
@@ -1633,7 +1612,7 @@ packages:
       pkg-types: 1.0.3
       scule: 1.0.0
       semver: 7.5.4
-      ufo: 1.3.1
+      ufo: 1.3.2
       unctx: 2.3.1
       unimport: 3.4.0(rollup@3.29.4)
       untyped: 1.4.0
@@ -1668,7 +1647,7 @@ packages:
       pathe: 1.1.1
       pkg-types: 1.0.3
       postcss-import-resolver: 2.0.0
-      std-env: 3.4.3
+      std-env: 3.5.0
       ufo: 1.3.1
       unimport: 3.4.0(rollup@3.29.4)
       untyped: 1.4.0
@@ -1687,7 +1666,7 @@ packages:
       hookable: 5.5.3
       pathe: 1.1.1
       pkg-types: 1.0.3
-      std-env: 3.4.3
+      std-env: 3.5.0
       ufo: 1.3.1
       unimport: 3.4.0(rollup@3.29.4)
       untyped: 1.4.0
@@ -1716,7 +1695,7 @@ packages:
       parse-git-config: 3.0.0
       pathe: 1.1.1
       rc9: 2.1.1
-      std-env: 3.4.3
+      std-env: 3.5.0
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -1760,7 +1739,7 @@ packages:
       pkg-types: 1.0.3
       postcss: 8.4.31
       rollup-plugin-visualizer: 5.9.2(rollup@3.29.4)
-      std-env: 3.4.3
+      std-env: 3.5.0
       strip-literal: 1.3.0
       ufo: 1.3.1
       unplugin: 1.5.0
@@ -1814,10 +1793,10 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxtjs/tailwindcss@6.9.4:
-    resolution: {integrity: sha512-T3B3P7RgJ/WTW3plHziLWqWbMzCWctUHpjqhW1WCXB/U3FOQxGH5dG4uEOmQkA6Gj4cbTNStIU/cRxpZhbBMhg==}
+  /@nuxtjs/tailwindcss@6.9.5:
+    resolution: {integrity: sha512-Q1jMY06KdK7f6IAL25HFWK0ZhTNaxyl/J0fhX3k0kjKojeflU6AbJTTKeVn9Dhqqt71y1thZqemuZNeJha+RBA==}
     dependencies:
-      '@nuxt/kit': 3.8.0
+      '@nuxt/kit': 3.8.1
       '@nuxt/postcss8': 1.1.3
       autoprefixer: 10.4.16(postcss@8.4.31)
       chokidar: 3.5.3
@@ -3934,7 +3913,7 @@ packages:
       longest: 2.0.1
       word-wrap: 1.2.5
     optionalDependencies:
-      '@commitlint/load': 18.4.1(typescript@5.2.2)
+      '@commitlint/load': 18.4.2(typescript@5.2.2)
     transitivePeerDependencies:
       - typescript
     dev: true
@@ -5430,7 +5409,7 @@ packages:
       destr: 2.0.2
       iron-webcrypto: 0.10.1
       radix3: 1.1.0
-      ufo: 1.3.1
+      ufo: 1.3.2
       uncrypto: 0.1.3
       unenv: 1.7.4
     dev: true
@@ -7042,7 +7021,7 @@ packages:
       semver: 7.5.4
       serve-placeholder: 2.0.1
       serve-static: 1.15.0
-      std-env: 3.4.3
+      std-env: 3.5.0
       ufo: 1.3.1
       uncrypto: 0.1.3
       unctx: 2.3.1
@@ -9658,6 +9637,10 @@ packages:
 
   /ufo@1.3.1:
     resolution: {integrity: sha512-uY/99gMLIOlJPwATcMVYfqDSxUR9//AUcgZMzwfSTJPDKzA1S8mX4VLqa+fiAtveraQUBCz4FFcwVZBGbwBXIw==}
+    dev: true
+
+  /ufo@1.3.2:
+    resolution: {integrity: sha512-o+ORpgGwaYQXgqGDwd+hkS4PuZ3QnmqMMxRuajK/a38L6fTpcE5GPIfrf+L/KemFzfUpeUQc1rRS1iDBozvnFA==}
     dev: true
 
   /ultrahtml@1.5.2:
